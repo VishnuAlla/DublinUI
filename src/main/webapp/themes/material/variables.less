@@ -14,200 +14,43 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         #d4145a;
+@brand-primary:         #448AFF;
 @brand-success:         #4CAF50;
 @brand-info:            #03A9F4;
 @brand-warning:         #FFB300;
 @brand-danger:          #F44336;
 
-/*@font-face {
-  font-family: "Roboto-Black";
-  font-style: normal;
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url('fonts/Roboto-Regular-webfont.eot');
+  src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+  url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+  url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
   font-weight: normal;
-  src: url("Roboto-Black") format("truetype");
-}*/
-@font-face {
-    font-family: "Roboto-Black";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-Black.eot"), url("fonts/Roboto-Black.ttf") format("truetype"), url("fonts/Roboto-Black.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-BlackItalic";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-BlackItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-BlackItalic.eot"), url("fonts/Roboto-BlackItalic.ttf") format("truetype"), url("fonts/Roboto-BlackItalic.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-Bold";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-Bold.eot"), url("fonts/Roboto-Bold.ttf") format("truetype"), url("fonts/Roboto-Bold.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-BoldItalic";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-BoldItalic.eot"), url("fonts/Roboto-BoldItalic.ttf") format("truetype"), url("fonts/Roboto-BoldItalic.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "RobotoCondensed-Bold";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/RobotoCondensed-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/RobotoCondensed-Bold.eot"), url("fonts/RobotoCondensed-Bold.ttf") format("truetype"), url("fonts/RobotoCondensed-Bold.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "RobotoCondensed-BoldItalic";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/RobotoCondensed-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/RobotoCondensed-BoldItalic.eot"), url("fonts/RobotoCondensed-BoldItalic.ttf") format("truetype"), url("fonts/RobotoCondensed-BoldItalic.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "RobotoCondensed-Italic";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/RobotoCondensed-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/RobotoCondensed-Italic.eot"), url("fonts/RobotoCondensed-Italic.ttf") format("truetype"), url("fonts/RobotoCondensed-Italic.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "RobotoCondensed-Light";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/RobotoCondensed-Light.eot?#iefix") format("embedded-opentype"), url("fonts/RobotoCondensed-Light.eot"), url("fonts/RobotoCondensed-Light.ttf") format("truetype"), url("fonts/RobotoCondensed-Light.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "RobotoCondensed-LightItalic";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/RobotoCondensed-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/RobotoCondensed-LightItalic.eot"), url("fonts/RobotoCondensed-LightItalic.ttf") format("truetype"), url("fonts/RobotoCondensed-LightItalic.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "RobotoCondensed-Regular";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/RobotoCondensed-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/RobotoCondensed-Regular.eot"), url("fonts/RobotoCondensed-Regular.ttf") format("truetype"), url("fonts/RobotoCondensed-Regular.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-Italic";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-Italic.eot"), url("fonts/Roboto-Italic.ttf") format("truetype"), url("fonts/Roboto-Italic.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-Light";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-Light.eot"), url("fonts/Roboto-Light.ttf") format("truetype"), url("fonts/Roboto-Light.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-LightItalic";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-LightItalic.eot"), url("fonts/Roboto-LightItalic.ttf") format("truetype"), url("fonts/Roboto-LightItalic.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-Medium";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-Medium.eot"), url("fonts/Roboto-Medium.ttf") format("truetype"), url("fonts/Roboto-Medium.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-MediumItalic";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-MediumItalic.eot"), url("fonts/Roboto-MediumItalic.woff") format("woff"), url("fonts/Roboto-MediumItalic.ttf") format("truetype"), url("fonts/Roboto-MediumItalic.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-Regular";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-Regular.eot"), url("fonts/Roboto-Regular.ttf") format("truetype"), url("fonts/Roboto-Regular.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-Thin";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-Thin.eot"), url("fonts/Roboto-Thin.ttf") format("truetype"), url("fonts/Roboto-Thin.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Roboto-ThinItalic";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Roboto-ThinItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-ThinItalic.eot"), url("fonts/Roboto-ThinItalic.ttf") format("truetype"), url("fonts/Roboto-ThinItalic.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Dosis-Bold";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Dosis-Bold.eot?#iefix") format("embedded-opentype"),
-    url("fonts/Dosis-Bold.eot"),
-    url("fonts/Dosis-Bold.ttf") format("truetype"),
-    url("fonts/Dosis-Bold.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Dosis-Book";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Dosis-Book.eot?#iefix") format("embedded-opentype"),
-    url("fonts/Dosis-Book.eot"),
-    url("fonts/Dosis-Book.ttf") format("truetype"),
-    url("fonts/Dosis-Book.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Dosis-ExtraBold";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Dosis-ExtraBold.eot?#iefix") format("embedded-opentype"),
-    url("fonts/Dosis-ExtraBold.eot"),
-    url("fonts/Dosis-ExtraBold.ttf") format("truetype"),
-    url("fonts/Dosis-ExtraBold.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Dosis-ExtraLight";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Dosis-ExtraLight.eot?#iefix") format("embedded-opentype"),
-    url("fonts/Dosis-ExtraLight.eot"),
-    url("fonts/Dosis-ExtraLight.ttf") format("truetype"),
-    url("fonts/Dosis-ExtraLight.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Dosis-Light";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Dosis-Light.eot?#iefix") format("embedded-opentype"),
-    url("fonts/Dosis-Light.eot"),
-    url("fonts/Dosis-Light.ttf") format("truetype"),
-    url("fonts/Dosis-Light.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Dosis-Medium";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Dosis-Medium.eot?#iefix") format("embedded-opentype"),
-    url("fonts/Dosis-Medium.eot"),
-    url("fonts/Dosis-Medium.ttf") format("truetype"),
-    url("fonts/Dosis-Medium.svg#svgFontName") format("svg");
-}
-@font-face {
-    font-family: "Dosis-SemiBold";
-    font-style: normal;
-    font-weight: normal;
-    src: url("fonts/Dosis-SemiBold.eot?#iefix") format("embedded-opentype"),
-    url("fonts/Dosis-SemiBold.eot"),
-    url("fonts/Dosis-SemiBold.ttf") format("truetype"),
-    url("fonts/Dosis-SemiBold.svg#svgFontName") format("svg");
+  font-style: normal;
 }
 
-
+@font-face {
+  font-family: 'Robotomedium';
+  src: url('fonts/Roboto-Medium.eot');
+  src: url('fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Roboto-Medium.woff') format('woff'),
+  url('fonts/Roboto-Medium.ttf') format('truetype'),
+  url('fonts/Roboto-Medium.svg#Robotomedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #282d39;
+@body-bg:               #f1f2f3;
 //** Global text color on `<body>`.
-@text-color:            #fff;
+@text-color:            #5e5e5e;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -221,10 +64,10 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  'Roboto-Regular';
-@font-family-serif:       'Roboto-Regular';
+@font-family-sans-serif:  'robotoregular', 'Arial', sans-serif;
+@font-family-serif:       'robotoregular', 'Arial', sans-serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-@font-family-monospace:   'Roboto-Regular';
+@font-family-monospace:   'robotoregular', 'Arial', sans-serif;
 @font-family-base:        @font-family-sans-serif;
 
 @font-size-base:          13px;
@@ -306,15 +149,15 @@
 @table-condensed-cell-padding:  @padding-small-vertical @padding-small-horizontal;
 
 //** Default background color used for all tables.
-@table-bg:                      #282d39;
+@table-bg:                      #fff;
 //** Background color used for `.table-striped`.
 @table-bg-accent:               rgba(162,162,162,.06);
 //** Background color used for `.table-hover`.
-@table-bg-hover:                #2e3443;
-@table-bg-active:               #2e3443;
+@table-bg-hover:                #eee;
+@table-bg-active:               #eee;
 
 //** Border color for table and cell borders.
-@table-border-color:            #282d39;
+@table-border-color:            #eee;
 
 
 //== Buttons
@@ -324,8 +167,8 @@
 @btn-font-weight:                normal;
 
 @btn-default-color:              @text-color;
-@btn-default-bg:                 #d4145a;
-// Commented by kajal @btn-default-border:             #ECEFF1;
+@btn-default-bg:                 #fff;
+@btn-default-border:             #ECEFF1;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
@@ -396,7 +239,7 @@
 @form-group-margin-bottom:       0;
 
 @legend-color:                   @gray-dark;
-@legend-border-color:            #797C7E;
+@legend-border-color:            #e5e5e5;
 
 //** Background color for textual input addons
 @input-group-addon-bg:           transparent;
@@ -418,7 +261,7 @@
 //** Dropdown menu `border-color` **for IE8**.
 @dropdown-fallback-border:       #ccc;
 //** Divider color for between dropdown items.
-@dropdown-divider-bg:            #797C7E;
+@dropdown-divider-bg:            #e5e5e5;
 
 //** Dropdown link text color.
 @dropdown-link-color:            @gray-dark;
@@ -544,15 +387,15 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-bg:                @body-bg;
+@navbar-default-bg:                #2090EA;
 @navbar-default-hover-bg:          transparent;
-@navbar-default-color:             #9da7be;
+@navbar-default-color:             rgba(255, 255, 255, 0.6);
 @navbar-default-border:            transparent;
 
 // Navbar links
-@navbar-default-link-color:                #9da7be;
+@navbar-default-link-color:                rgba(255, 255, 255, 0.6);
 @navbar-default-link-hover-color:          @text-color;
-@navbar-default-link-hover-bg:             #363d50;
+@navbar-default-link-hover-bg:             @navbar-default-link-active-bg;
 @navbar-default-link-active-color:         #fff;
 @navbar-default-link-active-bg:            rgba(0, 0, 0, 0.07);
 @navbar-default-link-disabled-color:       #ccc;
@@ -746,7 +589,7 @@
 //##
 
 //** Default label background color
-@label-default-bg:            @body-bg;
+@label-default-bg:            @gray-light;
 //** Primary label background color
 @label-primary-bg:            @brand-primary;
 //** Success label background color
@@ -883,7 +726,7 @@
 //
 //##
 
-@panel-bg:                    @body-bg;
+@panel-bg:                    #fff;
 @panel-body-padding:          @padding-base-horizontal;
 @panel-heading-padding:       @panel-body-padding;
 @panel-footer-padding:        @padding-base-horizontal;
@@ -891,11 +734,11 @@
 
 //** Border color for elements within panels
 @panel-inner-border:          #f0f0f0;
-@panel-footer-bg:             @body-bg;
+@panel-footer-bg:             #FFF;
 
 @panel-default-text:          @text-color;
 @panel-default-border:        transparent;
-@panel-default-heading-bg:    @body-bg;
+@panel-default-heading-bg:    #f7f7f7;
 
 @panel-primary-text:          #fff;
 @panel-primary-border:        @brand-primary;
@@ -971,11 +814,11 @@
 @breadcrumb-padding-vertical:   @padding-base-vertical;
 @breadcrumb-padding-horizontal: @padding-base-horizontal;
 //** Breadcrumb background color
-@breadcrumb-bg:                 @body-bg;
+@breadcrumb-bg:                 #F2F3F6;
 //** Breadcrumb text color
 @breadcrumb-color:              @brand-primary;
 //** Text color of current page in the breadcrumb
-@breadcrumb-active-color:      #fff;
+@breadcrumb-active-color:       #a4a4a4;
 //** Textual separator for between breadcrumb elements
 @breadcrumb-separator:          "/";
 

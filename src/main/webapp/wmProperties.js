@@ -1,5 +1,5 @@
 var _WM_APP_PROPERTIES = {
-  "activeTheme" : "Dublin1_.2",
+  "activeTheme" : "material",
   "dateFormat" : "",
   "defaultLanguage" : "en",
   "displayName" : "DublinUI",
