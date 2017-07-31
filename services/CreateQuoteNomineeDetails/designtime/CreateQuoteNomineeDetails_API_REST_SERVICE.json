@@ -1,0 +1,120 @@
+{
+  "basePath" : "",
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "host" : "wavemaker-apps.pramati.com",
+  "paths" : {
+    "/CreateQuoteNomineeDetails/invoke/services/createQuote/nominees" : {
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "description" : "RequestBody",
+          "name" : "RequestBody",
+          "required" : false,
+          "in" : "body"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "CreateQuoteNomineeDetails_RestServiceVirtualController-invoke"
+      },
+      "x-WM-BASE_PATH" : "/CreateQuoteNomineeDetails/invoke/services/createQuote/nominees",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.CreateQuoteNomineeDetails.scheme}://${rest.CreateQuoteNomineeDetails.host}${rest.CreateQuoteNomineeDetails.basepath}/services/createQuote/nominees"
+    }
+  },
+  "schemes" : [ "https" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateQuoteNomineeDetails.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "dateOfBirth" : {
+          "type" : "string"
+        },
+        "zip" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "client" : {
+          "$ref" : "#/definitions/client"
+        },
+        "applicationId" : {
+          "type" : "string"
+        },
+        "addressLine2" : {
+          "type" : "string"
+        },
+        "addressLine1" : {
+          "type" : "string"
+        },
+        "country" : {
+          "type" : "string"
+        },
+        "relationship" : {
+          "type" : "string"
+        },
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "stateId" : {
+          "type" : "string"
+        },
+        "entilementPercentage" : {
+          "type" : "string"
+        },
+        "mobileNumber" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateQuoteNomineeDetails.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "client" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateQuoteNomineeDetails.client",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "weight" : {
+          "type" : "string"
+        },
+        "height" : {
+          "type" : "string"
+        },
+        "changeInWeight" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "09e10a8b-445d-44ce-89ca-0d74b7635ef7",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

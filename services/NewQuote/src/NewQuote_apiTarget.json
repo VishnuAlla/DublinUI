@@ -1,0 +1,179 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.NewQuote.basepath}",
+  "paths" : {
+    "/services/newQuote/newApplication" : {
+      "x-WM-BASE_PATH" : "/services/newQuote/newApplication",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "description" : "RequestBody",
+          "name" : "RequestBody",
+          "required" : false,
+          "in" : "body"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "NewQuote_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.NewQuote.scheme}://${rest.NewQuote.host}${rest.NewQuote.basepath}/services/newQuote/newApplication"
+    }
+  },
+  "host" : "${rest.NewQuote.host}",
+  "schemes" : [ "${rest.NewQuote.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "NewQuote.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "NewQuote.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "client" : {
+          "$ref" : "#/definitions/client"
+        },
+        "Address" : {
+          "$ref" : "#/definitions/Address"
+        },
+        "clientDetails" : {
+          "$ref" : "#/definitions/clientDetails"
+        }
+      },
+      "required" : [ "Address", "client", "clientDetails" ]
+    },
+    "client" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "NewQuote.client",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "dateOfBirth" : {
+          "type" : "string"
+        },
+        "occupation" : {
+          "type" : "string"
+        },
+        "occupationalHazards" : {
+          "type" : "string"
+        },
+        "noOfChildren" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "maritalStatus" : {
+          "type" : "string"
+        },
+        "annualIncome" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "emailId" : {
+          "type" : "string"
+        },
+        "qualification" : {
+          "type" : "string"
+        },
+        "nationality" : {
+          "type" : "string"
+        },
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "clientName" : {
+          "type" : "string"
+        },
+        "company" : {
+          "type" : "string"
+        },
+        "gender" : {
+          "type" : "string"
+        },
+        "mobileNumber" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "annualIncome", "clientName", "company", "dateOfBirth", "emailId", "gender", "maritalStatus", "mobileNumber", "nationality", "noOfChildren", "occupation", "occupationalHazards", "phoneNumber", "qualification" ]
+    },
+    "Address" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "NewQuote.Address",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "zip" : {
+          "type" : "string"
+        },
+        "stateId" : {
+          "type" : "string"
+        },
+        "addressType" : {
+          "type" : "string"
+        },
+        "addressLine2" : {
+          "type" : "string"
+        },
+        "addressLine1" : {
+          "type" : "string"
+        },
+        "country" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "addressLine1", "addressLine2", "addressType", "country", "stateId", "zip" ]
+    },
+    "clientDetails" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "NewQuote.clientDetails",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "uniquePolicyId" : {
+          "type" : "string"
+        },
+        "term" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "sumAssured" : {
+          "type" : "string"
+        },
+        "tobaccoIntake" : {
+          "type" : "string"
+        },
+        "premiumType" : {
+          "type" : "string"
+        },
+        "agentId" : {
+          "type" : "string"
+        },
+        "premiumToBePaid" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "agentId", "premiumToBePaid", "premiumType", "sumAssured", "term", "tobaccoIntake", "uniquePolicyId" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "d5f589aa-42ad-4c63-a9e5-b56164d582da",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

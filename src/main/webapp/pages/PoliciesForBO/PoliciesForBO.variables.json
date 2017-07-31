@@ -1,0 +1,60 @@
+{
+  "getApplicationForBO" : {
+    "_id" : "wm-getApplicationForBO-wm.ServiceVariable-1489045779572",
+    "name" : "getApplicationForBO",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "bind:Variables.loggedInUser.dataSet.id",
+      "type" : "string"
+    }, {
+      "target" : "status",
+      "value" : "Pending Issuance",
+      "type" : "string"
+    } ],
+    "type" : "getApplicationForBackOfficer.RootResponseROOTEntryItem",
+    "service" : "getApplicationForBackOfficer",
+    "operation" : "invoke",
+    "operationId" : "getApplicationForBackOfficer_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "getDashboardCounts" : {
+    "_id" : "wm-getDashboardCounts-wm.ServiceVariable-1489044020658",
+    "name" : "getDashboardCounts",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "UserId",
+      "value" : "bind:Variables.loggedInUser.dataSet.id",
+      "type" : "string"
+    } ],
+    "type" : "getDashboardCounts.RootResponseROOTEntryItem",
+    "service" : "getDashboardCounts",
+    "operation" : "invoke",
+    "operationId" : "getDashboardCounts_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

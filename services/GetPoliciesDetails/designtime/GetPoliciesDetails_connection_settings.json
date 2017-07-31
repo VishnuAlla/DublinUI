@@ -1,0 +1,28 @@
+{
+  "endpointAddress" : "http://wavemaker-apps.pramati.com/dev_api_dublin/services/profile/policiesByDuration",
+  "method" : "POST",
+  "requestBody" : "{\n \"status\":\"Pending Application\",\n\"durationType\":\"All\",\n\"agentId\":\"440c1544-c8dc-11e6-9740-0242ac1108f8\"\n}",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"MobileNumber\":\"1515154\",\"ClientName\":\"Manikandan Sankar\",\"ClientId\":\"d2e808dc-662c-11e7-a08a-0242ac11010e\",\"ClientNumber\":\"C00000007\",\"PolicyId\":null,\"ApplicationId\":\"A00000029\",\"ApplicationDate\":1500016885000,\"SumAssured\":750000,\"Status\":\"Pending Application\",\"CreatedBy\":1499982169000,\"PremiumToBePaid\":\"1683\",\"ProcessStatus\":null,\"IssuanceDate\":1499982169000,\"UpdatedOn\":1499982169000,\"renewalDate\":1531518169000,\"StateName\":\"Texas\",\"PolicyName\":\"iProtect Smart\"},{\"MobileNumber\":\"8066445522\",\"ClientName\":\"John Doe\",\"ClientId\":\"e566c2f4-c8de-11e6-9740-0242ac1108f8\",\"ClientNumber\":\"C00000002\",\"PolicyId\":\"\",\"ApplicationId\":\"A66666666\",\"ApplicationDate\":1451994936000,\"SumAssured\":10000000,\"Status\":\"Pending Application\",\"CreatedBy\":1482407736000,\"PremiumToBePaid\":\"35000\",\"ProcessStatus\":null,\"IssuanceDate\":1482407736000,\"UpdatedOn\":1482407736000,\"renewalDate\":1513943736000,\"StateName\":\"Washington\",\"PolicyName\":\"Wealth Builder Plus\"},{\"MobileNumber\":\"1515154\",\"ClientName\":\"Manikandan Sankar\",\"ClientId\":\"d2e808dc-662c-11e7-a08a-0242ac11010e\",\"ClientNumber\":\"C00000007\",\"PolicyId\":null,\"ApplicationId\":\"A00000024\",\"ApplicationDate\":null,\"SumAssured\":1150000,\"Status\":\"Pending Application\",\"CreatedBy\":null,\"PremiumToBePaid\":\"831\",\"ProcessStatus\":null,\"IssuanceDate\":null,\"UpdatedOn\":null,\"renewalDate\":null,\"StateName\":\"Texas\",\"PolicyName\":\"iProtect Smart\"},{\"MobileNumber\":\"1515154\",\"ClientName\":\"Manikandan Sankar\",\"ClientId\":\"d2e808dc-662c-11e7-a08a-0242ac11010e\",\"ClientNumber\":\"C00000007\",\"PolicyId\":null,\"ApplicationId\":\"A00000025\",\"ApplicationDate\":null,\"SumAssured\":5677,\"Status\":\"Pending Application\",\"CreatedBy\":null,\"PremiumToBePaid\":\"7500\",\"ProcessStatus\":null,\"IssuanceDate\":null,\"UpdatedOn\":null,\"renewalDate\":null,\"StateName\":\"Texas\",\"PolicyName\":\"iProtect Plus\"},{\"MobileNumber\":\"1515154\",\"ClientName\":\"Manikandan Sankar\",\"ClientId\":\"d2e808dc-662c-11e7-a08a-0242ac11010e\",\"ClientNumber\":\"C00000007\",\"PolicyId\":null,\"ApplicationId\":\"A00000028\",\"ApplicationDate\":null,\"SumAssured\":550000,\"Status\":\"Pending Application\",\"CreatedBy\":null,\"PremiumToBePaid\":\"1135\",\"ProcessStatus\":null,\"IssuanceDate\":null,\"UpdatedOn\":null,\"renewalDate\":null,\"StateName\":\"Texas\",\"PolicyName\":\"iProtect Smart\"}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Transfer-Encoding" : [ "chunked" ],
+      "Vary" : [ "Accept-Encoding" ],
+      "Date" : [ "Fri, 14 Jul 2017 09:56:54 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "application/json",
+  "multiParamInfoList" : null
+}

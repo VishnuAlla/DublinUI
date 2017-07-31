@@ -1,0 +1,123 @@
+<wm-page data-ng-controller="policyDetailPageController" pagetitle="Policy Detail" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow9">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn15">
+                        <wm-breadcrumb dataset="bind:Variables.breadCrumb.dataSet" name="breadcrumb1" fontstyle="italic"></wm-breadcrumb>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1" padding="10px unset unset unset" class="leftmargin">
+                        <wm-label padding="unset unset 10px unset" name="label1" caption="Policy Details" fontsize="26" margin="unset unset unset .5em"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                        <wm-layoutgrid name="layoutgrid2">
+                            <wm-gridrow name="gridrow3">
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn5" class="ColumnDetails policydetails">
+                                    <wm-composite name="composite1">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label3" caption="Policy Id"></wm-label>
+                                        <wm-container class="col-md-9" name="container1">
+                                            <wm-text name="text1" datavalue="bind:Variables.getPolicyDetails.dataSet[$i].PolicyNumber"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn6" class="col-sm-offset-1 ColumnDetails policydetails">
+                                    <wm-composite name="composite2">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label4" caption="Policy Name"></wm-label>
+                                        <wm-container class="col-md-9" name="container2">
+                                            <wm-text name="text2" datavalue="bind:Variables.getPolicyDetails.dataSet[$i].PlanName"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow4">
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn7" class="ColumnDetails policydetails">
+                                    <wm-composite name="composite3">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label5" caption="Status"></wm-label>
+                                        <wm-container class="col-md-9" name="container3">
+                                            <wm-text name="text3" datavalue="bind:Variables.getPolicyDetails.dataSet[$i].PolicyStatus"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn8" class="col-sm-offset-1 ColumnDetails policydetails">
+                                    <wm-composite name="composite4">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label6" caption="Death Benefit"></wm-label>
+                                        <wm-container class="col-md-9" name="container4">
+                                            <wm-text name="text4" datavalue="bind:Variables.getPolicyDetails.dataSet[$i].DeathBenefit | toCurrency: '$'"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow5">
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn9" class="ColumnDetails policydetails">
+                                    <wm-composite name="composite5">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label7" caption="Premium Amount"></wm-label>
+                                        <wm-container class="col-md-9" name="container5">
+                                            <wm-text name="text5" datavalue="bind:Variables.getPolicyDetails.dataSet[$i].PremiumAmount | toCurrency: '$'"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn10" class="col-sm-offset-1 ColumnDetails policydetails">
+                                    <wm-composite name="composite6">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label8" caption="Face Amount"></wm-label>
+                                        <wm-container class="col-md-9" name="container6">
+                                            <wm-text name="text6" datavalue="bind:Variables.getPolicyDetails.dataSet[$i].FaceAmount | toCurrency: '$'"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow6">
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn11" class="ColumnDetails policydetails">
+                                    <wm-composite name="composite7">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label9" caption="Premium Due Date"></wm-label>
+                                        <wm-container class="col-md-9" name="container7">
+                                            <wm-text name="text7" datavalue="bind:Variables.getPolicyDetails.dataSet[$i].PremiumDueDate | toDate: 'yyyy-MM-dd'"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn12" class="col-sm-offset-1 ColumnDetails policydetails">
+                                    <wm-composite name="composite8">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label10" caption="Premium Mode"></wm-label>
+                                        <wm-container class="col-md-9" name="container8">
+                                            <wm-text name="text8" datavalue="bind:Variables.getPolicyDetails.dataSet[$i].PremiumMode"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow7">
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn13" class="ColumnDetails policydetails">
+                                    <wm-composite name="composite9">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label11" caption="Cash Value"></wm-label>
+                                        <wm-container class="col-md-9" name="container9">
+                                            <wm-text name="text9" datavalue="bind:Variables.getPolicyDetails.dataSet[$i].CashValue | toCurrency: '$'"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn14" class="col-sm-offset-1 ColumnDetails policydetails">
+                                    <wm-composite name="composite10">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label12" caption="BIR Number"></wm-label>
+                                        <wm-container class="col-md-9" name="container10">
+                                            <wm-text name="text10" datavalue="bind:Variables.getPolicyDetails.dataSet[$i].BirNumber"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow8">
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn13_1">
+                                    <wm-button class="btn-primary" caption="Back" type="button" margin="1em 0.5em unset .5em" name="button1" on-click="Variables.goToPage_clientListing.invoke()"></wm-button>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn14_1"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

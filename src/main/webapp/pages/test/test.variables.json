@@ -1,0 +1,21 @@
+{
+  "commentsvariable" : {
+    "_id" : "wm-commentsvariable-wm.Variable-1489142347638",
+    "name" : "commentsvariable",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : "Re-Review"
+    }, {
+      "dataValue" : "Approve"
+    }, {
+      "dataValue" : "Reject"
+    }, {
+      "dataValue" : "RFI"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}

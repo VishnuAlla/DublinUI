@@ -1,0 +1,398 @@
+<wm-page data-ng-controller="NeedAnalysisPageController" pagetitle="Need Analysis" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-container name="breadcrumbcontainer" content="breadcrumb" showindevice="sm,md,lg"></wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn2" horizontalalign="center" padding="40px unset unset unset">
+                        <wm-label padding="unset 0.5em" name="titlelabel" caption="Invest right at every life stage" show="true" class="dosislabel" fontsize="28" margin="unset unset 60px -60px"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3" horizontalalign="center">
+                        <wm-wizard name="NeedAnalysisWizard" padding="40px unset unset unset" class="NeedAnalysisWizard">
+                            <wm-wizardstep name="wizard_lifestage" title="Life Stage" class="needanalysis">
+                                <!--<wm-container name="firsttile">-->
+                                <wm-tile name="tile_youngtile" width="160px" height="200px" class="bg-primary" margin="10px 10px unset unset" on-click="tile_youngtileClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <wm-picture name="picture_youngtile" width="123px" height="72px" picturesource="resources/images/imagelists/needanalysislogos/icons.png" margin="16px unset unset unset"></wm-picture>
+                                                <wm-label name="lbl_pa_count" caption="Young &amp; Single" fontunit="em" class="lbl_primary"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <!--</wm-container>-->
+                                <wm-tile name="tile_activetile" width="160px" height="200px" class="bg-primary" margin="10px 10px unset 43px" on-click="tile_activetileClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <!--<wm-picture name="picture2" width="123px" height="72px" picturesource="resources/images/imagelists/needanalysislogos/icons.png" margin="29px unset unset unset" on-click="picture2Click($event, $scope)"></wm-picture>-->
+                                                <wm-icon name="icon1" iconclass="wi wi-favorite" iconsize="72px"></wm-icon>
+                                                <wm-label name="lbl_pa_count" caption="Newly Married" fontunit="em" class="lbl_primary" margin="60px unset unset unset"></wm-label>
+                                                <!--<wm-icon name="icon1" iconclass="wi wi-favorite" iconsize="72px"></wm-icon>--></wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <wm-tile name="tile_youngparent" width="160px" height="200px" class="bg-primary" margin="10px 10px unset 43px" on-click="tile_youngparentClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <!--<wm-picture name="picture3" width="123px" height="72px" picturesource="resources/images/imagelists/needanalysislogos/icons.png" margin="29px unset unset unset"></wm-picture>-->
+                                                <wm-icon name="icon2" iconsize="72px" iconclass="wi wi-child-friendly" color="#3a445d"></wm-icon>
+                                                <wm-label name="lbl_pa_count" caption="Young Parent" fontunit="em" class="lbl_primary" margin="60px unset unset unset"></wm-label>
+                                                <!--<wm-icon name="icon2" iconsize="72px" iconclass="wi wi-child-friendly"></wm-icon>--></wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <wm-tile name="tile_parentkids" width="160px" height="200px" class="bg-primary" margin="10px 10px unset 43px" on-click="tile_parentkidsClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <wm-picture name="picture_parentkids" width="62px" height="72px" picturesource="resources/images/imagelists/needanalysislogos/parent-with-kids-icon.png" margin="16px unset unset unset"></wm-picture>
+                                                <wm-label name="lbl_pa_count" caption="Parent with Kids" fontunit="em" class="lbl_primary"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <wm-tile name="tile_retirement" width="160px" height="200px" class="bg-primary" margin="10px 10px unset 43px" on-click="tile_retirementClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <wm-picture name="picture_retirement" width="67px" height="72px" picturesource="resources/images/imagelists/needanalysislogos/retire-icon.png" margin="16px unset unset unset"></wm-picture>
+                                                <wm-label name="lbl_pa_count" caption="Retiring or Retired" fontunit="em" class="lbl_primary"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <wm-layoutgrid name="layoutgrid16">
+                                    <wm-gridrow name="gridrow24">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn30" class="col-xs-12">
+                                            <wm-label padding="5em 0.5em unset 0.5em" name="label23" caption="Choose the investor profile that best describes you, so we can recommend the right funds, based on your financial goals and desired time horizon to achieve them."
+                                            color="#9da7be" fontsize="12"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow25">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn32_2"></wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn33_1"></wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-wizardstep>
+                            <wm-wizardstep name="wizard_lifeneed" title="Life Need">
+                                <wm-tile name="tile_longtermwealth" width="160px" height="200px" class="bg-primary" margin="10px 10px unset unset" on-click="tile_longtermwealthClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <wm-picture name="picture_longtermwealth" width="71px" height="72px" picturesource="resources/images/imagelists/needanalysislogos/wealth-icon.png" margin="16px unset unset unset"></wm-picture>
+                                                <wm-label name="lbl_pa_count" caption="Long Term Wealth" fontunit="em" class="lbl_primary"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <wm-tile name="tile_lifeprotection" width="160px" height="200px" class="bg-primary" margin="10px 10px unset 43px" on-click="tile_lifeprotectionClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <wm-picture name="picture_lifeprotection" width="51px" height="72px" picturesource="resources/images/imagelists/life-protection-copy.png" margin="16px unset unset unset"></wm-picture>
+                                                <wm-label name="lbl_pa_count" caption="Life Protection" fontunit="em" class="lbl_primary"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <wm-tile name="tile_retirmentplan" width="160px" height="200px" class="bg-primary" margin="10px 10px unset 43px" on-click="tile_retirmentplanClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <wm-picture name="picture_retirmentplan" width="67px" height="72px" picturesource="resources/images/imagelists/needanalysislogos/retire-icon.png" margin="16px unset unset unset"></wm-picture>
+                                                <wm-label name="lbl_pa_count" caption="Retirement Plan" fontunit="em" class="lbl_primary"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <wm-label padding="5em 0.5em unset 0.5em" name="label23" caption="Choose the investor profile that best describes you, so we can recommend the right funds, based on your financial goals and desired time horizon to achieve them."
+                                color="#9da7be" fontsize="12"></wm-label>
+                            </wm-wizardstep>
+                            <wm-wizardstep name="wizard_riskprofile" title="Risk Profile">
+                                <wm-tile name="tile_conservative" width="250px" height="250px" class="bg-primary" margin="10px 10px unset unset" on-click="tile_conservativeClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <wm-picture name="picture_conservative" width="68px" height="72px" picturesource="resources/images/imagelists/needanalysislogos/conservative-icon.png" margin="16px unset unset unset"></wm-picture>
+                                                <wm-label name="lbl_pa_count" caption="Conservative" fontunit="em" class="lbl_secondary" width="100%"></wm-label>
+                                                <wm-label padding="unset 0.5em" name="label13" caption="I spend on what I need and prefer to save as much money as i can" color="#9da7be" fontsize="14"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <wm-tile name="tile_moderate" width="250px" height="250px" class="bg-primary" margin="10px 10px unset 50px" on-click="tile_moderateClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <wm-picture name="picture_moderate" width="77px" height="72px" picturesource="resources/images/imagelists/needanalysislogos/moderate-icon.png" margin="16px unset unset unset"></wm-picture>
+                                                <wm-label name="lbl_pa_count" caption="Moderate" fontunit="em" class="lbl_secondary" width="100%"></wm-label>
+                                                <wm-label padding="unset 0.5em" caption="I like to strike a balance between saving money and spending it on things I like" color="#9da7be" fontsize="14" name="label14"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <wm-tile name="tile_aggressive" width="250px" height="250px" class="bg-primary" margin="10px 10px unset 50px" on-click="tile_aggressiveClick($event, $scope)">
+                                    <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                        <wm-gridrow height="100%" name="gridrow12">
+                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                                <!--<wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" show="false"></wm-label>-->
+                                                <wm-picture name="picture_aggressive" width="83px" height="72px" picturesource="resources/images/imagelists/needanalysislogos/aggresive-icon.png" margin="16px unset unset unset"></wm-picture>
+                                                <wm-label name="lbl_pa_count" caption="Aggressive" fontunit="em" class="lbl_secondary" width="100%"></wm-label>
+                                                <wm-label padding="unset 0.5em" caption="I prefer to go all out and splurge as much money as I can to live the lifestyle I desire." color="#9da7be" fontsize="14" name="label15"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tile>
+                                <wm-label padding="5em 0.5em unset 0.5em" name="label23" caption="Choose the investor profile that best describes you, so we can recommend the right funds, based on your financial goals and desired time horizon to achieve them."
+                                color="#9da7be" fontsize="12"></wm-label>
+                            </wm-wizardstep>
+                            <wm-wizardstep name="wizard_analysis" title="Analysis">
+                                <wm-layoutgrid name="layoutgrid13">
+                                    <wm-gridrow name="gridrow16">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn16" horizontalalign="center">
+                                            <wm-label name="label16" caption="Protection" class="lbl_secondary" margin="-12px unset unset unset"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow17">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn19" horizontalalign="center">
+                                            <wm-label padding="unset 0.5em" name="label17" caption="Answer these simple questions to find out your ideal insurance cover amount, calculated on the basis of your income" color="#282d39" fontsize="12" margin="20px unset unset unset"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow18" padding="30px unset unset unset">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn20" horizontalalign="left" padding="5px unset unset unset">
+                                            <wm-layoutgrid name="layoutgrid15">
+                                                <wm-gridrow name="gridrow23">
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn26" horizontalalign="right" class="col-xs-6" padding="unset 10px unset unset">
+                                                        <wm-label padding="unset 0.5em" name="label18" caption="What is your Age" color="#282d39" fontsize="16" margin="8px unset unset unset" textalign="right"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn26" class="col-xs-6">
+                                                        <!--<wm-container name="container3">-->
+                                                        <!--<wm-container name="rangecontainer" class="rangecontainer" height="100%">-->
+                                                        <!--<wm-gridcolumn columnwidth="6" name="gridcolumn32_1">-->
+                                                        <!--<wm-composite name="composite1">-->
+                                                        <!--<wm-container class="col-md-9" name="container4">-->
+                                                        <wm-select name="ageRange" dataset="bind:Variables.ageRanges.dataSet" datafield="Value" displayfield="Key" required="true" placeholder="18-25" on-change="ageRangeChange($event, $scope, newVal, oldVal)"></wm-select>
+                                                        <!--    </wm-container>-->
+                                                        <!--</wm-composite>-->
+                                                        <!--</wm-gridcolumn>-->
+                                                        <!--</wm-container>-->
+                                                        <!--</wm-container>-->
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn39" class="col-xs-12"></wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow_18">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn22" horizontalalign="left" padding="5px unset unset unset">
+                                            <!--<wm-label padding="unset 0.5em" caption="" name="label19"></wm-label>-->
+                                            <wm-layoutgrid name="layoutgrid14">
+                                                <wm-gridrow name="gridrow22">
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn23_1" horizontalalign="right" padding="unset 10px unset unset" class="col-xs-6">
+                                                        <wm-label padding="unset 0.5em" name="label31" margin="8px unset unset unset" color="#282d39" fontsize="16" class="col-xs-6" caption="Annual income" width="100%"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn24" class="col-xs-5">
+                                                        <!--<wm-composite name="composite4">-->
+                                                        <!--<wm-container class="col-md-9" name="container7">-->
+                                                        <wm-text name="IncomeAmnt" class="plaintextbox" textalign="left" required="false" regexp="^[0-9]*$" type="number" maxchars="7" placeholder="Enter annual salary" minvalue="1000"></wm-text>
+                                                        <!--</wm-container>-->
+                                                        <!--</wm-composite>-->
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn25" horizontalalign="left" class="col-xs-1">
+                                                        <wm-label padding="unset 0.5em" name="label28" caption="$" color="#9b9b9b" fontsize="16" margin="8px unset unset unset"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                            <!--<wm-composite name="composite2" backgroundattachment="fixed" captionposition="top">--></wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow19">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn21" horizontalalign="center" padding="50px unset unset unset">
+                                            <wm-label padding="unset 0.5em" name="label20" caption="Select Calculation Method" color="#282d39" fontsize="14"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow20">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn23" horizontalalign="center">
+                                            <wm-container name="container2" horizontalalign="center">
+                                                <wm-label padding="1em 0.5em unset 0.5em" name="label21" caption="Income Method" class="activetile"></wm-label>
+                                                <wm-label padding="1em 0.5em unset 0.5em" name="label22" caption="Expense Method" class="inactive-tile" textalign="center"></wm-label>
+                                            </wm-container>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow21">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn22_1" horizontalalign="center" padding="50px unset unset unset">
+                                            <wm-button class="btn_save" caption="Calculate" type="button" margin="unset 0.5em" name="calBtn" fontsize="24" padding="unset 2em" on-click="calBtnClick($event, $scope)"></wm-button>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-wizardstep>
+                        </wm-wizard>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn4" horizontalalign="center">
+                        <wm-label padding="unset 0.5em" name="label23" caption="Choose the investor profile that best describes you, so we can recommend the right funds, based on your financial goals and desired time horizon to achieve them." color="#9da7be"
+                        show="false"></wm-label>
+                        <wm-container name="container_confirmation" show="bind:pageData.Mode===&quot;MyMode&quot;" class="containerborder" margin="10px unset unset unset">
+                            <wm-layoutgrid name="layoutgrid18">
+                                <wm-gridrow name="gridrow33">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn45_1" padding="40px 40px unset unset" horizontalalign="right" class="col-xs-4">
+                                        <wm-picture name="picture10" picturesource="resources/images/imagelists/needanalysislogos/protect-icon.png"></wm-picture>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="5" name="gridcolumn49" class="col-xs-8">
+                                        <wm-layoutgrid name="layoutgrid19">
+                                            <wm-gridrow name="gridrow35">
+                                                <wm-gridcolumn columnwidth="11" name="gridcolumn50" horizontalalign="left">
+                                                    <wm-label name="label2" caption="You will require a life cover of" class="lbl_secondary" padding="16px unset unset unset"></wm-label>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow36">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn52" horizontalalign="left">
+                                                    <wm-label name="label3" class="amount" caption="bind:Variables.InsuranceAmount.dataSet.Amount" textalign="left"></wm-label>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow37">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn54" horizontalalign="left">
+                                                    <wm-label name="label4" caption="bind:Variables.InsuranceAmount.dataSet.AmountInWords" fontsize="14" color="#9da7be" margin="-10px unset unset unset" class="tranformingtext"></wm-label>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow38">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn55" horizontalalign="left" padding="40px unset unset unset">
+                                                    <wm-button class="btn_save" caption="Proceed" type="button" margin="unset 0.5em 1.5em unset" name="btn_proceed" on-click="btn_proceedClick($event, $scope)"></wm-button>
+                                                    <wm-button class="btn_secondary" caption="Back" type="button" margin="unset 0.5em 1.8em unset" on-click="btn_backClick($event, $scope)" name="btn_back"></wm-button>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn46"></wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow26">
+                    <!--<wm-gridcolumn columnwidth="12" name="gridcolumn32_3">-->
+                    <!--    <wm-container name="container_recommendation" show="bind:pageData.Mode===&quot;MyMode&quot;">-->
+                    <!--        <wm-layoutgrid name="layoutgrid18">-->
+                    <!--            <wm-gridrow name="gridrow39">-->
+                    <!--                <wm-gridcolumn columnwidth="12" name="gridcolumn62" horizontalalign="center">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label47" caption="Our Recommendation" class="lifestagelabel"></wm-label>-->
+                    <!--                </wm-gridcolumn>-->
+                    <!--            </wm-gridrow>-->
+                    <!--            <wm-gridrow name="gridrow40">-->
+                    <!--                <wm-gridcolumn columnwidth="12" name="gridcolumn65" horizontalalign="center" padding="unset unset 30px unset">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label49" caption="Invest in these recommended products and solutions based on your life needs. to achieve your financial goals as planned." horizontalalign="left" class="chartlabel"></wm-label>-->
+                    <!--                </wm-gridcolumn>-->
+                    <!--            </wm-gridrow>-->
+                    <!--            <wm-gridrow name="gridrow33" height="266px" class="containerborder">-->
+                    <!--                <wm-gridcolumn columnwidth="4" name="gridcolumn48" class="recommendationtile">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label31" width="100%" caption="360 Smart Protection" class="recommendationlabel"></wm-label>-->
+                    <!--                    <wm-label padding="unset 0.5em" width="100%" name="label32" caption="Offer your family 360 protection against Death, Disability &amp; Disease. A plan that provides ife Cover + 34 Critical Illnesses cover + Higher Accident cover and much more"-->
+                    <!--                    class="chartlabel" fontsize="14"></wm-label>-->
+                    <!--                    <wm-button class="btn-gradient" caption="Buy Now" type="button" margin="3.5em 0.5em unset 5em" name="button3"></wm-button>-->
+                    <!--                </wm-gridcolumn>-->
+                    <!--                <wm-gridcolumn columnwidth="4" name="gridcolumn49" class="rightborder paddedgridcolumn">-->
+                    <!--                    <wm-label padding="unset 0.5em 1em 0.5em" name="label33" width="100%" caption="Key Benefits" fontsize="20" fontfamily="Dosis-Regular"></wm-label>-->
+                    <!--                    <wm-layoutgrid name="layoutgrid19">-->
+                    <!--                        <wm-gridrow name="gridrow35">-->
+                    <!--                            <wm-gridcolumn columnwidth="1" name="gridcolumn57_1">-->
+                    <!--                                <wm-label padding="unset 0.5em" name="label37_1" caption="•" class="chartlabel"></wm-label>-->
+                    <!--                            </wm-gridcolumn>-->
+                    <!--                            <wm-gridcolumn columnwidth="11" name="gridcolumn55">-->
+                    <!--                                <wm-label padding="unset 0.5em" name="label35" caption="Choice of protection" class="chartlabel" fontsize="14"></wm-label>-->
+                    <!--                            </wm-gridcolumn>-->
+                    <!--                        </wm-gridrow>-->
+                    <!--                        <wm-gridrow name="gridrow36">-->
+                    <!--                            <wm-gridcolumn columnwidth="1" name="gridcolumn58">-->
+                    <!--                                <wm-label padding="unset 0.5em" caption="•" class="chartlabel" name="label38"></wm-label>-->
+                    <!--                            </wm-gridcolumn>-->
+                    <!--                            <wm-gridcolumn columnwidth="11" name="gridcolumn57">-->
+                    <!--                                <wm-label padding="unset 0.5em" name="label36" caption="Pay-out to you in case of 34 critical illnesses" fontsize="14" class="chartlabel"></wm-label>-->
+                    <!--                            </wm-gridcolumn>-->
+                    <!--                        </wm-gridrow>-->
+                    <!--                        <wm-gridrow name="gridrow38">-->
+                    <!--                            <wm-gridcolumn columnwidth="1" name="gridcolumn59">-->
+                    <!--                                <wm-label padding="unset 0.5em" caption="•" class="chartlabel" name="label39"></wm-label>-->
+                    <!--                            </wm-gridcolumn>-->
+                    <!--                            <wm-gridcolumn columnwidth="11" name="gridcolumn61">-->
+                    <!--                                <wm-label padding="unset 0.5em" name="label37" caption="Waiver of future premium in case of permanent disability due to an accident" fontsize="14" class="chartlabel"></wm-label>-->
+                    <!--                            </wm-gridcolumn>-->
+                    <!--                        </wm-gridrow>-->
+                    <!--                    </wm-layoutgrid>-->
+                    <!--                </wm-gridcolumn>-->
+                    <!--                <wm-gridcolumn columnwidth="4" name="gridcolumn52" class="paddedgridcolumn">-->
+                    <!--                    <wm-label padding="unset 0.5em 1em 0.5em" width="100%" caption="Important Links" fontsize="20" fontfamily="Dosis-Regular" name="label40"></wm-label>-->
+                    <!--                    <wm-anchor margin="unset 0.5em unset 0.7em" name="anchor1" class="viewallanchor" caption="Download Brochure"></wm-anchor>-->
+                    <!--                </wm-gridcolumn>-->
+                    <!--            </wm-gridrow>-->
+                    <!--            <wm-gridrow name="gridrow33" height="266px" class="containerborder">-->
+                    <!--                <wm-gridcolumn columnwidth="4" name="gridcolumn48" class="recommendationtile">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label31" width="100%" caption="iCare II" class="recommendationlabel"></wm-label>-->
+                    <!--                    <wm-label padding="unset 0.5em" width="100%" name="label32" caption="A protection plan that covers your loved ones and ensure that nothing ever comes in the way of their dreams." class="chartlabel" fontsize="14"></wm-label>-->
+                    <!--                    <wm-button class="btn-gradient" caption="Buy Now" type="button" margin="3.5em 0.5em unset 5em" name="button3"></wm-button>-->
+                    <!--                </wm-gridcolumn>-->
+                    <!--                <wm-gridcolumn columnwidth="4" name="gridcolumn49" class="rightborder paddedgridcolumn">-->
+                    <!--                    <wm-label padding="unset 0.5em 1em 0.5em" name="label33" width="100%" caption="Key Benefits" fontsize="20" fontfamily="Dosis-Regular"></wm-label>-->
+                    <!--                    <wm-layoutgrid name="layoutgrid19">-->
+                    <!--                        <wm-gridrow name="gridrow35">-->
+                    <!--                            <wm-gridcolumn columnwidth="1" name="gridcolumn57_1">-->
+                    <!--                                <wm-label padding="unset 0.5em" name="label37_1" caption="•" class="chartlabel"></wm-label>-->
+                    <!--                            </wm-gridcolumn>-->
+                    <!--                            <wm-gridcolumn columnwidth="11" name="gridcolumn55">-->
+                    <!--                                <wm-label padding="unset 0.5em" name="label35" caption="Security of your loved ones’ future even in your absence" class="chartlabel" fontsize="14"></wm-label>-->
+                    <!--                            </wm-gridcolumn>-->
+                    <!--                        </wm-gridrow>-->
+                    <!--<wm-gridrow name="gridrow36">-->
+                    <!--    <wm-gridcolumn columnwidth="1" name="gridcolumn58">-->
+                    <!--        <wm-label padding="unset 0.5em" caption="•" class="chartlabel" name="label38"></wm-label>-->
+                    <!--    </wm-gridcolumn>-->
+                    <!--    <wm-gridcolumn columnwidth="11" name="gridcolumn57">-->
+                    <!--        <wm-label padding="unset 0.5em" name="label36" caption="Pay-out to you in case of 34 critical illnesses" fontsize="14" class="chartlabel"></wm-label>-->
+                    <!--    </wm-gridcolumn>-->
+                    <!--</wm-gridrow>-->
+                    <!--<wm-gridrow name="gridrow38">-->
+                    <!--    <wm-gridcolumn columnwidth="1" name="gridcolumn59">-->
+                    <!--        <wm-label padding="unset 0.5em" caption="•" class="chartlabel" name="label39"></wm-label>-->
+                    <!--    </wm-gridcolumn>-->
+                    <!--    <wm-gridcolumn columnwidth="11" name="gridcolumn61">-->
+                    <!--        <wm-label padding="unset 0.5em" name="label37" caption="Waiver of future premium in case of permanent disability due to an accident" fontsize="14" class="chartlabel"></wm-label>-->
+                    <!--    </wm-gridcolumn>-->
+                    <!--</wm-gridrow>-->
+                    <!--                    </wm-layoutgrid>-->
+                    <!--                </wm-gridcolumn>-->
+                    <!--                <wm-gridcolumn columnwidth="4" name="gridcolumn52" class="paddedgridcolumn">-->
+                    <!--                    <wm-label padding="unset 0.5em 1em 0.5em" width="100%" caption="Important Links" fontsize="20" fontfamily="Dosis-Regular" name="label40"></wm-label>-->
+                    <!--                    <wm-anchor margin="unset 0.5em unset 0.7em" name="anchor1" class="viewallanchor" caption="Download Brochure"></wm-anchor>-->
+                    <!--                </wm-gridcolumn>-->
+                    <!--            </wm-gridrow>-->
+                    <!--        </wm-layoutgrid>-->
+                    <!--    </wm-container>-->
+                    <!--</wm-gridcolumn>-->
+                </wm-gridrow>
+                <wm-gridrow name="gridrow27">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn33"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <!--<wm-footer content="footer"></wm-footer> --></wm-page>

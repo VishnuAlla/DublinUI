@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="CreateQuoteFinalSubmit" type="RestService" springFile="CreateQuoteFinalSubmit.spring.xml">
+    <operation name="invoke">
+        <parameter name="RequestBody" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="CreateQuoteFinalSubmit.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="CreateQuoteFinalSubmit.RootRequest" name="RootRequest" supportsQuickData="false">
+            <element name="applicationId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="status" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="CreateQuoteFinalSubmit.RootResponse" name="RootResponse" supportsQuickData="false"/>
+    </dataobjects>
+</service>

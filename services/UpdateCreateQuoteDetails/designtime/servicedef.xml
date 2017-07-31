@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="UpdateCreateQuoteDetails" type="RestService" springFile="UpdateCreateQuoteDetails.spring.xml">
+    <operation name="invoke">
+        <parameter name="RequestBody" typeRef="java.lang.String" isList="false"/>
+        <parameter name="updatetype" typeRef="java.lang.String" isList="false"/>
+        <parameter name="applicationid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="UpdateCreateQuoteDetails.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="UpdateCreateQuoteDetails.RootRequest" name="RootRequest" supportsQuickData="false">
+            <element name="annualIncome" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="clientName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="company" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dateOfBirth" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="emailId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="gender" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="maritalStatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mobileNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="nationality" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="noOfChildren" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="occupation" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="occupationalHazards" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="phoneNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="premiumToBePaid" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="qualification" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="sumAssured" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="term" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="tobaccoIntake" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="UpdateCreateQuoteDetails.RootResponse" name="RootResponse" supportsQuickData="false"/>
+    </dataobjects>
+</service>

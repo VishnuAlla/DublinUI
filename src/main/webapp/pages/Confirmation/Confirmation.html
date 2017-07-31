@@ -1,0 +1,66 @@
+<wm-page data-ng-controller="ConfirmationPageController" pagetitle="Confirmation" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-container name="breadcrumbcontainer" content="breadcrum" showindevice="sm,md,lg"></wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <!--<wm-gridrow name="gridrow1">-->
+                <!--    <wm-gridcolumn columnwidth="8" name="gridcolumn1" class="boxshadow">-->
+                <!--        <wm-label padding="unset 0.5em" name="label1" caption="Business Overview for current Finanacial Year" class="headerlabel"></wm-label>-->
+                <!--        <wm-chart type="Line" title="Line Chart" iconclass="wi wi-line-chart" name="chart1" dataset="bind:Variables.GetBuisnessOverview.dataSet" xaxisdatakey="Month" yaxisdatakey="PremiunAmount,Target" staggerlabels="true" ynumberformat=",r"></wm-chart>-->
+                <!--    </wm-gridcolumn>-->
+                <!--    <wm-gridcolumn columnwidth="4" name="gridcolumn2" class="boxshadow">-->
+                <!--<wm-label padding="unset 0.5em" name="label1" caption="Business Overview for current Finanacial Year" show="false" class="headerlabel"></wm-label>-->
+                <!--        <wm-grid title="" dataset="bind:Variables.GetBuisnessOverview.dataSet" navigation="Basic" name="grid1" class="custom-grid">-->
+                <!--            <wm-grid-column binding="Month" caption="Month" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>-->
+                <!--            <wm-grid-column binding="PolicyCount" caption="Policy Count" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>-->
+                <!--            <wm-grid-column binding="PremiunAmount" caption="Premium Amount" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>-->
+                <!--            <wm-grid-column binding="Target" caption="Target" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>-->
+                <!--        </wm-grid>-->
+                <!--    </wm-gridcolumn>-->
+                <!--</wm-gridrow>-->
+            </wm-layoutgrid>
+            <wm-container name="container" borderstyle="solid">
+                <wm-layoutgrid name="layoutgrid3">
+                    <wm-gridrow name="gridrow6">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn12"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn13"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow7">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn14"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn22">
+                            <wm-label padding="unset 0.5em" name="label2" caption="You will require a life cover of" class="lifestagelabel"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn15"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow8">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn16"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn23">
+                            <wm-label padding="unset 0.5em" name="label3" class="amount"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn17"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow9">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn18"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn24">
+                            <wm-label padding="unset 0.5em" name="label4"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn19"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow10">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn20"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn25" padding="46px unset unset unset">
+                            <wm-button class="btn-default" caption="Proceed" type="button" margin="unset 0.5em" name="button1"></wm-button>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn21"></wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
+    <!--<wm-footer content="footer" name="footer1"></wm-footer>--></wm-page>

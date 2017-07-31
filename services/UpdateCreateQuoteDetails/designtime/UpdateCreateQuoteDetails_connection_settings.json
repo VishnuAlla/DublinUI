@@ -1,0 +1,24 @@
+{
+  "authType" : "NONE",
+  "contentType" : "application/json",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/userUpdate/quoteDetails/client/A00014",
+  "method" : "PUT",
+  "requestBody" : "{\n\t\"emailId\":\"c@f.com\",\n\t\"dateOfBirth\":\"28-04-1998\",\n\t\"clientName\":\"Celina Ahern\",\n\t\"maritalStatus\":\"Married\",\n\t\"noOfChildren\":2,\n\t\"nationality\":\"amrican\",\n\t\"gender\":\"Female\",\n\t\"mobileNumber\":\"56565\",\n\t\"phoneNumber\":\"655656\",\n\t\"qualification\":\"b.e\",\n\t\"company\":\"pp\",\n\t\"occupationalHazards\":\"no\",\n\t\"annualIncome\":\"76323\",\n\t\"occupation\":\"banker\",\n\t\"sumAssured\":6766,\n\t\"premiumToBePaid\":7600,\n\t\"tobaccoIntake\":\"no\",\n\t\"term\":7\n}",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : null,
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Date" : [ "Tue, 07 Feb 2017 13:23:53 GMT" ],
+      "Content-Length" : [ "0" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

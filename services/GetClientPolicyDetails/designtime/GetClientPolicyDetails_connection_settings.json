@@ -1,0 +1,30 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/clientProfile/clientPolicyDetails",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "id" : "P00000024",
+    "type" : "policyId"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"NomineeDetails\":[{\"Name\":\"pppp\",\"Relationship\":\"Parent\",\"EntilementPercentage\":90,\"DateOfBirth\":\"1970-01-01\",\"MobileNumber\":\"9090909090\"}],\"PaymentDetails\":[{\"PaymentDate\":null,\"PolicyPaymentId\":null,\"TransactionId\":null,\"PaymentMode\":null,\"PremiumPaid\":null}],\"PolicyDetail\":{\"PlanName\":\"iProtect Smart\",\"PolicyStatus\":\"InForce\",\"PremiumToBePaid\":\"3218.60\",\"term\":5,\"PremiumPaid\":null,\"PolicyId\":\"P00000024\",\"StartDate\":1489574743000,\"NextDueDate\":null,\"SumAssured\":950000,\"PremiumType\":\"yearly\"},\"ClientDetails\":{\"ClientNumber\":\"C00000015\",\"ClientName\":\"Justin Williams\",\"EmailId\":\"justin@gmail.com\",\"MobileNumber\":\"9090909090\",\"Address\":\"Lane1Lane1United States of America\",\"DateOfBirth\":\"1970-01-01\",\"MaritalStatus\":\"Single\"}}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"08f6917d2e1dec7bd9d01b999c3116173\"" ],
+      "Date" : [ "Wed, 15 Mar 2017 13:42:04 GMT" ],
+      "Content-Length" : [ "735" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Connection" : [ "keep-alive" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "mode" : [ "block" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

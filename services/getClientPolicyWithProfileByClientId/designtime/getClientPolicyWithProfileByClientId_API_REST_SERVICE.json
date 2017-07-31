@@ -1,0 +1,119 @@
+{
+  "basePath" : "",
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "host" : "wavemaker-apps.pramati.com",
+  "paths" : {
+    "/getClientPolicyWithProfileByClientId/invoke/services/clientProfile/clientPoliciesWithProfile" : {
+      "x-WM-BASE_PATH" : "/getClientPolicyWithProfileByClientId/invoke/services/clientProfile/clientPoliciesWithProfile",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "clientId",
+          "name" : "clientId",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "required" : false,
+          "type" : "string",
+          "in" : "query"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "getClientPolicyWithProfileByClientId_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.getClientPolicyWithProfileByClientId.scheme}://${rest.getClientPolicyWithProfileByClientId.host}${rest.getClientPolicyWithProfileByClientId.basepath}/services/clientProfile/clientPoliciesWithProfile"
+    }
+  },
+  "schemes" : [ "https" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "getClientPolicyWithProfileByClientId.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "Policies" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/PoliciesEntryItem"
+          },
+          "type" : "array"
+        },
+        "Profile" : {
+          "$ref" : "#/definitions/Profile"
+        }
+      }
+    },
+    "Profile" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "getClientPolicyWithProfileByClientId.Profile",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "DateOfBirth" : {
+          "type" : "string"
+        },
+        "Address" : {
+          "type" : "string"
+        },
+        "ClientNumber" : {
+          "type" : "string"
+        },
+        "ClientName" : {
+          "type" : "string"
+        },
+        "MaritalStatus" : {
+          "type" : "string"
+        },
+        "EmailId" : {
+          "type" : "string"
+        },
+        "MobileNumber" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PoliciesEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "getClientPolicyWithProfileByClientId.PoliciesEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "PlanName" : {
+          "type" : "string"
+        },
+        "PolicyId" : {
+          "type" : "string"
+        },
+        "NextDueDate" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "PolicyStatus" : {
+          "type" : "string"
+        },
+        "Term" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "5bf00655-8c6b-47cc-a5cb-13928b94acad",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

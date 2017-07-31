@@ -1,0 +1,154 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "e1cc7dd9-29ed-4131-9507-67e4b41e9a71",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true
+  },
+  "host" : "wavemaker-apps.pramati.com",
+  "basePath" : "/dev_api_dublin",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/services/profile/policiesByDuration" : {
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "GetPoliciesDetails_RestServiceVirtualController-invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RequestBody",
+          "description" : "RequestBody",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/RootResponseROOTEntryItem"
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "/services/profile/policiesByDuration",
+      "x-WM-COMPLETE_PATH" : "${rest.GetPoliciesDetails.scheme}://${rest.GetPoliciesDetails.host}${rest.GetPoliciesDetails.basepath}/services/profile/policiesByDuration",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "definitions" : {
+    "RootRequest" : {
+      "required" : [ "agentId", "durationType", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "agentId" : {
+          "type" : "string"
+        },
+        "durationType" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetPoliciesDetails.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponse" : {
+      "required" : [ "RootResponseROOT" ],
+      "properties" : {
+        "RootResponseROOT" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/RootResponseROOTEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetPoliciesDetails.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponseROOTEntryItem" : {
+      "required" : [ "ApplicationDate", "ApplicationId", "ClientId", "ClientName", "ClientNumber", "CreatedBy", "IssuanceDate", "MobileNumber", "PolicyId", "PolicyName", "PremiumToBePaid", "ProcessStatus", "StateName", "Status", "SumAssured", "UpdatedOn", "renewalDate" ],
+      "properties" : {
+        "PremiumToBePaid" : {
+          "type" : "string"
+        },
+        "UpdatedOn" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "ClientNumber" : {
+          "type" : "string"
+        },
+        "ClientId" : {
+          "type" : "string"
+        },
+        "ApplicationId" : {
+          "type" : "string"
+        },
+        "StateName" : {
+          "type" : "string"
+        },
+        "SumAssured" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "renewalDate" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "PolicyId" : {
+          "type" : "string"
+        },
+        "PolicyName" : {
+          "type" : "string"
+        },
+        "CreatedBy" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "ClientName" : {
+          "type" : "string"
+        },
+        "IssuanceDate" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "ProcessStatus" : {
+          "type" : "string"
+        },
+        "ApplicationDate" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "MobileNumber" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetPoliciesDetails.RootResponseROOTEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

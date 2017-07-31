@@ -1,0 +1,328 @@
+<wm-page data-ng-controller="PoliciesPageController" pagetitle="Policies" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-container name="breadcrumbcontainer" content="breadcrum" showindevice="sm,md,lg"></wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                        <wm-label padding="unset 0.5em unset 0em" name="label1" caption="Policies" fontsize="26" fontfamily="Dosis-Regular" margin="40px unset 30px unset" color="#282d39"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <!--<wm-gridcolumn columnwidth="12" name="gridcolumn1">-->
+                    <!--    <wm-layoutgrid name="layoutgrid2">-->
+                    <!--        <wm-gridrow name="gridrow4_1">-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn6">-->
+                    <!--                <wm-container name="container2" horizontalalign="center">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label1" caption="Pending Applications" width="100%" height="75%"></wm-label>-->
+                    <!--                    <wm-label padding="unset 0.5em" name="lbl_pa_count" horizontalalign="center" caption="6"></wm-label>-->
+                    <!--                </wm-container>-->
+                    <!--            </wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn7">-->
+                    <!--                <wm-container name="container2" horizontalalign="center">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label1" caption="Pending Insurance" width="100%" height="75%"></wm-label>-->
+                    <!--                    <wm-label padding="unset 0.5em" name="lbl_pi_count" horizontalalign="center" caption="15"></wm-label>-->
+                    <!--                </wm-container>-->
+                    <!--            </wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn10_1">-->
+                    <!--                <wm-container name="container2" horizontalalign="center" height="100%">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label1" caption="In Force" width="100%" height="75%"></wm-label>-->
+                    <!--                    <wm-label padding="unset 0.5em" name="lbl_if_count" horizontalalign="center" caption="785"></wm-label>-->
+                    <!--                </wm-container>-->
+                    <!--            </wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn11">-->
+                    <!--                <wm-container name="container2" horizontalalign="center" height="100%">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label1" caption="Over Due" width="100%" height="75%"></wm-label>-->
+                    <!--                    <wm-label padding="unset 0.5em" name="lbl_od_count" horizontalalign="center" caption="68"></wm-label>-->
+                    <!--                </wm-container>-->
+                    <!--            </wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn12">-->
+                    <!--                <wm-container name="container2" horizontalalign="center" height="100%">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label1" caption="Suspended" height="75%" width="100%"></wm-label>-->
+                    <!--                    <wm-label padding="unset 0.5em" name="lbl_sp_count" horizontalalign="center" caption="25"></wm-label>-->
+                    <!--                </wm-container>-->
+                    <!--            </wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn13">-->
+                    <!--                <wm-container name="container2" horizontalalign="center" height="100%">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label1" caption="Lapsed" width="100%" height="75%"></wm-label>-->
+                    <!--                    <wm-label padding="unset 0.5em" name="lbl_lap_count" horizontalalign="center" caption="224"></wm-label>-->
+                    <!--                </wm-container>-->
+                    <!--            </wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn14">-->
+                    <!--                <wm-container name="container2" horizontalalign="center" height="100%">-->
+                    <!--                    <wm-label padding="unset 0.5em" name="label1" caption="Cancelled" width="100%" height="75%"></wm-label>-->
+                    <!--                    <wm-label padding="unset 0.5em" name="lbl_can_count" horizontalalign="center" caption="35"></wm-label>-->
+                    <!--                </wm-container>-->
+                    <!--            </wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn15"></wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn16"></wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn17"></wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn18"></wm-gridcolumn>-->
+                    <!--            <wm-gridcolumn columnwidth="1" name="gridcolumn19"></wm-gridcolumn>-->
+                    <!--        </wm-gridrow>-->
+                    <!--    </wm-layoutgrid>-->
+                    <!--</wm-gridcolumn>-->
+                </wm-gridrow>
+                <wm-gridrow name="gridrow11_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn30_1">
+                        <wm-tile name="tile_pendingapplication" width="137px" height="160px" class="bg-primary rightmargin" margin="10px 13px unset unset" on-click="tile_pendingapplicationClick($event, $scope)">
+                            <wm-layoutgrid height="100%" name="layoutgrid4" width="100%">
+                                <wm-gridrow height="100%" name="gridrow12">
+                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                        <wm-label name="tileTitle" caption="Pending Applications" class="p" fontsize="1.1" fontunit="em" on-click="tileTitleClick($event, $scope)"></wm-label>
+                                        <wm-label name="lbl_pa_count" caption="00" fontsize="3" fontunit="em" class="p" margin="20px unset unset unset"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                        <wm-tile name="tile_pendingissuance" width="137px" height="160px" class="bg-primary" margin="10px 13px unset unset" on-click="tile_pendingissuanceClick($event, $scope)">
+                            <wm-layoutgrid height="100%" name="layoutgrid4">
+                                <wm-gridrow height="100%" name="gridrow12">
+                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                        <wm-label name="tileTitle" caption="Pending Issuance" class="p" fontsize="1.1" fontunit="em"></wm-label>
+                                        <wm-label name="lbl_pi_count" caption="00" fontsize="3" fontunit="em" class="p" margin="22px unset unset unset"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                        <wm-tile name="tile_inforce" width="137px" height="160px" class="bg-primary" margin="10px 13px unset unset" on-click="tile_inforceClick($event, $scope)">
+                            <wm-layoutgrid height="100%" name="layoutgrid4">
+                                <wm-gridrow height="100%" name="gridrow12">
+                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn32">
+                                        <wm-label name="tileTitle" caption="In Force" class="p" fontsize="1.1" fontunit="em"></wm-label>
+                                        <wm-label name="lbl_if_count" caption="00" fontsize="3" fontunit="em" class="p" margin="40px unset unset unset"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                        <wm-tile name="tile_overdue" width="137px" height="160px" class="bg-primary" margin="10px 13px unset unset" on-click="tile_overdueClick($event, $scope)">
+                            <wm-layoutgrid height="100%" name="layoutgrid5">
+                                <wm-gridrow height="100%" name="gridrow13">
+                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn34_1">
+                                        <wm-label name="tileTitle" caption="Overdue" class="p" fontsize="1.1" fontunit="em"></wm-label>
+                                        <wm-label name="lbl_od_count" caption="00" fontsize="3" fontunit="em" class="p" margin="40px unset unset unset"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                        <wm-tile name="tile_suspended" width="137px" height="160px" class="bg-primary" margin="10px 13px unset unset" on-click="tile_suspendedClick($event, $scope)">
+                            <wm-layoutgrid height="100%" name="layoutgrid6">
+                                <wm-gridrow height="100%" name="gridrow14">
+                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn36_1">
+                                        <wm-label name="tileTitle" caption="Suspended" class="p" fontsize="1.1" fontunit="em"></wm-label>
+                                        <wm-label name="lbl_sp_count" caption="00" fontsize="3" fontunit="em" class="p" margin="40px unset unset unset"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                        <wm-tile name="tile_lapsed" width="137px" height="160px" class="bg-primary" margin="10px 13px unset unset" on-click="tile_lapsedClick($event, $scope)">
+                            <wm-layoutgrid height="100%" name="layoutgrid7">
+                                <wm-gridrow height="100%" name="gridrow15">
+                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn38">
+                                        <wm-label name="tileTitle" caption="Lapsed" class="p" fontsize="1.1" fontunit="em"></wm-label>
+                                        <wm-label name="lbl_lap_count" caption="00" fontsize="3" fontunit="em" class="p" margin="40px unset unset unset"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                        <wm-tile name="tile_cancelled" width="137px" height="160px" class="bg-primary" margin="10px unset unset unset" on-click="tile_cancelledClick($event, $scope)">
+                            <wm-layoutgrid height="100%" name="layoutgrid8">
+                                <wm-gridrow height="100%" name="gridrow16">
+                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn40">
+                                        <wm-label name="tileTitle" caption="Cancelled" class="p" fontsize="1.1" fontunit="em"></wm-label>
+                                        <wm-label name="lbl_can_count" caption="00" fontsize="3" fontunit="em" class="p" margin="40px unset unset unset"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                        <wm-prefab prefabname="GridSearch_Enterprise" name="GridSearch_Enterprise1" class="prefab-search" girdname="grid_policiesdetails" griddata="bind:Variables.GetPoliciesDetails.dataSet"></wm-prefab>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                        <wm-composite name="composite_radiodurationtype" captionposition="left" horizontalalign="left" margin="10px unset unset unset" class="pull-right radiocomposite default-label" height="40px">
+                            <wm-label class="control-label default-label" name="label15" caption="RENEWAL" margin="14px unset unset unset" horizontalalign="right"></wm-label>
+                            <wm-container name="container9" horizontalalign="left" class="pull-right">
+                                <wm-radioset height="auto" name="radio_durationtype" layout="inline" dataset="This Week, This Month, All" usekeys="false" datafield="All Fields" on-click="radio_durationtypeClick($event, $scope)" on-change="radio_durationtypeChange($event, $scope, newVal, oldVal)"></wm-radioset>
+                            </wm-container>
+                        </wm-composite>
+                        <wm-composite captionposition="left" horizontalalign="left" margin="10px unset unset unset" class="radiocomposite  pull-right" height="40px" name="composite_RadioRFI1" show="true">
+                            <wm-checkbox caption="bind:&quot;RFI Pending&quot; +&quot; ( &quot;+Variables.GetRFICount.dataSet.length +&quot; )&quot;" name="checkbox1" on-change="checkbox1Change($event, $scope, newVal, oldVal)" on-click="checkbox1Click($event, $scope)"
+                            checkedvalue="rfi" uncheckedvalue="All" class="radiocomposite default-label"></wm-checkbox>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn17_1">
+                        <wm-grid title="" navigation="Basic" name="grid_policiesdetails" dataset="bind:Variables.GetPoliciesDetails.dataSet" pagesize="10">
+                            <wm-grid-column binding="ClientNumber" caption="Customer ID" type="string" width="100px" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true">
+                                <wm-anchor caption="{{row.ClientNumber}}" class="common-link" ng-click="CustomerProfile(row)"></wm-anchor>
+                            </wm-grid-column>
+                            <wm-grid-column binding="ClientName" caption="Customer" type="string" width="150px" readonly="true" col-class="col-attr1" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="ApplicationId" caption="Application Id" type="string" width="120px" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true">
+                                <wm-anchor caption="{{row.ApplicationId}}" class="common-link" ng-click="manageapplication(row)"></wm-anchor>
+                            </wm-grid-column>
+                            <wm-grid-column binding="PolicyId" caption="Policy No." type="string" width="120px" readonly="true" edit-widget-type="text" show="bind:Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;InForce&quot; || 
+Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;Suspended&quot; || 
+Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;Lapsed&quot;||
+Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;Overdue&quot;">
+                                <wm-anchor caption="{{row.PolicyId}}" class="common-link" ng-click="managepolicies(row)"></wm-anchor>
+                            </wm-grid-column>
+                            <wm-grid-column binding="PolicyName" caption="Policy" type="string" width="150px" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="Status" caption="Policy Status" type="string" width="150px" readonly="true" mobiledisplay="false" edit-widget-type="text" searchable="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="SumAssured" caption="Sum Assured" type="string" width="120px" textalignment="right" readonly="true" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false" edit-widget-type="text"
+                            show="true"></wm-grid-column>
+                            <wm-grid-column binding="PremiumToBePaid" caption="Premium Amount" type="string" width="130px" textalignment="right" readonly="true" col-class="grid-amt" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false"
+                            edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="MobileNumber" caption="Mobile No." type="string" width="120px" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="StateName" caption="State" type="string" readonly="true" mobiledisplay="false" edit-widget-type="text" searchable="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="ApplicationDate" caption="Application Date" type="date" width="130px" readonly="true" datepattern="dd MMM, yyyy" formatpattern="toDate" mobiledisplay="false" edit-widget-type="date"
+                            searchable="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="IssuanceDate" caption="Issuance Date" type="date" width="120px" readonly="true" datepattern="dd MMM, yyyy" formatpattern="toDate" mobiledisplay="false" edit-widget-type="date" searchable="false"
+                            show="bind:Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;InForce&quot; || 
+Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;Suspended&quot; || 
+Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;Lapsed&quot;||
+Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;Overdue&quot;"></wm-grid-column>
+                            <wm-grid-column binding="renewalDate" caption="Renewal Date" type="date" width="120px" readonly="true" datepattern="dd MMM, yyyy" formatpattern="toDate" mobiledisplay="false" edit-widget-type="date" searchable="false"
+                            show="bind:Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;InForce&quot; || 
+Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;Lapsed&quot;||
+Variables.GetPoliciesDetails.dataSet[$i].Status===&quot;Overdue&quot;?true:false"></wm-grid-column>
+                            <wm-grid-column binding="expandField" caption="Expand" type="custom" widget-type="button" readonly="true" pcdisplay="false" edit-widget-type="text" searchable="false" show="true">
+                                <wm-button caption="
+                                " show="true " class="btn-arrow " iconclass="wi wi-arrow-downward " on-click="expandRow(row) " data-ng-class=" "></wm-button>
+                            </wm-grid-column>
+                            <wm-grid-column binding="UpdatedOn" caption="Updated On" type="date" width="130px" datepattern="dd MMM,yyyy" formatpattern="toDate" mobiledisplay="false" edit-widget-type="date" searchable="false" show="true" readonly="false"></wm-grid-column>
+                        </wm-grid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow6
+                                ">
+                    <wm-gridcolumn columnwidth="12 " name="gridcolumn19_1 "></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow7 ">
+                    <wm-gridcolumn columnwidth="12 " name="gridcolumn21 ">
+                        <wm-container name="container10 " show="false ">
+                            <wm-layoutgrid name="layoutgrid3
+                                ">
+                                <wm-gridrow name="gridrow9 ">
+                                    <wm-gridcolumn columnwidth="3 " name="gridcolumn25 ">
+                                        <wm-container name="container11 " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label16 " width="100% " caption="Pending Insurance
+                                "></wm-label>
+                                        </wm-container>
+                                        <wm-container name="container12 " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label17 " width="100% " caption="Application created by agent but policy yet to be issued "></wm-label>
+                                            <wm-label padding="unset 0.5em
+                                " width="100% " caption="Identified by the Application Number " name="label18 "></wm-label>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="3 " name="gridcolumn29 ">
+                                        <wm-container name="container11 " horizontalalign="center
+                                ">
+                                            <wm-label padding="unset 0.5em " name="label16 " width="100% " caption="In Force "></wm-label>
+                                        </wm-container>
+                                        <wm-container name="container12 " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label17 " width="100%
+                                " caption="Policies that are currently active "></wm-label>
+                                            <wm-label padding="unset 0.5em " width="100% " caption="Identified by the Application Number " name="label18
+                                "></wm-label>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="3 " name="gridcolumn30 ">
+                                        <wm-container name="container11 " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label16 " width="100% " caption="Over Due "></wm-label>
+                                        </wm-container>
+                                        <wm-container name="container12
+                                " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label17 " width="100% " caption="Applications that have passed the renewal date but still in grace period. "></wm-label>
+                                            <wm-label padding="unset 0.5em " width="100%
+                                " caption="Policy coverage active User can renew without late fee " name="label18 "></wm-label>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="3 " name="gridcolumn31 ">
+                                        <wm-container name="container11
+                                " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label16 " width="100% " caption="Suspended "></wm-label>
+                                        </wm-container>
+                                        <wm-container name="container12 " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label17
+                                " width="100% " caption="Applications that have passed the renewal date and the grace period. "></wm-label>
+                                            <wm-label padding="unset 0.5em " width="100% " caption="No policy coverage User can renew by paying late fee " name="label18
+                                "></wm-label>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow11 ">
+                                    <wm-gridcolumn columnwidth="3 " name="gridcolumn33 ">
+                                        <wm-container name="container11 " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label16 " width="100% " caption="Lapsed
+                                "></wm-label>
+                                        </wm-container>
+                                        <wm-container name="container12 " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label17 " width="100% " caption="Policy Lapsed "></wm-label>
+                                            <wm-label padding="unset 0.5em " width="100% " caption="User should buy a new policy
+                                " name="label18 "></wm-label>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="3 " name="gridcolumn34 ">
+                                        <wm-container name="container11 " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label16
+                                " width="100% " caption="Pending Applications "></wm-label>
+                                        </wm-container>
+                                        <wm-container name="container12 " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label17 " width="100% " caption="Policies that have been
+                                cancelled "></wm-label>
+                                            <wm-label padding="unset 0.5em " width="100% " caption="Identified by the Application Number " name="label18 "></wm-label>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="3 " name="gridcolumn35
+                                ">
+                                        <wm-container name="container11 " horizontalalign="center ">
+                                            <wm-label padding="unset 0.5em " name="label16 " width="100% " caption="Cancelled "></wm-label>
+                                        </wm-container>
+                                        <wm-container name="container12 " horizontalalign="center
+                                ">
+                                            <wm-label padding="unset 0.5em " name="label17 " width="100% " caption="Policies that have been cancelled "></wm-label>
+                                            <wm-label padding="unset 0.5em " width="100% " caption="Identified by the Application Number " name="label18
+                                "></wm-label>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="3 " name="gridcolumn36 ">
+                                        <wm-label padding="unset 0.5em " name="label37 " caption="POLICY STATUSES
+                                "></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow8 ">
+                    <wm-gridcolumn columnwidth="6 " name="gridcolumn23 "></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6 " name="gridcolumn24 "></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+        <wm-view class="dialog-view
+                                " name="view2 " show="false ">
+            <wm-dialog height="100% " dialogtype="design-dialog " modal="true " name="Dialog_policydetails " class="mobile-dialog " title="Pending Applications Details ">
+                <wm-container name="container3
+                                " content="ExpandSelectedRow "></wm-container>
+                <wm-dialogactions name="dialogactions2 ">
+                    <wm-button class="btn-gradient pull-left " caption="Close " on-click="closeDialog() " name="button1 "></wm-button>
+                    <!--<wm-button class="btn-primary
+                                " caption="Delete " name="btnDeleteInDialog " on-click="deleteCompliance() " show="bind:Widgets.gridEmployeeComplianceByStatus.selecteditem.Status==& quot;PendingApproval&quot; || Widgets.gridEmployeeComplianceByStatus.selecteditem.Status==&
+                                quot;Assigned&quot; "></wm-button>-->
+                    <!--<wm-button class="btn-primary " caption="Add " name="btnAddInDialog " on-click="addCompliance()
+                                "></wm-button>--></wm-dialogactions>
+            </wm-dialog>
+        </wm-view>
+    </wm-content>
+    <!--<wm-footer content="footer " name="footer1 "></wm-footer>--></wm-page>

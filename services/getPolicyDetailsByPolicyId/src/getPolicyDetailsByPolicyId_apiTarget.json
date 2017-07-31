@@ -1,0 +1,181 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.getPolicyDetailsByPolicyId.basepath}",
+  "paths" : {
+    "/services/clientProfile/detailsByPolicyId" : {
+      "x-WM-BASE_PATH" : "/services/clientProfile/detailsByPolicyId",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "policyId",
+          "name" : "policyId",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "type" : "string",
+          "required" : false,
+          "in" : "query"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "getPolicyDetailsByPolicyId_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.getPolicyDetailsByPolicyId.scheme}://${rest.getPolicyDetailsByPolicyId.host}${rest.getPolicyDetailsByPolicyId.basepath}/services/clientProfile/detailsByPolicyId"
+    }
+  },
+  "host" : "${rest.getPolicyDetailsByPolicyId.host}",
+  "schemes" : [ "${rest.getPolicyDetailsByPolicyId.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "getPolicyDetailsByPolicyId.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "NomineeDetails" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "PolicyDetail" : {
+          "$ref" : "#/definitions/PolicyDetail"
+        },
+        "PaymentDetails" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/PaymentDetailsEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "ClientDetails" : {
+          "$ref" : "#/definitions/ClientDetails"
+        }
+      },
+      "required" : [ "ClientDetails", "NomineeDetails", "PaymentDetails", "PolicyDetail" ]
+    },
+    "java.lang.Object" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "getPolicyDetailsByPolicyId.java.lang.Object",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "PaymentDetailsEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "getPolicyDetailsByPolicyId.PaymentDetailsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "TransactionId" : {
+          "type" : "string"
+        },
+        "PaymentMode" : {
+          "type" : "string"
+        },
+        "PolicyPaymentId" : {
+          "type" : "string"
+        },
+        "PaymentDate" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "PaymentStatus" : {
+          "type" : "string"
+        },
+        "PremiumPaid" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "PaymentDate", "PaymentMode", "PaymentStatus", "PolicyPaymentId", "PremiumPaid", "TransactionId" ]
+    },
+    "PolicyDetail" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "getPolicyDetailsByPolicyId.PolicyDetail",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "PlanName" : {
+          "type" : "string"
+        },
+        "PolicyId" : {
+          "type" : "string"
+        },
+        "PremiumType" : {
+          "type" : "string"
+        },
+        "StartDate" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "term" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "PremiumToBePaid" : {
+          "type" : "string"
+        },
+        "NextDueDate" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "PolicyStatus" : {
+          "type" : "string"
+        },
+        "PremiumPaid" : {
+          "type" : "string"
+        },
+        "SumAssured" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      },
+      "required" : [ "NextDueDate", "PlanName", "PolicyId", "PolicyStatus", "PremiumPaid", "PremiumToBePaid", "PremiumType", "StartDate", "SumAssured", "term" ]
+    },
+    "ClientDetails" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "getPolicyDetailsByPolicyId.ClientDetails",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "DateOfBirth" : {
+          "type" : "string"
+        },
+        "Address" : {
+          "type" : "string"
+        },
+        "ClientName" : {
+          "type" : "string"
+        },
+        "ClientNumber" : {
+          "type" : "string"
+        },
+        "MaritalStatus" : {
+          "type" : "string"
+        },
+        "EmailId" : {
+          "type" : "string"
+        },
+        "MobileNumber" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "Address", "ClientName", "ClientNumber", "DateOfBirth", "EmailId", "MaritalStatus", "MobileNumber" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "ca735876-e3ee-4c6d-8e87-3fc02f3c63a2",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

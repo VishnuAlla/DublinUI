@@ -1,0 +1,108 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.getDashboardCount.basepath}",
+  "paths" : {
+    "/services/profile/allCountByStatus" : {
+      "x-WM-BASE_PATH" : "/services/profile/allCountByStatus",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "agentId",
+          "name" : "agentId",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "type" : "string",
+          "required" : false,
+          "in" : "query"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-IS_LIST" : true,
+              "items" : {
+                "$ref" : "#/definitions/RootResponseROOTEntryItem"
+              },
+              "uniqueItems" : false,
+              "type" : "array"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "getDashboardCount_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.getDashboardCount.scheme}://${rest.getDashboardCount.host}${rest.getDashboardCount.basepath}/services/profile/allCountByStatus"
+    }
+  },
+  "host" : "${rest.getDashboardCount.host}",
+  "schemes" : [ "${rest.getDashboardCount.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "getDashboardCount.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "RootResponseROOT" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/RootResponseROOTEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        }
+      }
+    },
+    "RootResponseROOTEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "getDashboardCount.RootResponseROOTEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "OverDuePremiumAmount" : {
+          "type" : "string"
+        },
+        "InForcePremiumForWeek" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "CustomerCount" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "InForcePremiumForMonth" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "SuspendedPremiumAmount" : {
+          "type" : "string"
+        },
+        "SuspendedCount" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "OverdueCount" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "InForceCount" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "e6826603-0b05-405a-81fd-caebb622b9dd",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

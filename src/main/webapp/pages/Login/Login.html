@@ -1,0 +1,100 @@
+<wm-page layouttype="one-column" columns="1" data-ng-controller="LoginPageController" name="page1" pagetitle="Login">
+    <wm-content name="content1" height="100%">
+        <wm-page-content columnwidth="12" name="column1" padding="0px" class="login_background" backgroundimage="resources/images/imagelists/worldmap.png" backgroundrepeat="no-repeat">
+            <!--<wm-container class="bg-primary" width="100%" height="100%" backgroundimage="resources/images/imagelists/login-bg.png" backgroundrepeat="no-repeat" backgroundposition="0 0" backgroundsize="100% 100%" backgroundattachment="fixed" name="loginPageContainer">-->
+            <wm-container name="background-container">
+                <wm-layoutgrid name="loginGrid" height="100%">
+                    <wm-gridrow name="gridrow7" height="15%">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn10_2">
+                            <wm-label padding="1em 1.5em unset 0.5em" name="label2_1" caption="Version" class="pull-right" fontweight="bold"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow7">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn10_2"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow6_1">
+                        <!--<wm-gridcolumn columnwidth="12" name="gridcolumn10_1" horizontalalign="center" class="col-xs-12" padding="unset unset 2em unset">-->
+                        <!--    <wm-picture name="picture1" picturesource="resources/images/logos/logo.png" height="6em"></wm-picture>-->
+                        <!--</wm-gridcolumn>-->
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn12" height="160px"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="loginGridRow">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn8" class="col-xs-1 col-md-5"></wm-gridcolumn>
+                        <wm-gridcolumn name="loginContentColumn" columnwidth="1" class="col-xs-10  col-md-3 login-container">
+                            <wm-container name="container1" class="panel" backgroundcolor="#ffffff" color="#bdbdbd" horizontalalign="center">
+                                <wm-container name="logo-container" horizontalalign="center" borderstyle="solid" borderwidth="0px 0px 1px 0px" bordercolor="#e2e2e2">
+                                    <wm-picture name="picture1" picturesource="resources/images/logos/logo.png" class="p" margin="0px unset" padding="1em unset" width="160px" height="84px"></wm-picture>
+                                </wm-container>
+                                <wm-login name="loginForm" data-ng-controller="loginFormController" on-submit="loginFormSubmit($event, $scope)" title="" autocomplete="nofill">
+                                    <wm-layoutgrid name="layoutgrid2">
+                                        <!--<wm-gridrow name="gridrow8">-->
+                                        <!--    <wm-gridcolumn columnwidth="12" name="gridcolumn10_1">-->
+                                        <!--        <wm-container class="input-group" name="container3">-->
+                                        <!--            <wm-container class="input-group-addon" name="container4">-->
+                                        <!--                <wm-icon name="icon1" iconclass="wi wi-user"></wm-icon>-->
+                                        <!--            </wm-container>-->
+                                        <!--            <wm-text placeholder="Role" name="roletext" class="app-login-username" width="100%" autocomplete="false" autocorrect="off" autocapitalize="off" updateon="default" required="true"></wm-text>-->
+                                        <!--        </wm-container>-->
+                                        <!--    </wm-gridcolumn>-->
+                                        <!--</wm-gridrow>-->
+                                        <wm-gridrow name="gridrow10">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                                                <wm-message name="invallidcredentails" type="error" show="false"></wm-message>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow9">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn11" padding="unset unset 2em unset">
+                                                <wm-composite name="composite1" required="true">
+                                                    <wm-label class="col-md-3 control-label" name="label2" caption="Select Role" show="false"></wm-label>
+                                                    <wm-container name="container9" width="100%">
+                                                        <wm-select name="roleselect" dataset="bind:Variables.RoleValue.dataSet" datafield="Key" displayfield="dataValue" required="true" placeholder="Select Role" color="#000"></wm-select>
+                                                    </wm-container>
+                                                </wm-composite>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow2">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn4" padding="unset unset 2em unset">
+                                                <wm-container class="input-group" name="container3" width="100%">
+                                                    <wm-container class="input-group-addon" name="container4" show="false">
+                                                        <wm-icon name="icon1" iconclass="wi wi-user"></wm-icon>
+                                                    </wm-container>
+                                                    <wm-text placeholder="Username" name="usernametext" class="app-login-username" width="100%" autocomplete="false" autocorrect="off" autocapitalize="off" updateon="default" required="true" color="#000"></wm-text>
+                                                </wm-container>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow3">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                                                <wm-container class="input-group" name="container3" width="100%">
+                                                    <wm-container class="input-group-addon" name="container6" show="false">
+                                                        <wm-icon name="icon1" iconclass="wi wi-key"></wm-icon>
+                                                    </wm-container>
+                                                    <wm-text type="password" name="passwordtext" placeholder="Password" class="app-login-password" width="100%" autocomplete="true" autocorrect="off" autocapitalize="off" updateon="default" required="true"
+                                                    color="#000"></wm-text>
+                                                </wm-container>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow6">
+                                            <wm-gridcolumn columnwidth="7" name="gridcolumn14" class="col-xs-7">
+                                                <wm-checkbox caption="Remember me" name="remembermecheck" show="false"></wm-checkbox>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="5" name="gridcolumn15" padding="unset unset 1em unset" horizontalalign="right" class="col-xs-12">
+                                                <wm-anchor name="anchor1" caption="Forgot Password?" margin="12px unset unset unset" show="bind:pageData.Mode===&quot;Edit&quot;"></wm-anchor>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow4">
+                                            <wm-gridcolumn columnwidth="10" name="gridcolumn10">
+                                                <wm-button type="submit" caption="" class="app-login-button btn-primary login-button" name="loginButton" fontsize="1.2" fontunit="em" iconclass="wi wi-arrow-right" width="54px" height="54px"></wm-button>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-login>
+                                <!--<wm-button type="submit" caption="" class="app-login-button btn-primary login-button" name="loginButton" fontsize="1.2" fontunit="em" iconclass="wi wi-arrow-right"></wm-button>--></wm-container>
+                            <!--<wm-button type="submit" caption="" class="app-login-button btn-primary login-button" name="loginButton" fontsize="1.2" fontunit="em" iconclass="wi wi-arrow-right"></wm-button>--></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="5" name="gridcolumn9" class="col-xs-1  col-md-4"></wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-container>
+            <!--</wm-container>-->
+        </wm-page-content>
+    </wm-content>
+</wm-page>

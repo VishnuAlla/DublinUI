@@ -1,0 +1,85 @@
+<wm-partial data-ng-controller="leftnavPageController" name="leftnav" type="leftnav">
+    <!--<wm-button name="btn_createquote" caption="Create a Quote" width="100%" horizontalalign="center" class="btn-gradient"></wm-button>-->
+    <wm-nav name="leftnavigation" type="pills" layout="stacked">
+        <wm-nav-item name="logo" class="leftnavlogo visible-xs">
+            <wm-picture picturesource="resources/images/imagelists/logo_115x60.png" name="AppLogo" showindevice="all" height="53px" padding="5px 0px"></wm-picture>
+        </wm-nav-item>
+        <wm-nav-item name="list_dashboard">
+            <wm-button name="btn_createquote" caption="Create a Quote" width="100%" horizontalalign="center" class="btn-gradient" style="margin-bottom:20px; margin-top:18px" height="40px" padding="0px" fontsize="18" on-click="Variables.goToPage_selectproduct.invoke()"
+            accessroles="Agent"></wm-button>
+        </wm-nav-item>
+        <wm-nav-item name="list_dashboard" show="false">
+            <wm-anchor caption="Dashboard" name="homeLink" iconclass="wi wi-dashboard" on-click="Variables.goToPage_Main.invoke()" accessroles="Agent"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order" show="false">
+            <wm-anchor caption="Clients &amp; Policies" name="clientsLink" iconclass="wi wi-assignment-ind" on-click="Variables.goToPage_clientListing.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <!--<wm-nav-item name="list_inventory">-->
+        <!--    <wm-anchor caption="Commissions" name="inventoryLink" iconclass="wi wi-attach-money"></wm-anchor>-->
+        <!--</wm-nav-item>-->
+        <!--<wm-nav-item name="list_support">-->
+        <!--    <wm-anchor caption="Calculator" name="supportLink" iconclass="fa fa-calculator"></wm-anchor>-->
+        <!--</wm-nav-item>-->
+        <!--<wm-nav-item name="nav_item5">-->
+        <!--    <wm-anchor name="anchor5" iconclass="wi wi-find-in-page" caption="Needs Analysis"></wm-anchor>-->
+        <!--</wm-nav-item>-->
+        <!--<wm-nav-item name="nav_item6">-->
+        <!--    <wm-anchor name="anchor6" iconclass="wi wi-insert-chart" caption="Reports"></wm-anchor>-->
+        <!--</wm-nav-item>-->
+        <!--<wm-nav-item name="nav_item7">-->
+        <!--    <wm-anchor name="anchor7" iconclass="wi wi-search" caption="Search"></wm-anchor>-->
+        <!--</wm-nav-item>-->
+        <wm-nav-item name="nav_item7">
+            <wm-anchor name="anchor7" iconclass="wi wi-dashboard" caption="Dashboard" on-click="Variables.goToPage_Dashboard.invoke()" accessroles="Agent"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item7" show="false">
+            <wm-anchor name="anchor7" iconclass="wi wi-style" caption="Products" accessroles="Agent"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item7" show="false">
+            <wm-anchor name="anchor7" iconclass="wi wi-search" caption="Profile" on-click="Variables.goToPage_Profile.invoke()" accessroles=",Client,Agent"></wm-anchor>
+        </wm-nav-item>
+        <!--<wm-nav-item name="nav_item7">-->
+        <!--    <wm-anchor name="anchor7" iconclass="wi wi-search" caption="Buisness OverView" on-click="Variables.goToPage_buisnessoverview.invoke()" accessroles="Agent"></wm-anchor>-->
+        <!--</wm-nav-item>-->
+        <!--<wm-nav-item name="nav_item7">-->
+        <!--    <wm-anchor name="anchor7" iconclass="wi wi-search" caption="My Earnings" on-click="Variables.goToPage_Myearnings.invoke()" accessroles="Agent"></wm-anchor>-->
+        <!--</wm-nav-item>-->
+        <wm-nav-item name="nav_item7">
+            <wm-anchor name="anchor7" iconclass="wi wi-live-help" caption="Need Analysis" on-click="Variables.goToPage_NeedAnalysis.invoke()" accessroles="Agent"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="lead_nav_item18" accessroles="Agent">
+            <wm-anchor name="anchor15" iconclass="wi wi-lightbulb-outline" caption="Leads" on-click="Variables.goToPage_Leads.invoke()" accessroles="Agent"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="p_nav_item7">
+            <wm-anchor name="anchor7" iconclass="wi wi-assignment" caption="Policies" on-click="anchor7Click($event, $scope)" accessroles="Agent" class="{{activePageName==='Policies' ? 'active' : ''}}"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item7">
+            <wm-anchor name="anchor7" iconclass="wi wi-import-contacts" caption="Customer Portfolio" on-click="Variables.goToPage_customerportfolio.invoke()" accessroles="Agent"></wm-anchor>
+        </wm-nav-item>
+        <!--<wm-nav-item name="nav_item13">-->
+        <!--    <wm-menu caption="Reports" name="menu1" iconclass="wi wi-assessment" type="anchor" dataset="bind:Variables.submenuVariable.dataSet" itemlabel="pagename" itemlink="url" linktarget="_self"></wm-menu>-->
+        <!--</wm-nav-item>-->
+        <wm-nav-item name="nav_itemSettings">
+            <wm-anchor caption="Reports" name="menu3Link" iconclass="wi wi-assessment" on-click="menu3LinkClick($event, $scope)" class="parent-menu" accessroles="Agent"></wm-anchor>
+        </wm-nav-item>
+        <wm-container name="menu3container" show="bind:Variables.expandmenu3.dataSet.dataValue">
+            <wm-nav name="menu3nav" class="sub-menu">
+                <wm-nav-item name="nav_item2">
+                    <wm-anchor caption="Business Overview" name="submenu2Link" on-click="Variables.goToPage_buisnessoverview.invoke()"></wm-anchor>
+                </wm-nav-item>
+                <wm-nav-item name="nav_item3">
+                    <wm-anchor caption="My Earnings" name="submenu3Link" on-click="Variables.goToPage_Myearnings.invoke()"></wm-anchor>
+                </wm-nav-item>
+            </wm-nav>
+        </wm-container>
+        <!--<wm-nav-item name="nav_item8">-->
+        <!--    <wm-anchor name="anchor8" iconclass="wi wi-import-contacts" caption="Applications Details" accessroles="BackOfficeOperator"></wm-anchor>-->
+        <!--</wm-nav-item>-->
+        <wm-nav-item name="nav_item16" show="bind:activePageName === &quot;createaquote&quot;" accessroles="BackOfficeOperator">
+            <wm-anchor name="anchor14" class="{{activePageName==='createaquote' ? 'active' : ''}}" iconclass="wi wi-description" caption="View Policy" accessroles="BackOfficeOperator"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item8" accessroles="BackOfficeOperator">
+            <wm-anchor name="anchor8" iconclass="wi wi-import-contacts" caption="Applications" on-click="Variables.goToPage_PoliciesForBO.invoke()" accessroles="BackOfficeOperator,BackOffice Operator"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+</wm-partial>

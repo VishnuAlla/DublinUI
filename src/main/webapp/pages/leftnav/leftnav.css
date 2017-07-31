@@ -1,0 +1,64 @@
+.app-left-panel ul li a{
+font-family: Roboto-Medium !important;    
+}
+/*.wm-app .btn-gradient{*/
+/*     background-image: linear-gradient(100deg, #d4145a, #9e005d);*/
+/*  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);*/
+/*      color: #fff !important;*/
+/*    text-transform: none !important;*/
+/*    font-family: 'Roboto-Bold'!important;*/
+/*    font-size:18px !important;*/
+/*}*/
+/*.wm-ap .btn-gradient span*/
+/*{*/
+/*    font-size:16px !important;*/
+/*}*/
+/*.wm-app .app-left-panel .nav.nav-pills li a, .wm-app .app-right-panel .nav.nav-pills li a, .wm-app .app-left-panel .nav.nav-pills li .btn, .wm-app .app-right-panel .nav.nav-pills li .btn, .wm-app .app-left-panel .nav.nav-pills li .dropdown a, .wm-app .app-right-panel .nav.nav-pills li .dropdown a, .wm-app .app-left-panel .nav.nav-pills li .dropdown a.dropdown-toggle, .wm-app .app-right-panel .nav.nav-pills li .dropdown a.dropdown-toggle, .wm-app .app-left-panel .nav.nav-pills li .app-popover a, .wm-app .app-right-panel .nav.nav-pills li .app-popover a
+{
+        color: #fff;
+        text-transform:uppercase;
+}*/
+.wm-app .app-left-panel .nav.nav-pills li a.active, .wm-app .app-right-panel .nav.nav-pills li a.active, .wm-app .app-left-panel .nav.nav-pills li .btn.active, .wm-app .app-right-panel .nav.nav-pills li .btn.active, .wm-app .app-left-panel .nav.nav-pills li .dropdown a.active, .wm-app .app-right-panel .nav.nav-pills li .dropdown a.active, .wm-app .app-left-panel .nav.nav-pills li .dropdown a.dropdown-toggle.active, .wm-app .app-right-panel .nav.nav-pills li .dropdown a.dropdown-toggle.active, .wm-app .app-left-panel .nav.nav-pills li .app-popover a.active, .wm-app .app-right-panel .nav.nav-pills li .app-popover a.active
+{
+    color:#fff;
+}
+
+.wm-app .open > .dropdown-menu li
+{
+    margin-left:0 !important;
+}
+.wm-app .caret
+{
+        float: right;
+    margin-top: 10px;
+}
+.wm-app .app-left-panel .nav.nav-pills li a .app-icon, .wm-app .app-right-panel .nav.nav-pills li a .app-icon, .wm-app .app-left-panel .nav.nav-pills li .btn .app-icon, .wm-app .app-right-panel .nav.nav-pills li .btn .app-icon, .wm-app .app-left-panel .nav.nav-pills li .dropdown a .app-icon, .wm-app .app-right-panel .nav.nav-pills li .dropdown a .app-icon, .wm-app .app-left-panel .nav.nav-pills li .dropdown a.dropdown-toggle .app-icon, .wm-app .app-right-panel .nav.nav-pills li .dropdown a.dropdown-toggle .app-icon, .wm-app .app-left-panel .nav.nav-pills li .app-popover a .app-icon, .wm-app .app-right-panel .nav.nav-pills li .app-popover a .app-icon
+{
+    font-size:24px;
+}
+.wm-app .parent-menu span:after
+{
+        content: '\f0d7';
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0px 0px 0px 10px;
+    text-decoration: none;
+    float: right;
+    position: relative;
+    top: 5px;
+}
+.wm-app .parent-menu.active span:after, .wm-app .parent-menu .active span:after
+{
+        content: '\f0d8';
+}
+.wm-app .app-container .app-nav-item .app-anchor .anchor-caption
+{
+        padding-left: 1.5em !important;
+}
+.wm-app .leftnavlogo{
+background-color: #fff;
+    left: -20px;
+    width: 100% !important;
+    text-align:center;
+}

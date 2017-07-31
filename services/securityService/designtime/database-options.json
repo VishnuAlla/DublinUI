@@ -1,0 +1,19 @@
+{
+  "modelName" : "DublinAuth",
+  "entityName" : "User",
+  "tableName" : "User",
+  "unamePropertyName" : "userName",
+  "unameColumnName" : "UserName",
+  "uidPropertyName" : "userId",
+  "uidColumnName" : "UserId",
+  "pwPropertyName" : "password",
+  "pwColumnName" : "Password",
+  "rolePropertyName" : "",
+  "roleColumnName" : "",
+  "useRolesQuery" : true,
+  "rolesByUsernameQuery" : "SELECT u.UserId,r.RoleId,r.RoleName from User u \njoin UserRoleMapping urm on urm.UserId = u.UserId\njoin Role r on r.RoleId = urm.RoleId\nWhere UserName = :LOGGED_IN_USERNAME",
+  "tenantIdField" : null,
+  "defTenantId" : 0,
+  "tenantIdPropertyName" : null,
+  "queryType" : "NATIVE_SQL"
+}

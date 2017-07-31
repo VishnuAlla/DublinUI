@@ -1,0 +1,54 @@
+<wm-partial data-ng-controller="headerPageController" name="header" type="header">
+    <wm-container name="container3" class="pull-right"></wm-container>
+    <wm-layoutgrid name="headerlayout" class="headerrow header-border">
+        <wm-gridrow name="gridrow1"></wm-gridrow>
+        <wm-gridrow name="headerrow">
+            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="10">
+                <wm-picture picturesource="resources/images/logos/logo_cropped.png" name="AppLogo" showindevice="all" height="100%" class="hidden-xs" on-click="Variables.goToPage_Dashboard.invoke()"></wm-picture>
+                <wm-label caption="Agent Portal" class="application-name LogoText" name="AppName" fontsize="18" show="false" padding=".9em unset unset 1em" showindevice="all"></wm-label>
+                <wm-container name="container4" class="pull-left visible-xs" height="55" padding="15px unset unset unset" showindevice="xs" margin="unset unset unset 10px">
+                    <wm-label name="labelPageNameHeader" caption="bind:Variables.Breadcrumbs.dataSet.length > 0 ? Variables.Breadcrumbs.dataSet.length == 1 ? Variables.Breadcrumbs.dataSet[0].bcLable.replace(&quot;/&quot;,&quot;&quot;) : Variables.Breadcrumbs.dataSet[Variables.Breadcrumbs.dataSet.length - 1].bcLable : activePageName"
+                    class="dosislabel" fontsize="16" width="85px"></wm-label>
+                </wm-container>
+                <wm-label padding="unset 0.5em" name="VersionLabel"></wm-label>
+            </wm-gridcolumn>
+            <!--<wm-gridcolumn name="headerright" verticalalign="middle" columnwidth="2" horizontalalign="right">-->
+            <wm-container name="popover_container" class="pull-right" margin="12px 20px unset unset">
+                <wm-popover popoverheight="100" name="popover2" iconclass="" caption="" color="#9b9b9b" class="popoover-arrrow custom-popover " contentsource="inline" backgroundimage="resources/images/imagelists/oval-2.png" width="40" height="40" popoverwidth="150">
+                    <wm-container name="container1" show="true" accessroles="Authenticated">
+                        <wm-layoutgrid name="loggedinGrid">
+                            <wm-gridrow name="loggedinRow">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn1" height="60">
+                                    <wm-container name="container2" class="userContainer" bordercolor="#e2e2e2" borderstyle="solid" borderwidth="0 0 1px 0" padding="20px unset unset unset" cursor="pointer">
+                                        <wm-label name="label1" caption="bind:Variables.loggedInUser.dataSet.name" on-click="Variables.goToPage_Profile.invoke()" class="userlabel"></wm-label>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow3">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                                    <wm-anchor name="anchor1" caption="Logout" on-click="Variables.logoutVariable.invoke()" class="Logout" width="100%"></wm-anchor>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-popover>
+            </wm-container>
+            <wm-container name="name_container" class="pull-right" margin="17px 10px unset unset">
+                <wm-layoutgrid name="layoutgrid2">
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn3" horizontalalign="right" padding="unset unset 0em unset">
+                            <wm-label padding="unset unset unset 0.5em" name="label3" caption="bind:Variables.loggedInUser.dataSet.name" class="loginname" margin="unset unset 0px unset"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4" padding="-3px unset unset unset">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn8" horizontalalign="right" padding="0em unset unset unset">
+                            <wm-label padding="unset unset unset 0.5em" name="label4" horizontalalign="left" caption="bind:Variables.loggedInUser.dataSet.roles[0]" color="#556287" fontsize="10" margin="unset unset 0px unset" class="rolename"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-container>
+            <wm-container name="notification_container" class="pull-right"></wm-container>
+            <!--</wm-gridcolumn>-->
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

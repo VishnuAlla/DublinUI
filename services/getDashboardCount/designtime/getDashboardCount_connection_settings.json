@@ -1,0 +1,29 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/profile/allCountByStatus",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "agentId" : "440c1544-c8dc-11e6-9740-0242ac1108f8"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"CustomerCount\":6,\"InForceCount\":12,\"OverdueCount\":0,\"SuspendedCount\":0,\"OverDuePremiumAmount\":null,\"InForcePremiumForMonth\":310225,\"InForcePremiumForWeek\":112225,\"SuspendedPremiumAmount\":null}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"0970262d1063ec63bded77aecc907a698\"" ],
+      "Date" : [ "Fri, 20 Jan 2017 09:25:13 GMT" ],
+      "Content-Length" : [ "200" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ],
+      "Cache-Control" : [ "max-age=0" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

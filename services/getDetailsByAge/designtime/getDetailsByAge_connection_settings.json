@@ -1,0 +1,29 @@
+{
+  "endpointAddress" : "http://wavemaker-apps.pramati.com/dev_api_dublin/services/profile/detailsByAge/18-25",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"CA\":12}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "ETag" : [ "\"0c092dd0a3f3e608349af9643546196fd\"" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Content-Length" : [ "14" ],
+      "Date" : [ "Tue, 04 Jul 2017 09:27:57 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

@@ -1,0 +1,38 @@
+/*.wm-app .login-form*/
+/*{*/
+/*      box-shadow: 0 4px 34px 0 rgba(0, 0, 0, 0.2);*/
+
+/*}*/
+/*.wm-app .login-button{*/
+/*    border-radius:50%;*/
+    /*top:27px;*/
+/*        padding: 1em;*/
+/*        color: #fff;*/
+/*    background-image: linear-gradient(135deg, #d4145a, #9e005d);*/
+/*    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);*/
+/*}*/
+/*.app-login .app-form.app-login-form*/
+/*{*/
+/*    padding-bottom:0;*/
+/*}*/
+.app-message .icon
+{
+       margin-left: -9px;
+    margin-right: 0;
+    display:none;
+}
+.app-login .app-message.alert
+{
+    margin: 0 0 16px 0;
+    background-color: #d4145a;
+    border-color: #d4145a;
+}
+.app-login .app-message
+{
+        padding: 8px;
+}
+.wm-app .app-message .close
+{
+   
+    display:none;
+}

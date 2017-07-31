@@ -1,0 +1,1392 @@
+{
+  "AddressType" : {
+    "_id" : "wm-AddressType-wm.Variable-1485849457420",
+    "name" : "AddressType",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : "Home"
+    }, {
+      "dataValue" : "Office"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "AgentID" : {
+    "_id" : "wm-AgentID-wm.Variable-1486103768809",
+    "name" : "AgentID",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "appNotification" : {
+    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
+    "name" : "appNotification",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "Breadcrumbs" : {
+    "_id" : "wm-Breadcrumbs-wm.Variable-1482220509869",
+    "name" : "Breadcrumbs",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "index" : 0,
+      "bcLable" : "",
+      "pageName" : "",
+      "link" : "",
+      "pageData" : {
+        "statusValue" : "",
+        "searchText" : ""
+      }
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "CheckUserExist" : {
+    "_id" : "wm-CheckUserExist-wm.ServiceVariable-1493114025508",
+    "name" : "CheckUserExist",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "UserExist.RootResponse",
+    "service" : "UserExist",
+    "operation" : "invoke",
+    "operationId" : "UserExist_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "doNotExecute",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "colors_buisnessoverview" : {
+    "_id" : "wm-colors_buisnessoverview-wm.Variable-1483684816255",
+    "name" : "colors_buisnessoverview",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ "#01d0a0", "#d4145a" ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "Country" : {
+    "_id" : "wm-Country-wm.Variable-1485846119499",
+    "name" : "Country",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "Value" : "United States of America",
+      "Key" : "United States of America"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "Cover" : {
+    "_id" : "wm-Cover-wm.Variable-1485849265842",
+    "name" : "Cover",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : "$50,000",
+      "Key" : "50000"
+    }, {
+      "dataValue" : "$100,000",
+      "Key" : "100000"
+    }, {
+      "dataValue" : "$150,000",
+      "Key" : "150000"
+    }, {
+      "dataValue" : "$200,000",
+      "Key" : "200000"
+    }, {
+      "dataValue" : "$250,000",
+      "Key" : "250000"
+    }, {
+      "dataValue" : "$300,000",
+      "Key" : "300000"
+    }, {
+      "dataValue" : "$350,000",
+      "Key" : "350000"
+    }, {
+      "dataValue" : "$400,000",
+      "Key" : "400000"
+    }, {
+      "dataValue" : "$450,000",
+      "Key" : "450000"
+    }, {
+      "dataValue" : "$500,000",
+      "Key" : "500000"
+    }, {
+      "dataValue" : "$550,000",
+      "Key" : "550000"
+    }, {
+      "dataValue" : "$600,000",
+      "Key" : "600000"
+    }, {
+      "dataValue" : "$650,000",
+      "Key" : "650000"
+    }, {
+      "dataValue" : "$700,000",
+      "Key" : "700000"
+    }, {
+      "dataValue" : "$750,000",
+      "Key" : "750000"
+    }, {
+      "dataValue" : "$800,000",
+      "Key" : "800000"
+    }, {
+      "dataValue" : "$850,000",
+      "Key" : "850000"
+    }, {
+      "dataValue" : "$900,000",
+      "Key" : "900000"
+    }, {
+      "dataValue" : "$950,000",
+      "Key" : "950000"
+    }, {
+      "dataValue" : "$1,000,000",
+      "Key" : "1000000"
+    }, {
+      "dataValue" : "$1,050,000",
+      "Key" : "1050000"
+    }, {
+      "dataValue" : "$1,100,000",
+      "Key" : "1100000"
+    }, {
+      "dataValue" : "$1,150,000",
+      "Key" : "1150000"
+    }, {
+      "dataValue" : "$1,200,000",
+      "Key" : "1200000"
+    }, {
+      "dataValue" : "$1,250,000",
+      "Key" : "1250000"
+    }, {
+      "dataValue" : "$1,300,000",
+      "Key" : "1300000"
+    }, {
+      "dataValue" : "$1,350,000",
+      "Key" : "1350000"
+    }, {
+      "dataValue" : "$1,400,000",
+      "Key" : "1400000"
+    }, {
+      "dataValue" : "$1,450,000",
+      "Key" : "1450000"
+    }, {
+      "dataValue" : "$1,500,000",
+      "Key" : "1500000"
+    }, {
+      "dataValue" : "$1,550,000",
+      "Key" : "1550000"
+    }, {
+      "dataValue" : "$1,600,000",
+      "Key" : "1600000"
+    }, {
+      "dataValue" : "$1,650,000",
+      "Key" : "1650000"
+    }, {
+      "dataValue" : "$1,700,000",
+      "Key" : "1700000"
+    }, {
+      "dataValue" : "$1,750,000",
+      "Key" : "1750000"
+    }, {
+      "dataValue" : "$1,800,000",
+      "Key" : "1800000"
+    }, {
+      "dataValue" : "$1,850,000",
+      "Key" : "1850000"
+    }, {
+      "dataValue" : "$1,900,000",
+      "Key" : "1900000"
+    }, {
+      "dataValue" : "$1,950,000",
+      "Key" : "1950000"
+    }, {
+      "dataValue" : "$2,000,000",
+      "Key" : "2000000"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "CustomerProfileDetails" : {
+    "_id" : "wm-CustomerProfileDetails-wm.Variable-1486623028132",
+    "name" : "CustomerProfileDetails",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "ClientDetails" : { },
+      "NomineeDetails" : { },
+      "PaymentDetails" : { },
+      "PolicyDetail" : [ { } ]
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "Editableform" : {
+    "_id" : "wm-Editableform-wm.Variable-1487070499500",
+    "name" : "Editableform",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "createquote" : "",
+      "customerdetails" : "",
+      "proposaldetails" : "",
+      "btn_continuecaption" : "",
+      "btn_step2continuecaption" : "",
+      "btn_step3continuecaption" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "EmailNotify" : {
+    "_id" : "wm-SendEmail-wm.ServiceVariable-1494920028950",
+    "name" : "EmailNotify",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "EmailNotify.RootResponse",
+    "service" : "EmailNotify",
+    "operation" : "invoke",
+    "operationId" : "EmailNotify_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual",
+    "spinnerContext" : "page",
+    "spinnerMessage" : "Sending EMail"
+  },
+  "expandmenu1" : {
+    "_id" : "wm-expandmenu1-wm.Variable-1487742724907",
+    "name" : "expandmenu1",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : false
+    },
+    "type" : "boolean",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "expandmenu2" : {
+    "_id" : "wm-expandmenu2-wm.Variable-1485250421804",
+    "name" : "expandmenu2",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : false
+    },
+    "type" : "boolean",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "expandmenu3" : {
+    "_id" : "wm-expandmenu3-wm.Variable-1487742699259",
+    "name" : "expandmenu3",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : false
+    },
+    "type" : "boolean",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "expandVariable" : {
+    "_id" : "wm-expandVariable-wm.Variable-1484058945166",
+    "name" : "expandVariable",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "key" : "",
+      "value" : ""
+    }, {
+      "key" : "",
+      "value" : ""
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "GetAgentID" : {
+    "_id" : "wm-GetAgentID-wm.ServiceVariable-1486026932553",
+    "name" : "GetAgentID",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "userid",
+      "value" : "bind:Variables.loggedInUser.dataSet.id",
+      "type" : "string"
+    } ],
+    "type" : "GetAgentID.RootResponse",
+    "service" : "GetAgentID",
+    "operation" : "invoke",
+    "operationId" : "GetAgentID_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "GetClientPolicyDetails" : {
+    "_id" : "wm-GetClientPolicyDetails-wm.ServiceVariable-1486627434136",
+    "name" : "GetClientPolicyDetails",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "p00003",
+      "type" : "string"
+    }, {
+      "target" : "type",
+      "value" : "policyId",
+      "type" : "string"
+    } ],
+    "type" : "GetClientPolicyDetails.RootResponse",
+    "service" : "GetClientPolicyDetails",
+    "operation" : "invoke",
+    "operationId" : "GetClientPolicyDetails_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "getClientPolicyWithProfileByClientId" : {
+    "_id" : "wm-getClientPolicyWithProfileByClientId-wm.ServiceVariable-1486113705270",
+    "name" : "getClientPolicyWithProfileByClientId",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "getClientPolicyWithProfileByClientId.RootResponse",
+    "service" : "getClientPolicyWithProfileByClientId",
+    "operation" : "invoke",
+    "operationId" : "getClientPolicyWithProfileByClientId_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "GetCreateQuoteData" : {
+    "_id" : "wm-GetCreateQuoteData-wm.ServiceVariable-1486118485719",
+    "name" : "GetCreateQuoteData",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "GetCreateQuoteData.RootResponse",
+    "service" : "GetCreateQuoteData",
+    "operation" : "invoke",
+    "operationId" : "GetCreateQuoteData_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "GetPoliciesDetails" : {
+    "_id" : "wm-GetPoliciesDetails-wm.ServiceVariable-1499715299112",
+    "name" : "GetPoliciesDetails",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "isList" : false,
+      "target" : "RequestBody",
+      "value" : "{\n \"status\":\"inforce\",\n\"durationType\":\"all\",\n\"agentId\":\"440c1544-c8dc-11e6-9740-0242ac1108f8\"\n}",
+      "type" : "GetPoliciesDetails.RootRequest"
+    } ],
+    "type" : "GetPoliciesDetails.RootResponseROOTEntryItem",
+    "service" : "GetPoliciesDetails",
+    "operation" : "invoke",
+    "operationId" : "GetPoliciesDetails_RestServiceVirtualController-invoke",
+    "operationType" : "post",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual",
+    "spinnerContext" : "page"
+  },
+  "getPolicyDetailsByPolicyId" : {
+    "_id" : "wm-getPolicyDetailsByPolicyId-wm.ServiceVariable-1486131136435",
+    "name" : "getPolicyDetailsByPolicyId",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "policyId",
+      "value" : "bind:Widgets.livelist1.selecteditem.PolicyId",
+      "type" : "string"
+    } ],
+    "type" : "getPolicyDetailsByPolicyId.RootResponse",
+    "service" : "getPolicyDetailsByPolicyId",
+    "operation" : "invoke",
+    "operationId" : "getPolicyDetailsByPolicyId_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "GetPolicyID" : {
+    "_id" : "wm-GetPolicyID-wm.ServiceVariable-1486446254413",
+    "name" : "GetPolicyID",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "GetPolicyID.RootResponse",
+    "service" : "GetPolicyID",
+    "operation" : "invoke",
+    "operationId" : "GetPolicyID_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "GetStates" : {
+    "_id" : "wm-GetStates-wm.ServiceVariable-1486026045499",
+    "name" : "GetStates",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "GetStates.RootResponseROOTEntryItem",
+    "service" : "GetStates",
+    "operation" : "invoke",
+    "operationId" : "GetStates_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "goToPage_buisnessoverview" : {
+    "_id" : "wm-goToPage_buisnessoverview-wm.NavigationVariable-1482233219537",
+    "name" : "goToPage_buisnessoverview",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "buisnessoverview",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_clientDetail" : {
+    "_id" : "wm-goToPage_clientDetail-wm.NavigationVariable-1477551551617",
+    "name" : "goToPage_clientDetail",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "clientDetail",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_clientListing" : {
+    "_id" : "wm-goToPage_clientListing-wm.NavigationVariable-1477551524109",
+    "name" : "goToPage_clientListing",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "clientListing",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Confirmation" : {
+    "_id" : "wm-goToPage_Confirmation-wm.NavigationVariable-1484226696321",
+    "name" : "goToPage_Confirmation",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Confirmation",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_createapolicy" : {
+    "_id" : "wm-goToPage_createapolicy-wm.NavigationVariable-1484803317847",
+    "name" : "goToPage_createapolicy",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "createapolicy",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_createaquote" : {
+    "_id" : "wm-goToPage_createaquote-wm.NavigationVariable-1487061475391",
+    "name" : "goToPage_createaquote",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "createaquote",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_customerportfolio" : {
+    "_id" : "wm-goToPage_customerportfolio-wm.NavigationVariable-1482229723110",
+    "name" : "goToPage_customerportfolio",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "customerportfolio",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_CustomerProfile" : {
+    "_id" : "wm-goToPage_CustomerProfile-wm.NavigationVariable-1484724740315",
+    "name" : "goToPage_CustomerProfile",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "CustomerProfile",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Dashboard" : {
+    "_id" : "wm-goToPage_Dashboard-wm.NavigationVariable-1482124524679",
+    "name" : "goToPage_Dashboard",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Dashboard",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Dublin" : {
+    "_id" : "wm-goToPage_Dublin-wm.NavigationVariable-1492604089420",
+    "name" : "goToPage_Dublin",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Dublin",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Leads" : {
+    "_id" : "wm-goToPage_Leads-wm.NavigationVariable-1489753307817",
+    "name" : "goToPage_Leads",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Leads",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Main" : {
+    "_id" : "wm-wm.NavigationVariable1389180517517",
+    "name" : "goToPage_Main",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "operation" : "gotoPage",
+    "pageName" : "Main"
+  },
+  "goToPage_Myearnings" : {
+    "_id" : "wm-goToPage_Myearnings-wm.NavigationVariable-1482233427716",
+    "name" : "goToPage_Myearnings",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Myearnings",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_NeedAnalysis" : {
+    "_id" : "wm-goToPage_NeedAnalysis-wm.NavigationVariable-1484116412140",
+    "name" : "goToPage_NeedAnalysis",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "NeedAnalysis",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Policies" : {
+    "_id" : "wm-goToPage_Policies-wm.NavigationVariable-1482299303957",
+    "name" : "goToPage_Policies",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Policies",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_PoliciesForBO" : {
+    "_id" : "wm-goToPage_PoliciesForBO-wm.NavigationVariable-1489043638013",
+    "name" : "goToPage_PoliciesForBO",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "PoliciesForBO",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_policyDetail" : {
+    "_id" : "wm-goToPage_policyDetail-wm.NavigationVariable-1477551570996",
+    "name" : "goToPage_policyDetail",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "policyDetail",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Profile" : {
+    "_id" : "wm-goToPage_Profile-wm.NavigationVariable-1482209626926",
+    "name" : "goToPage_Profile",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Profile",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Recommendation" : {
+    "_id" : "wm-goToPage_Recommendation-wm.NavigationVariable-1485164588795",
+    "name" : "goToPage_Recommendation",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Recommendation",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_selectproduct" : {
+    "_id" : "wm-goToPage_selectproduct-wm.NavigationVariable-1486379861075",
+    "name" : "goToPage_selectproduct",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "selectproduct",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_test" : {
+    "_id" : "wm-goToPage_test-wm.NavigationVariable-1478163318539",
+    "name" : "goToPage_test",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_testing" : {
+    "_id" : "wm-goToPage_testing-wm.NavigationVariable-1491285609630",
+    "name" : "goToPage_testing",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "testing",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "InvallidCredentials" : {
+    "_id" : "wm-InvallidCredentials-wm.NotificationVariable-1486541692560",
+    "name" : "InvallidCredentials",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "list"
+    }, {
+      "target" : "text",
+      "value" : "Authentication Failed: Bad credentials",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "4000",
+      "type" : "list"
+    }, {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "livelistvariables" : {
+    "_id" : "wm-livelistvariables-wm.Variable-1489136279198",
+    "name" : "livelistvariables",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "name" : "Michael Doe",
+      "date" : "Back Office Operator | 19 Feb, 2017 - 8pm",
+      "description" : "The preservation of human life is the ultimate value, a pillar of ethics and the foundation of all morality. This held true in most cultures and societies throughout history.",
+      "docname" : "Agreement.docx",
+      "status" : "Re-REVIEW"
+    }, {
+      "name" : "Michael Doe",
+      "date" : "Back Office Operator | 19 Feb, 2017 - 8pm",
+      "description" : "The preservation of human life is the ultimate value, a pillar of ethics and the foundation of all morality. This held true in most cultures and societies throughout history.",
+      "docname" : "Agreement.docx",
+      "status" : "APPROVED"
+    }, {
+      "name" : "Michael Doe",
+      "date" : "Back Office Operator | 19 Feb, 2017 - 8pm",
+      "description" : "The preservation of human life is the ultimate value, a pillar of ethics and the foundation of all morality. This held true in most cultures and societies throughout history.",
+      "docname" : "Agreement.docx",
+      "status" : "REJECTED"
+    }, {
+      "name" : "Michael Doe",
+      "date" : "Back Office Operator | 19 Feb, 2017 - 8pm",
+      "description" : "The preservation of human life is the ultimate value, a pillar of ethics and the foundation of all morality. This held true in most cultures and societies throughout history.",
+      "docname" : "Agreement.docx",
+      "status" : "RFI"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "loggedInUser" : {
+    "_id" : "wm-loggedInUser-wm.Variable-1482910242274",
+    "name" : "loggedInUser",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "username",
+      "value" : "bind:Variables.loginVariable.dataSet.username"
+    } ],
+    "dataSet" : {
+      "name" : "",
+      "username" : "",
+      "id" : "",
+      "tenantId" : "",
+      "isAuthenticated" : false,
+      "isSecurityEnabled" : true,
+      "roles" : [ ]
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "loginVariable" : {
+    "_id" : "wm-loginVariable-wm.LoginVariable-1482910242272",
+    "name" : "loginVariable",
+    "owner" : "App",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ {
+      "target" : "username",
+      "value" : "bind:Widgets.usernametext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "password",
+      "value" : "bind:Widgets.passwordtext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "rememberme",
+      "value" : "bind:Widgets.remembermecheck.datavalue",
+      "type" : "boolean"
+    } ],
+    "dataSet" : {
+      "username" : "",
+      "password" : "",
+      "rememberme" : false
+    },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "onResult" : "loginVariableonResult($event, $scope)",
+    "onError" : "loginVariableonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : true
+  },
+  "logoutVariable" : {
+    "_id" : "wm-logoutVariable-wm.LogoutVariable-1482910242274",
+    "name" : "logoutVariable",
+    "owner" : "App",
+    "category" : "wm.LogoutVariable",
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "redirectTo" : "Login",
+    "useDefaultSuccessHandler" : true
+  },
+  "MaritalStatus" : {
+    "_id" : "wm-MaritalStatus-wm.Variable-1485845588203",
+    "name" : "MaritalStatus",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "Value" : "Never Married",
+      "Key" : "Single"
+    }, {
+      "Value" : "Married",
+      "Key" : "Married"
+    }, {
+      "Value" : "Divorced",
+      "Key" : "Divorced"
+    }, {
+      "Value" : "Widowed",
+      "Key" : "Widowed"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "MarkedasCold" : {
+    "_id" : "wm-MarkedasCold-wm.NotificationVariable-1490166173569",
+    "name" : "MarkedasCold",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "string"
+    }, {
+      "target" : "text",
+      "value" : "Successfully marked as cold",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "4000",
+      "type" : "number"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "string"
+    } ],
+    "operation" : "toast"
+  },
+  "MasterPolicyDetails" : {
+    "_id" : "wm-MasterPolicyDetails-wm.ServiceVariable-1486964934766",
+    "name" : "MasterPolicyDetails",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "MasterPolicyDetails.RootResponseROOTEntryItem",
+    "service" : "MasterPolicyDetails",
+    "operation" : "invoke",
+    "operationId" : "MasterPolicyDetails_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "Number_ofChildrens" : {
+    "_id" : "wm-Number_ofChildrens-wm.Variable-1485848172941",
+    "name" : "Number_ofChildrens",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "Value" : "Nil",
+      "Key" : "0"
+    }, {
+      "Value" : "1",
+      "Key" : "1"
+    }, {
+      "Value" : "2",
+      "Key" : "2"
+    }, {
+      "Value" : "3",
+      "Key" : "3"
+    }, {
+      "Value" : "3<",
+      "Key" : "4"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "Occupation" : {
+    "_id" : "wm-Occupation-wm.Variable-1485845802859",
+    "name" : "Occupation",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "Value" : "Agricultural Consultant",
+      "Key" : "Agricultural Consultant"
+    }, {
+      "Value" : "Architect",
+      "Key" : "Architect"
+    }, {
+      "Value" : "Auditor",
+      "Key" : "Auditor"
+    }, {
+      "Value" : "Carpenter and Joiner",
+      "Key" : "Carpenter and Joiner"
+    }, {
+      "Value" : "Civil Engineer",
+      "Key" : "Civil Engineer"
+    }, {
+      "Value" : "Developer Programmer",
+      "Key" : "Developer Programmer"
+    }, {
+      "Value" : "Engineering Manager",
+      "Key" : "Engineering Manager"
+    }, {
+      "Value" : "General Practitioner",
+      "Key" : "General Practitioner"
+    }, {
+      "Value" : "Mechanical Engineer",
+      "Key" : "Mechanical Engineer"
+    }, {
+      "Value" : "Medical Laboratory Scientist",
+      "Key" : "Medical Laboratory Scientist"
+    }, {
+      "Value" : "Motor Mechanic",
+      "Key" : "Motor Mechanic"
+    }, {
+      "Value" : "Registered Nurse",
+      "Key" : "Registered Nurse"
+    }, {
+      "Value" : "Software Engineer",
+      "Key" : "Software Engineer"
+    }, {
+      "Value" : "Surveyor",
+      "Key" : "Surveyor"
+    }, {
+      "Value" : "Systems Analyst",
+      "Key" : "Systems Analyst"
+    }, {
+      "Value" : "Teacher",
+      "Key" : "Teacher"
+    }, {
+      "Value" : "Veterinarian",
+      "Key" : "Veterinarian"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "PolicyDetails" : {
+    "_id" : "wm-PolicyDetails-wm.Variable-1486446055430",
+    "name" : "PolicyDetails",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "navpath" : "",
+      "mode" : "",
+      "policyid" : "",
+      "policyname" : "",
+      "currentfundvalue" : "",
+      "cashvalue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "PolicyProfileDetails" : {
+    "_id" : "wm-PolicyProfileDetails-wm.Variable-1486522860603",
+    "name" : "PolicyProfileDetails",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "navpath" : "",
+      "policydetails" : [ { } ]
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "Qualification" : {
+    "_id" : "wm-Qualification-wm.Variable-1485845698284",
+    "name" : "Qualification",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "Value" : "No High School Diploma",
+      "Key" : "No High School Diploma"
+    }, {
+      "Value" : "High School Diploma",
+      "Key" : "High School Diploma"
+    }, {
+      "Value" : "Associate Degree",
+      "Key" : "Associate Degree"
+    }, {
+      "Value" : "Bachelor's Degree",
+      "Key" : "Bachelor's Degree"
+    }, {
+      "Value" : "Master's Degree",
+      "Key" : "Master's Degree"
+    }, {
+      "Value" : "Ph.D. or Advanced",
+      "Key" : "Ph.D. or Advanced"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "Relationship" : {
+    "_id" : "wm-Relationship-wm.Variable-1485846094444",
+    "name" : "Relationship",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "Value" : "Spouse",
+      "Key" : "Spouse"
+    }, {
+      "Value" : "Parent",
+      "Key" : "Parent"
+    }, {
+      "Value" : "Child",
+      "Key" : "Child"
+    }, {
+      "Value" : "Sibling",
+      "Key" : "Sibling"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "RoleValue" : {
+    "_id" : "wm-RoleValue-wm.Variable-1483355169385",
+    "name" : "RoleValue",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "Key" : "Agent",
+      "dataValue" : "Agent"
+    }, {
+      "Key" : "BackOfficeOperator",
+      "dataValue" : "Back Office Operator"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "State" : {
+    "_id" : "wm-State-wm.Variable-1485850111559",
+    "name" : "State",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "States" : "Washington",
+      "StateCode" : "WA",
+      "GeoGroup" : "West Coast"
+    }, {
+      "States" : "Oregon",
+      "StateCode" : "OR",
+      "GeoGroup" : "West Coast"
+    }, {
+      "States" : "California",
+      "StateCode" : "CA",
+      "GeoGroup" : "West Coast"
+    }, {
+      "States" : "Texas",
+      "StateCode" : "TX",
+      "GeoGroup" : "Central"
+    }, {
+      "States" : "Kansas",
+      "StateCode" : "KS",
+      "GeoGroup" : "Central"
+    }, {
+      "States" : "New Mexico",
+      "StateCode" : "NM",
+      "GeoGroup" : "Central"
+    }, {
+      "States" : "Wyoming",
+      "StateCode" : "WY",
+      "GeoGroup" : "Central"
+    }, {
+      "States" : "Florida",
+      "StateCode" : "FL",
+      "GeoGroup" : "East Coast"
+    }, {
+      "States" : "New York",
+      "StateCode" : "NY",
+      "GeoGroup" : "East Coast"
+    }, {
+      "States" : "Maine",
+      "StateCode" : "ME",
+      "GeoGroup" : "East Coast"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "submenu" : {
+    "_id" : "wm-submenu-wm.Variable-1486378185717",
+    "name" : "submenu",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "ActionLabel" : "Buisness OverView",
+      "ActionLink" : "#buisnessoverview"
+    }, {
+      "ActionLabel" : "My Earnings",
+      "ActionLink" : "#Myearnings"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "Term" : {
+    "_id" : "wm-Term-wm.Variable-1485849307871",
+    "name" : "Term",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "Value" : "5 Years",
+      "Key" : "5"
+    }, {
+      "Value" : "10 Years",
+      "Key" : "10"
+    }, {
+      "Value" : "15 Years",
+      "Key" : "15"
+    }, {
+      "Value" : "20 Years",
+      "Key" : "20"
+    }, {
+      "Value" : "25 Years",
+      "Key" : "25"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "UpdateLeads" : {
+    "_id" : "wm-UpdateLeads-wm.ServiceVariable-1498210455601",
+    "name" : "UpdateLeads",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "UpdateLead.java.lang.Object",
+    "service" : "UpdateLead",
+    "operation" : "invoke",
+    "operationId" : "UpdateLead_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "UserData" : {
+    "_id" : "wm-UserData-wm.Variable-1494934365030",
+    "name" : "UserData",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "userName" : "",
+      "password" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "UserLastLogin" : {
+    "_id" : "wm-UserLastLogin-wm.ServiceVariable-1491286959006",
+    "name" : "UserLastLogin",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.commons.wrapper.StringWrapper",
+    "service" : "securityService",
+    "operation" : "getLoginTime",
+    "operationId" : "SecurityController_getLoginTime",
+    "operationType" : "get",
+    "serviceType" : "SecurityServiceType",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Security"
+  },
+  "WidgetHandling" : {
+    "_id" : "wm-widetHandling-wm.Variable-1497425816816",
+    "name" : "WidgetHandling",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "next" : "",
+      "cancel" : "",
+      "submit" : "",
+      "Edit" : "",
+      "show" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "YesNoValue" : {
+    "_id" : "wm-YesNoValue-wm.Variable-1486471272458",
+    "name" : "YesNoValue",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : "Yes",
+      "Key" : "true"
+    }, {
+      "dataValue" : "No",
+      "Key" : "false"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}

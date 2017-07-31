@@ -1,0 +1,27 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services//profile/masterPolicies",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"UniquePolicyId\":\"1ca9a31f-edf0-11e6-ba0a-0242ac11000b\",\"PlanName\":\"iProtect Smart\",\"CurrentFundValue\":1000000,\"CashValue\":40000},{\"UniquePolicyId\":\"858e74a4-cb43-11e6-8c86-0242ac11090e\",\"PlanName\":\"iProtect Plus\",\"CurrentFundValue\":1000000,\"CashValue\":20000},{\"UniquePolicyId\":\"b57cf4bb-cb43-11e6-8c86-0242ac11090e\",\"PlanName\":\"Wealth Builder Plus\",\"CurrentFundValue\":1000000,\"CashValue\":40000}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"07c33e9456ececc24e3bb67fc0c15c613\"" ],
+      "Date" : [ "Mon, 13 Feb 2017 05:47:54 GMT" ],
+      "Content-Length" : [ "416" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ],
+      "Cache-Control" : [ "max-age=0" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

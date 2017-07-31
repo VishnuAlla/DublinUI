@@ -1,0 +1,203 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "/dev_api_dublin",
+  "paths" : {
+    "/services/clientProfile/clientPolicyDetails" : {
+      "x-WM-BASE_PATH" : "/services/clientProfile/clientPolicyDetails",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "id",
+          "name" : "id",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "type" : "string",
+          "required" : false,
+          "in" : "query"
+        }, {
+          "description" : "type",
+          "name" : "type",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "type" : "string",
+          "required" : false,
+          "in" : "query"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "GetClientPolicyDetails_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetClientPolicyDetails.scheme}://${rest.GetClientPolicyDetails.host}${rest.GetClientPolicyDetails.basepath}/services/clientProfile/clientPolicyDetails"
+    }
+  },
+  "host" : "wavemaker-apps.pramati.com",
+  "schemes" : [ "https" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetClientPolicyDetails.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "NomineeDetails" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/NomineeDetailsEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "PolicyDetail" : {
+          "$ref" : "#/definitions/PolicyDetail"
+        },
+        "PaymentDetails" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/PaymentDetailsEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "ClientDetails" : {
+          "$ref" : "#/definitions/ClientDetails"
+        }
+      },
+      "required" : [ "ClientDetails", "NomineeDetails", "PaymentDetails", "PolicyDetail" ]
+    },
+    "NomineeDetailsEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetClientPolicyDetails.NomineeDetailsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "Name" : {
+          "type" : "string"
+        },
+        "DateOfBirth" : {
+          "type" : "string"
+        },
+        "Relationship" : {
+          "type" : "string"
+        },
+        "EntilementPercentage" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "MobileNumber" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "DateOfBirth", "EntilementPercentage", "MobileNumber", "Name", "Relationship" ]
+    },
+    "PaymentDetailsEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetClientPolicyDetails.PaymentDetailsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "TransactionId" : {
+          "type" : "string"
+        },
+        "PaymentMode" : {
+          "type" : "string"
+        },
+        "PolicyPaymentId" : {
+          "type" : "string"
+        },
+        "PaymentDate" : {
+          "type" : "string"
+        },
+        "PremiumPaid" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "PaymentDate", "PaymentMode", "PolicyPaymentId", "PremiumPaid", "TransactionId" ]
+    },
+    "PolicyDetail" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetClientPolicyDetails.PolicyDetail",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "PlanName" : {
+          "type" : "string"
+        },
+        "PolicyId" : {
+          "type" : "string"
+        },
+        "PremiumType" : {
+          "type" : "string"
+        },
+        "StartDate" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "term" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "PremiumToBePaid" : {
+          "type" : "string"
+        },
+        "NextDueDate" : {
+          "type" : "string"
+        },
+        "PolicyStatus" : {
+          "type" : "string"
+        },
+        "PremiumPaid" : {
+          "type" : "string"
+        },
+        "SumAssured" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      },
+      "required" : [ "NextDueDate", "PlanName", "PolicyId", "PolicyStatus", "PremiumPaid", "PremiumToBePaid", "PremiumType", "StartDate", "SumAssured", "term" ]
+    },
+    "ClientDetails" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetClientPolicyDetails.ClientDetails",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "DateOfBirth" : {
+          "type" : "string"
+        },
+        "Address" : {
+          "type" : "string"
+        },
+        "ClientName" : {
+          "type" : "string"
+        },
+        "ClientNumber" : {
+          "type" : "string"
+        },
+        "MaritalStatus" : {
+          "type" : "string"
+        },
+        "EmailId" : {
+          "type" : "string"
+        },
+        "MobileNumber" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "Address", "ClientName", "ClientNumber", "DateOfBirth", "EmailId", "MaritalStatus", "MobileNumber" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "de9b6b2e-d4c7-46ee-a668-0b118fa404e3",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

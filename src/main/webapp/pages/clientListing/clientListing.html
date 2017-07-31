@@ -1,0 +1,38 @@
+<wm-page data-ng-controller="clientListingPageController" pagetitle="Client Listing" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                        <wm-breadcrumb dataset="bind:Variables.breadcrumb.dataSet" name="breadcrumb1" fontstyle="italic"></wm-breadcrumb>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1" padding="10px unset unset unset">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                        <wm-label name="label1" caption="Clients &amp; Policies" fontsize="26" padding="unset unset 10px unset" class="ClientsandPolicies" margin="20px unset 10px unset"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                        <wm-grid title="" dataset="bind:Variables.GuardianExecuteGetAllClientPolicies.dataSet" navigation="Basic" name="allPoliciesGrid" filtermode="search" class="custom-data-grid" gridclass="table-bordered table-striped table-hover" iconclass="">
+                            <wm-grid-column binding="ClientNumber" caption="Client Id" type="string" readonly="true" edit-widget-type="text" show="true">
+                                <wm-anchor caption="{{row.ClientNumber}}" ng-click="navigateToClientDetailPage(row)"></wm-anchor>
+                            </wm-grid-column>
+                            <wm-grid-column binding="ClientName" caption="Client Name" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="EmailId" caption="Email Id" type="string" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PolicyNumber" caption="Policy Id" type="string" readonly="true" edit-widget-type="text" show="true">
+                                <wm-anchor caption="{{row.PolicyNumber}}" ng-click="navigateToPolicyDetailPage(row)"></wm-anchor>
+                            </wm-grid-column>
+                            <wm-grid-column binding="PolicyStatus" caption="Policy Status" type="string" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PremiumDueDate" caption="Premium Due Date" type="string" readonly="true" datepattern="yyyy-MM-dd" formatpattern="toDate" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PremiumAmount" caption="Premium Amount" type="string" readonly="true" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                        </wm-grid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

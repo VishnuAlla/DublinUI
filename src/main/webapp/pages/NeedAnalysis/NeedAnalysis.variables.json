@@ -1,0 +1,111 @@
+{
+  "ageRanges" : {
+    "_id" : "wm-ageRanges-wm.Variable-1485067257262",
+    "name" : "ageRanges",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "Key" : "26-39",
+      "Value" : "10"
+    }, {
+      "Key" : "40-65",
+      "Value" : "8"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "ConfirmationError" : {
+    "_id" : "wm-ConfirmationError-wm.NotificationVariable-1484825085163",
+    "name" : "ConfirmationError",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "list"
+    }, {
+      "target" : "text",
+      "value" : "Please enter a valid annual income",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "5000",
+      "type" : "list"
+    }, {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "DetailsByAge" : {
+    "_id" : "wm-getDetailsByAge-wm.ServiceVariable-1484819173985",
+    "name" : "DetailsByAge",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "getDetailsByAge.RootResponseROOTEntryItem",
+    "service" : "getDetailsByAge",
+    "operation" : "invoke",
+    "operationId" : "getDetailsByAge_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "getIncomeDetails" : {
+    "_id" : "wm-getIncomeDetails-wm.ServiceVariable-1484817472899",
+    "name" : "getIncomeDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "amt",
+      "value" : "bind:Widgets.IncomeAmnt.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "getIncomeDetails.RootResponseROOTEntryItem",
+    "service" : "getIncomeDetails",
+    "operation" : "invoke",
+    "operationId" : "getIncomeDetails_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "InsuranceAmount" : {
+    "_id" : "wm-InsuranceAmount-wm.Variable-1484645213509",
+    "name" : "InsuranceAmount",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "Amount" : "",
+      "AmountInWords" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}

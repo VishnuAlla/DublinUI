@@ -1,0 +1,27 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/backOfficeProfile/policies/bd0778d3-030b-11e7-a552-a45d36d03885/RFIPending",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"MobileNumber\":\"1212121212\",\"ClientName\":\"kary john\",\"PolicyId\":\"\",\"ApplicationId\":\"A00000022\",\"ApplicationDate\":1489476228000,\"SumAssured\":1900000,\"Status\":\"Pending Issuance\",\"ProcessStatus\":\"RFIPending\",\"Country\":\"United States of America\",\"PremiumToBePaid\":\"2843\",\"IssuanceDate\":null,\"PolicyName\":\"Wealth Builder Plus\"},{\"MobileNumber\":\"706660000\",\"ClientName\":\"Mary Williams\",\"PolicyId\":\"\",\"ApplicationId\":\"A00000021\",\"ApplicationDate\":1489474591000,\"SumAssured\":900000,\"Status\":\"Pending Issuance\",\"ProcessStatus\":\"RFIPending\",\"Country\":\"United States of America\",\"PremiumToBePaid\":\"3049.20\",\"IssuanceDate\":null,\"PolicyName\":\"iProtect Smart\"}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"07e516bf1e09b53e53cc7774fab28a3f6\"" ],
+      "Date" : [ "Tue, 14 Mar 2017 07:24:03 GMT" ],
+      "Content-Length" : [ "655" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Connection" : [ "keep-alive" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "mode" : [ "block" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

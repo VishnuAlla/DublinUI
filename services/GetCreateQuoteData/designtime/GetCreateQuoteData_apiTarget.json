@@ -1,0 +1,240 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "/dev_api_dublin",
+  "paths" : {
+    "/services/createQuote/applicationDetails/{ApplicationID}" : {
+      "x-WM-BASE_PATH" : "/services/createQuote/applicationDetails/{ApplicationID}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "ApplicationID",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "GetCreateQuoteData_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetCreateQuoteData.scheme}://${rest.GetCreateQuoteData.host}${rest.GetCreateQuoteData.basepath}/services/createQuote/applicationDetails/{ApplicationID}"
+    }
+  },
+  "host" : "wavemaker-apps.pramati.com",
+  "schemes" : [ "https" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetCreateQuoteData.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "Details" : {
+          "$ref" : "#/definitions/Details"
+        },
+        "Nominees" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/NomineesEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        }
+      },
+      "required" : [ "Details", "Nominees" ]
+    },
+    "Details" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetCreateQuoteData.Details",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "Qualification" : {
+          "type" : "string"
+        },
+        "TobaccoIntake" : {
+          "type" : "string"
+        },
+        "PremiumToBePaid" : {
+          "type" : "string"
+        },
+        "OccupationalHazards" : {
+          "type" : "string"
+        },
+        "AnnualIncome" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "ClientNumber" : {
+          "type" : "string"
+        },
+        "PolicyStatus" : {
+          "type" : "string"
+        },
+        "ApplicationId" : {
+          "type" : "string"
+        },
+        "PolicyId" : {
+          "type" : "string"
+        },
+        "StartDate" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "Weight" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "NoOfChildren" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "StateId" : {
+          "type" : "string"
+        },
+        "ChangeInWeight" : {
+          "type" : "string"
+        },
+        "Occupation" : {
+          "type" : "string"
+        },
+        "ProcessStatus" : {
+          "type" : "string"
+        },
+        "MaritalStatus" : {
+          "type" : "string"
+        },
+        "Zip" : {
+          "type" : "string"
+        },
+        "EmailId" : {
+          "type" : "string"
+        },
+        "Company" : {
+          "type" : "string"
+        },
+        "ProcessInstanceId" : {
+          "type" : "string"
+        },
+        "MobileNumber" : {
+          "type" : "string"
+        },
+        "Height" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "PhoneNumber" : {
+          "type" : "string"
+        },
+        "ClientId" : {
+          "type" : "string"
+        },
+        "Country" : {
+          "type" : "string"
+        },
+        "Nationality" : {
+          "type" : "string"
+        },
+        "Term" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "SumAssured" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "clientDOB" : {
+          "type" : "string"
+        },
+        "policyName" : {
+          "type" : "string"
+        },
+        "PremiumType" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "ClientName" : {
+          "type" : "string"
+        },
+        "AddressType" : {
+          "type" : "string"
+        },
+        "AddressLine1" : {
+          "type" : "string"
+        },
+        "AddressLine2" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "AddressLine1", "AddressLine2", "AddressType", "AnnualIncome", "ApplicationId", "ChangeInWeight", "ClientId", "ClientName", "ClientNumber", "Company", "Country", "EmailId", "Gender", "Height", "MaritalStatus", "MobileNumber", "Nationality", "NoOfChildren", "Occupation", "OccupationalHazards", "PhoneNumber", "PolicyId", "PolicyStatus", "PremiumToBePaid", "PremiumType", "ProcessInstanceId", "ProcessStatus", "Qualification", "StartDate", "StateId", "SumAssured", "Term", "TobaccoIntake", "Weight", "Zip", "clientDOB", "policyName" ]
+    },
+    "NomineesEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetCreateQuoteData.NomineesEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "nomineeAdress1" : {
+          "type" : "string"
+        },
+        "nomineeZip" : {
+          "type" : "string"
+        },
+        "nomineePercentage" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "nomineeMobile" : {
+          "type" : "string"
+        },
+        "nomineeDOB" : {
+          "type" : "string"
+        },
+        "nomineeAddress2" : {
+          "type" : "string"
+        },
+        "clientId" : {
+          "type" : "string"
+        },
+        "nomineePhone" : {
+          "type" : "string"
+        },
+        "nomieeLastName" : {
+          "type" : "string"
+        },
+        "nomineeRelation" : {
+          "type" : "string"
+        },
+        "nomineeStateId" : {
+          "type" : "string"
+        },
+        "nomineeFirstName" : {
+          "type" : "string"
+        },
+        "nomineeCountry" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "clientId", "nomieeLastName", "nomineeAddress2", "nomineeAdress1", "nomineeCountry", "nomineeDOB", "nomineeFirstName", "nomineeMobile", "nomineePercentage", "nomineePhone", "nomineeRelation", "nomineeStateId", "nomineeZip" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "54c973ee-a3fe-4c39-b6cb-6400310438aa",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

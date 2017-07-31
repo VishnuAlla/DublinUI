@@ -1,0 +1,278 @@
+<wm-page data-ng-controller="DublinPageController" pagetitle="Dublin" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-container name="breadcrumbcontainer" content="breadcrumb" showindevice="sm,md,lg"></wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow10" height="13%">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn17_1" class="col-xs-12">
+                        <wm-container name="reneval_container" class="boxshadow mobilecontainer" margin="20px 20px unset unset" padding="10px 10px 0px 10px" height="200px" horizontalalign="center" on-click="reneval_containerClick($event, $isolateScope)" cursor="pointer">
+                            <wm-label padding="unset 0.5em" name="label15_2" caption="Renewal This Week" fontsize="20" class="dosislabel cursortype"></wm-label>
+                            <wm-chart type="Donut" title="" iconclass="wi wi-donut-large" name="chart_renevalweek" height="100px" width="40%" customcolors="bind:Variables.color_weekly.dataSet" showlegend="hide" showlabels="hide" dataset="bind:Variables.Dashboardweekly.dataSet"
+                            xaxisdatakey="StatusName" yaxisdatakey="StatusCount"></wm-chart>
+                            <wm-label name="lblcount" caption="bind:Variables.Dashboardweekly.dataSet[0].StatusCount===null?&quot;0&quot;:Variables.Dashboardweekly.dataSet[0].StatusCount" width="60%" class="countlabel cursortype" padding="unset 0px"
+                            color="#9b9b9b"></wm-label>
+                            <wm-layoutgrid name="layoutgrid5" style="margin-top:-27px" show="true">
+                                <wm-gridrow name="gridrow12">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn22" horizontalalign="left" class="rightborder col-xs-6">
+                                        <wm-label padding="unset 0.5em" name="label34" caption="INFORCE" class="chartlabel" width="100%" color="#9b9b9b"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label35" caption="bind:Variables.getDashboardCount.dataSet[$i].InForceCount" class="amountlabel" color="#282d39"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn23" horizontalalign="left" padding="unset unset unset 10px" class="col-xs-6">
+                                        <wm-label padding="unset 0.5em" name="label36" class="chartlabel" caption="PREMIUM" color="#9b9b9b"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label37" class="amountlabel" caption="bind:Variables.getDashboardCount.dataSet[$i].InForcePremiumForWeek===null?&quot;0&quot;:Variables.getDashboardCount.dataSet[$i].InForcePremiumForWeek | toCurrency: '$'"
+                                        width="100%" color="#282d39"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn15_1" class="col-xs-12">
+                        <wm-container name="renevalmonth_container" class="boxshadow mobilecontainer" margin="20px 20px unset unset" padding="10px 10px 0px 10px" height="200px" horizontalalign="center" on-click="renevalmonth_containerClick($event, $isolateScope)"
+                        cursor="pointer">
+                            <wm-label padding="unset 0.5em" name="label18" caption="Renewal This Month" fontsize="20" class="dosislabel cursortype"></wm-label>
+                            <wm-chart type="Donut" title="" iconclass="wi wi-donut-large" name="chart_renevalmonth" dataset="bind:Variables.DashboardMonthly.dataSet" showlegend="hide" tooltips="true" showlabels="hide" customcolors="bind:Variables.color_monthly.dataSet"
+                            height="100px" xaxisdatakey="StatusName" yaxisdatakey="StatusCount" width="40%"></wm-chart>
+                            <wm-label name="lblcount" caption="bind:Variables.DashboardMonthly.dataSet[0].StatusCount===null?&quot;0&quot;:Variables.DashboardMonthly.dataSet[0].StatusCount" width="60%" class="countlabel  cursortype" padding="unset 0px"
+                            color="#9b9b9b"></wm-label>
+                            <wm-layoutgrid name="layoutgrid5" style="margin-top:-27px" show="true">
+                                <wm-gridrow name="gridrow12">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn22" horizontalalign="left" class="rightborder col-xs-6">
+                                        <wm-label padding="unset 0.5em" name="label34" caption="INFORCE" class="chartlabel" width="100%" color="#9b9b9b"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label35" caption="bind:Variables.getDashboardCount.dataSet[$i].InForceCount" class="amountlabel" color="#282d39"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn23" horizontalalign="left" padding="unset unset unset 10px" class="col-xs-6">
+                                        <wm-label padding="unset 0.5em" name="label36" class="chartlabel" caption="PREMIUM" color="#9b9b9b"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label37" class="amountlabel" caption="bind:Variables.getDashboardCount.dataSet[$i].InForcePremiumForMonth===null?&quot;0&quot;:Variables.getDashboardCount.dataSet[$i].InForcePremiumForMonth | toCurrency: '$'"
+                                        width="100%" color="#282d39"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn16" class="col-xs-6 mobilecontainer">
+                        <wm-container name="overdue_container" class="boxshadow" horizontalalign="left" margin="20px 20px unset unset" padding="10px" height="87px" on-click="overdue_containerClick($event, $isolateScope)" cursor="pointer">
+                            <wm-layoutgrid name="layoutgrid3">
+                                <wm-gridrow name="gridrow8">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn14_1" horizontalalign="left">
+                                        <wm-label padding="unset 0.5em unset unset" width="60%" caption="Overdue" name="label15" class="totallabel dosislabel cursortype"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn15_2" horizontalalign="right">
+                                        <wm-label padding="unset 0.5em" name="label31" caption="PREMIUM" margin="22px unset unset unset" fontsize="12" color="#9b9b9b" class="hidden-xs" show="true"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow9">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn16_1" horizontalalign="left">
+                                        <wm-label padding="unset 0.5em unset unset" width="20%" caption="bind:Variables.getDashboardCount.dataSet[$i].OverdueCount" name="label16" class="secondcount cursortype" color="#d4145a" margin="-12px unset unset unset"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn17" horizontalalign="right">
+                                        <wm-label padding="unset 0.5em" name="label32" caption="bind:Variables.getDashboardCount.dataSet[$i].OverDuePremiumAmount===null?&quot;0&quot;:Variables.getDashboardCount.dataSet[$i].OverDuePremiumAmount | toCurrency: '$'"
+                                        style="top:-5px" class="amountlabel hidden-xs" show="true" color="#282d39"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-container>
+                        <wm-container name="suspended_container" class="boxshadow" horizontalalign="left" margin="26px 20px unset unset" padding="10px" height="87px" on-click="suspended_containerClick($event, $isolateScope)" cursor="pointer">
+                            <wm-layoutgrid name="layoutgrid3" class="cursortype">
+                                <wm-gridrow name="gridrow8">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn14_1" horizontalalign="left">
+                                        <wm-label padding="unset 0.5em unset unset" width="60%" caption="Suspended" name="label15" class="totallabel dosislabel cursortype"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn15_2" horizontalalign="right">
+                                        <wm-label padding="unset 0.5em" name="label31" caption="PREMIUM" margin="22px unset unset unset" fontsize="12" color="#9b9b9b" class="hidden-xs" show="true"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow9">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn16_1" horizontalalign="left">
+                                        <wm-label padding="unset 0.5em unset unset" width="20%" caption="bind:Variables.getDashboardCount.dataSet[$i].SuspendedCount" name="label16" class="secondcount cursortype" color="#9b9b9b" margin="-12px unset unset unset"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn17" horizontalalign="right">
+                                        <wm-label padding="unset 0.5em" name="label32" caption="bind:Variables.getDashboardCount.dataSet[$i].SuspendedPremiumAmount===null?&quot;0&quot;:Variables.getDashboardCount.dataSet[$i].SuspendedPremiumAmount | toCurrency: '$'"
+                                        style="top:-5px" class="amountlabel hidden-xs" show="true" color="#282d39"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn14" class="col-xs-6 mobilecontainer">
+                        <wm-container name="totalcustomer_container" class="boxshadow cursortype" horizontalalign="center" margin="20px 11px unset unset" padding="10px" height="200px" on-click="Variables.goToPage_customerportfolio.invoke()">
+                            <wm-label padding="2.5em 0.5em unset 0.5em" name="label11" width="100%" caption="Total Customers" class="totallabel dosislabel cursortype" on-click="Variables.goToPage_CustomerProfile.invoke()"></wm-label>
+                            <wm-label padding="unset 0.5em" width="100%" name="label12" caption="bind:Variables.getDashboardCount.dataSet[$i].CustomerCount" class="totalcount cursortype" margin="0px unset unset unset" color="#9b9b9b"></wm-label>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1" height="35%" style="margin-top:20px">
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn1" class="col-xs-12">
+                        <wm-container name="topleftcontainer" class="boxshadow" margin="0px 20px unset unset" padding="10px" height="400px" horizontalalign="left">
+                            <wm-gridrow name="gridrow4_1">
+                                <wm-gridcolumn columnwidth="8" name="gridcolumn3_1" class="col-xs-8">
+                                    <wm-label padding="0.2em 0.5em unset 0.5em" name="label1" caption="Business Overview" class="dosislabel"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn3_1_1">
+                                    <wm-composite name="composite1" class="pull-right">
+                                        <!--<wm-label class="col-md-3 control-label" name="label2" show="false"></wm-label>-->
+                                        <wm-container class="col-md-9 custom-select" name="container5" width="100%">
+                                            <wm-select name="select_year" dataset="2016,2017" datavalue="bind:today.getFullYear()" on-change="select_yearChange($event, $scope, newVal, oldVal)" class="inchartselect"></wm-select>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-chart type="Column" title="" height="290px" iconclass="wi wi-bar-chart" name="chart_businessoverview" customcolors="bind:Variables.colors_buisnessoverview.dataSet" showlegend="hide" xdomain="Min" reducexticks="false" ynumberformat=",r"
+                            dataset="bind:Variables.GetBuisnessOverview.dataSet" xaxisdatakey="GraphMonth" yaxisdatakey="PremiumAmount,Target"></wm-chart>
+                            <!--<wm-label padding="unset 0.5em" name="label20" fontsize="20" caption="Buisness Overview" class="dosislabel"></wm-label>--></wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn2" class="col-xs-12">
+                        <wm-container name="toprightcontainer" class="boxshadow mobilecontainer" margin="0px 10px unset unset" padding="10px" height="400px" horizontalalign="center" cursor="pointer">
+                            <wm-label padding="0.2em 0.5em unset 0.5em" name="label19" caption="Policy Volume Comparison" fontsize="20" class="dosislabel"></wm-label>
+                            <wm-chart type="Donut" title="" iconclass="wi wi-donut-large" name="chart_policyvolumcomparison" dataset="bind:Variables.GetPolicyVolumeComparison.dataSet" customcolors="bind:Variables.colors_policyvolumecomparison.dataSet"
+                            tooltips="false" showlegend="hide" donutratio="0.6" showlabels="hide" height="250px" centerlabel="bind:TotalCount" on-select="chart_policyvolumcomparisonSelect($event, $scope, selectedItem, selectedChartItem)" xaxisdatakey="StatusName"
+                            yaxisdatakey="StatusCount"></wm-chart>
+                            <wm-container name="container11" margin="24px unset unset unset">
+                                <wm-layoutgrid name="layoutgrid2">
+                                    <wm-gridrow name="gridrow7" padding="unset 20px unset 26px">
+                                        <wm-gridcolumn columnwidth="4" name="gridcolumn11" horizontalalign="center" class="col-xs-4 leftpadded">
+                                            <wm-container name="container12" horizontalalign="center" bordercolor="#01d0a0" borderstyle="solid" borderwidth="1px" width="100%">
+                                                <wm-label padding="unset 0.5em" name="label20_1" width="100%" caption="bind:Variables.GetPolicyVolumeComparison.dataSet[$i].StatusName" textalign="center" backgroundcolor="#01d0a0" color="#fff"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" name="label21" caption="bind:Variables.GetPolicyVolumeComparison.dataSet[$i].StatusName===&quot;Active&quot;?Variables.GetPolicyVolumeComparison.dataSet[$i].StatusCount:&quot;0&quot;"
+                                                color="#282d39"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" name="label22" caption="bind:(Variables.GetPolicyVolumeComparison.dataSet[$i].Percentage | toNumber: '1')+&quot;%&quot;" color="#01d0a0"></wm-label>
+                                            </wm-container>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="4" name="gridcolumn12" horizontalalign="center" class="col-xs-4 leftpadded">
+                                            <wm-container horizontalalign="center" name="container13" borderstyle="solid" borderwidth="1px" bordercolor="#e2e2e2" width="100%">
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetPolicyVolumeComparison.dataSet[$i+2].StatusName" name="label23" backgroundcolor="#e2e2e2" color="#282d39"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetPolicyVolumeComparison.dataSet[$i+2].StatusName===&quot;Inactive&quot;?Variables.GetPolicyVolumeComparison.dataSet[$i+2].StatusCount:&quot;0&quot;"
+                                                name="label24" color="#282d39"></wm-label>
+                                                <!--<wm-label padding="unset 0.5em" width="100%" name="label25" caption=""></wm-label>-->
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:(Variables.GetPolicyVolumeComparison.dataSet[$i+2].Percentage| toNumber: '1')+&quot;%&quot;" name="label30" color="#9b9b9b"></wm-label>
+                                            </wm-container>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="4" name="gridcolumn15" class="col-xs-4 leftpadded">
+                                            <wm-container horizontalalign="center" name="container14" borderwidth="1px" borderstyle="solid" bordercolor="#d4145a" width="100%">
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetPolicyVolumeComparison.dataSet[$i+1].StatusName" name="label26" backgroundcolor="#d4145a" color="#fff"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetPolicyVolumeComparison.dataSet[$i+1].StatusCount" name="label27" color="#282d39"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" name="label28" caption="bind:(Variables.GetPolicyVolumeComparison.dataSet[$i+1].Percentage| toNumber: '1')+&quot;%&quot;" color="#d4145a"></wm-label>
+                                            </wm-container>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-container>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <!--<wm-gridrow name="gridrow2">-->
+                <!--    <wm-gridcolumn columnwidth="4" name="gridcolumn3">-->
+                <!--        <wm-container name="container_pendingrenevalweek">-->
+                <!--            <wm-label padding="unset 0.5em" name="label5" width="100%" caption="Pending Reneval This Week"></wm-label>-->
+                <!--            <wm-label padding="unset 0.5em" name="label7" caption="18"></wm-label>-->
+                <!--        </wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--    <wm-gridcolumn columnwidth="4" name="gridcolumn12">-->
+                <!--        <wm-container name="container_pendingrenevalmonth">-->
+                <!--            <wm-label padding="unset 0.5em" name="label6" width="100%" caption="Pending Reneval This Month"></wm-label>-->
+                <!--            <wm-label padding="unset 0.5em" name="label8" caption="68"></wm-label>-->
+                <!--        </wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--    <wm-gridcolumn columnwidth="4" name="gridcolumn4">-->
+                <!--        <wm-container name="container4">-->
+                <!--            <wm-layoutgrid name="layoutgrid2">-->
+                <!--                <wm-gridrow name="gridrow7">-->
+                <!--                    <wm-gridcolumn columnwidth="12" name="gridcolumn13">-->
+                <!--                        <wm-label padding="unset 0.5em" name="label1" caption="Overdue"></wm-label>-->
+                <!--                        <wm-label padding="unset 0.5em" name="label3" class="pull-right" caption="68"></wm-label>-->
+                <!--                    </wm-gridcolumn>-->
+                <!--                </wm-gridrow>-->
+                <!--                <wm-gridrow name="gridrow8">-->
+                <!--                    <wm-gridcolumn columnwidth="12" name="gridcolumn15">-->
+                <!--                        <wm-label padding="unset 0.5em" name="label2" caption="Suspended"></wm-label>-->
+                <!--                        <wm-label padding="unset 0.5em" name="label4" class="pull-right" caption="25"></wm-label>-->
+                <!--                    </wm-gridcolumn>-->
+                <!--                </wm-gridrow>-->
+                <!--            </wm-layoutgrid>-->
+                <!--        </wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--</wm-gridrow>-->
+                <wm-gridrow name="gridrow4_1" height="10%" class="custom-gridrow">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn6" padding="35px unset unset unset">
+                        <wm-label padding="unset 0.5em unset unset" caption="Pending Renewal" name="label16" class="table-title"></wm-label>
+                        <wm-label padding="unset 0.5em" caption="85" name="lbl_pendingreneval" margin="10px unset unset unset" class="gridcount"></wm-label>
+                        <wm-anchor margin="unset 0.5em" name="anchor1" caption="View All" on-click="anchor1Click($event, $scope)" class="common-link"></wm-anchor>
+                        <wm-grid title="" dataset="bind:Variables.GetInforceData.dataSet" navigation="Basic" name="grid_pendingreneval" pagesize="2" nodatamessage="None of applications are pending for renewal">
+                            <wm-grid-column binding="PolicyId" caption="Policy Number" type="string" readonly="true" show="true">
+                                <wm-anchor caption="{{row.PolicyId}}" class="common-link" ng-click="managepolicy(row)"></wm-anchor>
+                            </wm-grid-column>
+                            <wm-grid-column binding="ClientName" caption="Customer Name" type="string" readonly="true" show="true"></wm-grid-column>
+                            <wm-grid-column binding="MobileNumber" caption="Mobile Number" type="string" readonly="true" mobiledisplay="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="DueDate" caption="Due Date" type="string" readonly="true" datepattern="dd MMM, yyyy" formatpattern="toDate" mobiledisplay="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PremiumPaid" caption="Premium" type="string" textalignment="right" readonly="true" col-class="grid-amt" formatpattern="toCurrency" currencypattern="USD" fractionsize="0" mobiledisplay="false"
+                            show="true"></wm-grid-column>
+                            <wm-grid-column binding="expandField" caption="Expand" type="custom" widget-type="button" readonly="true" pcdisplay="false" searchable="false" show="true">
+                                <wm-button caption="" show="true" class="btn-arrow" iconclass="wi wi-arrow-downward" on-click="expandRow(row)" data-ng-class=""></wm-button>
+                            </wm-grid-column>
+                        </wm-grid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow5" height="10%" class="custom-gridrow">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn8" padding="23px unset unset unset">
+                        <wm-label padding="unset 0.5em unset unset" caption="Pending Applications" name="label16" class="table-title"></wm-label>
+                        <wm-label padding="unset 0.5em" caption="85" name="lbl_pendingapplication" margin="10px unset unset unset" class="gridcount"></wm-label>
+                        <wm-anchor margin="unset 0.5em" name="anchor_pendingApplication" caption="View All" on-click="anchor_pendingApplicationClick($event, $scope)" class="common-link"></wm-anchor>
+                        <wm-grid title="" dataset="bind:Variables.GetApplicationsData.dataSet" navigation="Basic" name="grid_pendingapplication" pagesize="2" nodatamessage="None of applications are pending for completion">
+                            <wm-grid-column binding="ApplicationId" caption="Application Number" type="string" readonly="true" show="true">
+                                <wm-anchor caption="{{row.ApplicationId}}" class="common-link" ng-click="manageapplication(row)"></wm-anchor>
+                            </wm-grid-column>
+                            <wm-grid-column binding="ClientName" caption="Customer Name" type="string" readonly="true" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PolicyName" caption="Policy" type="string" readonly="true" mobiledisplay="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="ApplicationDate" caption="Application Date" type="string" readonly="true" datepattern="dd MMM, yyyy" formatpattern="toDate" mobiledisplay="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="Status" caption="Status" type="string" widget-type="label" textalignment="right" readonly="true" col-class="pending" mobiledisplay="false" show="true">
+                                <wm-label caption="{{row.getProperty('Status')}}" class="pending-apps"></wm-label>
+                            </wm-grid-column>
+                            <wm-grid-column binding="expandField" caption="Expand" type="custom" widget-type="button" readonly="true" pcdisplay="false" searchable="false" show="true">
+                                <wm-button caption="" show="true" class="btn-arrow" iconclass="wi wi-arrow-downward" on-click="expandRow(row)" data-ng-class=""></wm-button>
+                            </wm-grid-column>
+                        </wm-grid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow6" height="10%" class="custom-gridrow">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10_1" padding="23px unset unset unset">
+                        <wm-label padding="unset 0.5em unset unset" caption="Pending Issuance" name="label16" class="table-title"></wm-label>
+                        <wm-label padding="unset 0.5em" caption="85" name="lbl_pendingissuance" margin="10px unset unset unset" class="gridcount"></wm-label>
+                        <wm-anchor margin="unset 0.5em" name="anchor_pendingIssuance" caption="View All" on-click="anchor_pendingIssuanceClick($event, $scope)" fontunit="em" class="common-link"></wm-anchor>
+                        <wm-grid title="" dataset="bind:Variables.GetIssuanceData.dataSet" navigation="Basic" name="grid_pendingissuance" pagesize="2" nodatamessage="None of applications are pending for payment">
+                            <wm-grid-column binding="ApplicationId" caption="Application Number" type="string" readonly="true" show="true">
+                                <wm-anchor caption="{{row.ApplicationId}}" ng-click="manageapplication(row)" class="common-link"></wm-anchor>
+                            </wm-grid-column>
+                            <wm-grid-column binding="ClientName" caption="Customer Name" type="string" readonly="true" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PolicyName" caption="Policy" type="string" readonly="true" mobiledisplay="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="ApplicationDate" caption="Application Date" type="string" readonly="true" datepattern="dd MMM, yyyy" formatpattern="toDate" mobiledisplay="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PremiumToBePaid" caption="Premium" type="string" textalignment="right" readonly="true" col-class="grid-amt" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false" show="true"></wm-grid-column>
+                            <wm-grid-column binding="expandField" caption="Expand" type="custom" widget-type="button" readonly="true" pcdisplay="false" searchable="false" show="true">
+                                <wm-button caption="" show="true" class="btn-arrow" iconclass="wi wi-arrow-downward" on-click="expandRow(row)" data-ng-class=""></wm-button>
+                            </wm-grid-column>
+                        </wm-grid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow14">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn26"></wm-gridcolumn>
+                </wm-gridrow>
+                <!--<wm-gridrow name="gridrow9">-->
+                <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn17">-->
+                <!--        <wm-container name="container_alertnotification">-->
+                <!--            <wm-label padding="unset 0.5em" name="label9" width="100%" caption="ALERTS AND NOTIFICATION"></wm-label>-->
+                <!--            <wm-label padding="unset 0.5em" name="label10"></wm-label>-->
+                <!--        </wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn18">-->
+                <!--        <wm-container name="container_image"></wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--</wm-gridrow>-->
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

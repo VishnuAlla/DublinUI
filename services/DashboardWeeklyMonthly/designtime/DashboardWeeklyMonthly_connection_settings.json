@@ -1,0 +1,30 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/profile/renewalinfo",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "Agent_userID" : "440c1544-c8dc-11e6-9740-0242ac1108f8",
+    "durtype" : "month"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"StatusCount\":\"10\",\"StatusName\":\"MonthCount\"},{\"StatusCount\":\"12\",\"StatusName\":\"TotalCount\"}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"0a4e035ed98be471225f9194374d18cf5\"" ],
+      "Date" : [ "Tue, 10 Jan 2017 05:25:07 GMT" ],
+      "Content-Length" : [ "95" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ],
+      "Cache-Control" : [ "max-age=0" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

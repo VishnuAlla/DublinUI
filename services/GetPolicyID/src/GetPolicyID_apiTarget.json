@@ -1,0 +1,101 @@
+{
+  "basePath" : "${rest.GetPolicyID.basepath}",
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "host" : "${rest.GetPolicyID.host}",
+  "paths" : {
+    "/services/createQuote/policyId/{name}" : {
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "/services/createQuote/policyId/{name}",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "name",
+          "required" : true,
+          "type" : "string",
+          "in" : "path"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "GetPolicyID_RestServiceVirtualController-invoke"
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.GetPolicyID.scheme}://${rest.GetPolicyID.host}${rest.GetPolicyID.basepath}/services/createQuote/policyId/{name}",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "schemes" : [ "${rest.GetPolicyID.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetPolicyID.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "UniquePolicyId" : {
+          "type" : "string"
+        },
+        "MinSumAssured" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "MinInsuredAge" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "PlanName" : {
+          "type" : "string"
+        },
+        "LOB" : {
+          "type" : "string"
+        },
+        "CashValue" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "ProductType" : {
+          "type" : "string"
+        },
+        "MaxInsuredAge" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "MaxSumAssured" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "MaxPolicyTerm" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "MinPolicyTerm" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "CurrentFundValue" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      },
+      "required" : [ "CashValue", "CurrentFundValue", "LOB", "MaxInsuredAge", "MaxPolicyTerm", "MaxSumAssured", "MinInsuredAge", "MinPolicyTerm", "MinSumAssured", "PlanName", "ProductType", "UniquePolicyId" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "62e0080b-c110-48a9-adbe-2016cda09d3c",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.GetPoliciesDetails.basepath}",
+  "paths" : {
+    "/services/profile/policiesByDuration" : {
+      "x-WM-BASE_PATH" : "/services/profile/policiesByDuration",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "description" : "RequestBody",
+          "name" : "RequestBody",
+          "required" : false,
+          "in" : "body"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-IS_LIST" : true,
+              "items" : {
+                "$ref" : "#/definitions/RootResponseROOTEntryItem"
+              },
+              "uniqueItems" : false,
+              "type" : "array"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "GetPoliciesDetails_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetPoliciesDetails.scheme}://${rest.GetPoliciesDetails.host}${rest.GetPoliciesDetails.basepath}/services/profile/policiesByDuration"
+    }
+  },
+  "host" : "${rest.GetPoliciesDetails.host}",
+  "schemes" : [ "${rest.GetPoliciesDetails.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetPoliciesDetails.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "RootResponseROOT" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/RootResponseROOTEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        }
+      },
+      "required" : [ "RootResponseROOT" ]
+    },
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetPoliciesDetails.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "agentId" : {
+          "type" : "string"
+        },
+        "durationType" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "agentId", "durationType", "status" ]
+    },
+    "RootResponseROOTEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetPoliciesDetails.RootResponseROOTEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "PremiumToBePaid" : {
+          "type" : "string"
+        },
+        "UpdatedOn" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "ClientNumber" : {
+          "type" : "string"
+        },
+        "ClientId" : {
+          "type" : "string"
+        },
+        "ApplicationId" : {
+          "type" : "string"
+        },
+        "StateName" : {
+          "type" : "string"
+        },
+        "SumAssured" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "renewalDate" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "PolicyId" : {
+          "type" : "string"
+        },
+        "PolicyName" : {
+          "type" : "string"
+        },
+        "IssuanceDate" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "ClientName" : {
+          "type" : "string"
+        },
+        "CreatedBy" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "ProcessStatus" : {
+          "type" : "string"
+        },
+        "ApplicationDate" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "MobileNumber" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "ApplicationDate", "ApplicationId", "ClientId", "ClientName", "ClientNumber", "CreatedBy", "IssuanceDate", "MobileNumber", "PolicyId", "PolicyName", "PremiumToBePaid", "ProcessStatus", "StateName", "Status", "SumAssured", "UpdatedOn", "renewalDate" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "e1cc7dd9-29ed-4131-9507-67e4b41e9a71",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

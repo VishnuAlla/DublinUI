@@ -1,0 +1,27 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/backOfficeProfile/A00000016",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"Comments\":\"sghdfshdfg\",\"UpdatedOn\":1489412470000,\"UserName\":\"john\",\"ProcessStatus\":\"Cancelled\",\"RoleName\":\"BackOfficeOperator\"}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"0df3ab6a40d78864f3d89157247192ace\"" ],
+      "Date" : [ "Mon, 13 Mar 2017 13:44:58 GMT" ],
+      "Content-Length" : [ "131" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Connection" : [ "keep-alive" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "mode" : [ "block" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

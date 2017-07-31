@@ -1,0 +1,24 @@
+{
+  "authType" : "NONE",
+  "contentType" : "application/json",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/createQuote/nominees",
+  "method" : "POST",
+  "requestBody" : "{\n\t\"applicationId\":\"A12889775\",\n\t\"relationship\":\"Mother\",\n\t\"stateId\":\"c0871e89-e916-11e6-bf4a-0242ac110a6f\",\n\t\"entilementPercentage\":\"59\",\n\t\"phoneNumber\":\"5467853\",\n\t\"firstName\":\"Rita\",\n\t\"mobileNumber\":\"6565656\",\n\t\"zip\":\"76767\",\n\t\"lastName\":\"jones\",\n\t\"dateOfBirth\":\"1991-12-15\",\n\t\"country\":\"UnitedStates\",\n\t\"addressLine1\":\"park state\",\n\t\"addressLine2\":\"113/A\",\n\t\"client\":\n\t{\n\t\"weight\":\"6\",\n\t\"height\":\"7\",\n\t\"changeInWeight\":\"no\"\n\t}\n}",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : null,
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Date" : [ "Fri, 03 Feb 2017 12:36:25 GMT" ],
+      "Content-Length" : [ "0" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

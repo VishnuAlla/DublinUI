@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="getIncomeDetails" type="RestService" springFile="getIncomeDetails.spring.xml">
+    <operation name="invoke">
+        <parameter name="amt" typeRef="java.lang.String" isList="false"/>
+        <return isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="getIncomeDetails.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="RootResponseROOT" typeRef="getIncomeDetails.RootResponseROOTEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="getIncomeDetails.RootResponseROOTEntryItem" name="RootResponseROOTEntryItem" supportsQuickData="false">
+            <element name="CAI" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

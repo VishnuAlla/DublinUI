@@ -1,0 +1,24 @@
+{
+  "authType" : "NONE",
+  "contentType" : "application/json",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/createQuote/",
+  "method" : "POST",
+  "requestBody" : "{\n\"userName\":\"RiyaJones\",\n\"password\":\"riya\",\n\"client\":\n{\n\n   \"clientNumber\":\"C17777\", \n   \"emailId\":\"riya@Mailbox.com\",\n   \"dateOfBirth\": \"1991-12-15\",\n   \"clientName\": \"Riya Johnes\",\n   \"maritalStatus\": \"Single\",\n   \"noOfChildren\":0,\n   \"nationality\":\"American\",\n   \"gender\":\"Female\",\n   \"mobileNumber\": \"9776549221\",\n   \"phoneNumber\": \"87655431246\",\n   \"qualification\": \"B.E\",\n  \"company\":\"Pramati\",\n   \"occupationalHazards\":\"No\",\n   \"annualIncome\":45000,\n   \"occupation\":\"Engineer\"\n},\n  \"address\":\n  {\n  \"addressType\": \"Home\",\n  \"addressLine1\":\"12/A block\",\n  \"addressLine2\": \"Park Street\",\n  \"zip\": \"781A09\",\n  \"stateId\": \"8a674c8e-e922-11e6-ba0a-0242ac11000b\",\n  \"country\":\"United States\"\n},\n\"clientDetails\":\n{\n\"agentId\":\"2516f904-c8df-11e6-9740-0242ac1108f8\",\n\t\"uniquePolicyId\":\"858e74a4-cb43-11e6-8c86-0242ac11090e\",\n\t\"sumAssured\":\"5677\",\n\t\"policyId\":\"\",\n\t\"premiumToBePaid\":\"7500\",\n\t\"premiumType\":\"yearly\",\n\t\"tobaccoIntake\":\"No\",\n\t\"term\":2\n}\n}",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : null,
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Date" : [ "Thu, 02 Feb 2017 09:18:05 GMT" ],
+      "Content-Length" : [ "0" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

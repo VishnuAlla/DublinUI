@@ -1,0 +1,19 @@
+{
+  "breadcrumb" : {
+    "_id" : "wm-breadcrumb-wm.Variable-1478149130093",
+    "name" : "breadcrumb",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "label" : "Home",
+      "link" : "#/Main"
+    }, {
+      "label" : "Clients & Policies",
+      "link" : "#/clientListing"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}

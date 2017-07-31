@@ -1,0 +1,131 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.UpdateCreateQuoteDetails.basepath}",
+  "paths" : {
+    "/services/userUpdate/quoteDetails/{updatetype}/{applicationid}" : {
+      "x-WM-BASE_PATH" : "/services/userUpdate/quoteDetails/{updatetype}/{applicationid}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "put" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "description" : "RequestBody",
+          "name" : "RequestBody",
+          "required" : false,
+          "in" : "body"
+        }, {
+          "name" : "updatetype",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        }, {
+          "name" : "applicationid",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "UpdateCreateQuoteDetails_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.UpdateCreateQuoteDetails.scheme}://${rest.UpdateCreateQuoteDetails.host}${rest.UpdateCreateQuoteDetails.basepath}/services/userUpdate/quoteDetails/{updatetype}/{applicationid}"
+    }
+  },
+  "host" : "${rest.UpdateCreateQuoteDetails.host}",
+  "schemes" : [ "${rest.UpdateCreateQuoteDetails.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "UpdateCreateQuoteDetails.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "UpdateCreateQuoteDetails.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "dateOfBirth" : {
+          "type" : "string"
+        },
+        "occupation" : {
+          "type" : "string"
+        },
+        "tobaccoIntake" : {
+          "type" : "string"
+        },
+        "occupationalHazards" : {
+          "type" : "string"
+        },
+        "noOfChildren" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "maritalStatus" : {
+          "type" : "string"
+        },
+        "premiumToBePaid" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "annualIncome" : {
+          "type" : "string"
+        },
+        "emailId" : {
+          "type" : "string"
+        },
+        "qualification" : {
+          "type" : "string"
+        },
+        "nationality" : {
+          "type" : "string"
+        },
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "term" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "sumAssured" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "clientName" : {
+          "type" : "string"
+        },
+        "company" : {
+          "type" : "string"
+        },
+        "gender" : {
+          "type" : "string"
+        },
+        "mobileNumber" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "e24dbbed-1bd5-4a9a-93d3-f86d06140143",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

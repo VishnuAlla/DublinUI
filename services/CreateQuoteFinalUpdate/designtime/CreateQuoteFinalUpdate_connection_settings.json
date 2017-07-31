@@ -1,0 +1,24 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/createQuote/policyStatus/A66666666/Pending Issuance",
+  "method" : "PUT",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : null,
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Date" : [ "Tue, 07 Feb 2017 11:43:13 GMT" ],
+      "Content-Length" : [ "0" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

@@ -1,0 +1,191 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.InsertCreateQuotePersonal1.basepath}",
+  "paths" : {
+    "/services/createQuote/clientDetails" : {
+      "x-WM-BASE_PATH" : "/services/createQuote/clientDetails",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "description" : "RequestBody",
+          "name" : "RequestBody",
+          "required" : false,
+          "in" : "body"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "InsertCreateQuotePersonal1_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.InsertCreateQuotePersonal1.scheme}://${rest.InsertCreateQuotePersonal1.host}${rest.InsertCreateQuotePersonal1.basepath}/services/createQuote/clientDetails"
+    }
+  },
+  "host" : "${rest.InsertCreateQuotePersonal1.host}",
+  "schemes" : [ "${rest.InsertCreateQuotePersonal1.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "InsertCreateQuotePersonal1.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "InsertCreateQuotePersonal1.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "client" : {
+          "$ref" : "#/definitions/client"
+        },
+        "address" : {
+          "$ref" : "#/definitions/address"
+        },
+        "userName" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "clientDetails" : {
+          "$ref" : "#/definitions/clientDetails"
+        }
+      },
+      "required" : [ "address", "client", "clientDetails", "password", "userName" ]
+    },
+    "client" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "InsertCreateQuotePersonal1.client",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "dateOfBirth" : {
+          "type" : "string"
+        },
+        "occupation" : {
+          "type" : "string"
+        },
+        "occupationalHazards" : {
+          "type" : "string"
+        },
+        "clientNumber" : {
+          "type" : "string"
+        },
+        "noOfChildren" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "maritalStatus" : {
+          "type" : "string"
+        },
+        "annualIncome" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "emailId" : {
+          "type" : "string"
+        },
+        "qualification" : {
+          "type" : "string"
+        },
+        "nationality" : {
+          "type" : "string"
+        },
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "clientName" : {
+          "type" : "string"
+        },
+        "company" : {
+          "type" : "string"
+        },
+        "gender" : {
+          "type" : "string"
+        },
+        "mobileNumber" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "annualIncome", "clientName", "clientNumber", "company", "dateOfBirth", "emailId", "gender", "maritalStatus", "mobileNumber", "nationality", "noOfChildren", "occupation", "occupationalHazards", "phoneNumber", "qualification" ]
+    },
+    "address" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "InsertCreateQuotePersonal1.address",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "zip" : {
+          "type" : "string"
+        },
+        "stateId" : {
+          "type" : "string"
+        },
+        "addressType" : {
+          "type" : "string"
+        },
+        "addressLine2" : {
+          "type" : "string"
+        },
+        "addressLine1" : {
+          "type" : "string"
+        },
+        "country" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "addressLine1", "addressLine2", "addressType", "country", "stateId", "zip" ]
+    },
+    "clientDetails" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "InsertCreateQuotePersonal1.clientDetails",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "uniquePolicyId" : {
+          "type" : "string"
+        },
+        "term" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "policyId" : {
+          "type" : "string"
+        },
+        "sumAssured" : {
+          "type" : "string"
+        },
+        "tobaccoIntake" : {
+          "type" : "string"
+        },
+        "premiumType" : {
+          "type" : "string"
+        },
+        "agentId" : {
+          "type" : "string"
+        },
+        "premiumToBePaid" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "agentId", "policyId", "premiumToBePaid", "premiumType", "sumAssured", "term", "tobaccoIntake", "uniquePolicyId" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "75fb586f-ffa6-4d8b-b662-51aa75f7018b",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

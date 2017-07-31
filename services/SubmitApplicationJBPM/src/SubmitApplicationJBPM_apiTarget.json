@@ -1,0 +1,138 @@
+{
+  "basePath" : "${rest.SubmitApplicationJBPM.basepath}",
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "host" : "${rest.SubmitApplicationJBPM.host}",
+  "paths" : {
+    "/services/createQuote/policy" : {
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "description" : "loggedInId",
+          "name" : "loggedInId",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "required" : false,
+          "type" : "string",
+          "in" : "query"
+        }, {
+          "description" : "prevHistory",
+          "name" : "prevHistory",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "required" : false,
+          "type" : "string",
+          "in" : "query"
+        }, {
+          "description" : "status",
+          "name" : "status",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "required" : false,
+          "type" : "string",
+          "in" : "query"
+        }, {
+          "description" : "age",
+          "name" : "age",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "required" : false,
+          "type" : "string",
+          "in" : "query"
+        }, {
+          "description" : "applicationId",
+          "name" : "applicationId",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "required" : false,
+          "type" : "string",
+          "in" : "query"
+        }, {
+          "description" : "sum",
+          "name" : "sum",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "required" : false,
+          "type" : "string",
+          "in" : "query"
+        }, {
+          "description" : "custname",
+          "name" : "custname",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "required" : false,
+          "type" : "string",
+          "in" : "query"
+        }, {
+          "description" : "custid",
+          "name" : "custid",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "required" : false,
+          "type" : "string",
+          "in" : "query"
+        }, {
+          "description" : "productType",
+          "name" : "productType",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "required" : false,
+          "type" : "string",
+          "in" : "query"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-IS_LIST" : true,
+              "items" : {
+                "$ref" : "#/definitions/java.lang.Integer"
+              },
+              "type" : "array",
+              "uniqueItems" : false
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "SubmitApplicationJBPM_RestServiceVirtualController-invoke"
+      },
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "/services/createQuote/policy",
+      "x-WM-COMPLETE_PATH" : "${rest.SubmitApplicationJBPM.scheme}://${rest.SubmitApplicationJBPM.host}${rest.SubmitApplicationJBPM.basepath}/services/createQuote/policy",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "schemes" : [ "${rest.SubmitApplicationJBPM.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "SubmitApplicationJBPM.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "RootResponseROOT" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "format" : "int32",
+            "type" : "integer"
+          },
+          "type" : "array",
+          "uniqueItems" : false
+        }
+      },
+      "required" : [ "RootResponseROOT" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "23884e8d-ec16-4195-8a05-008bed0fcdd2",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

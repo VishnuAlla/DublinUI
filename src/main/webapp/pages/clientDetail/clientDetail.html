@@ -1,0 +1,116 @@
+<wm-page data-ng-controller="clientDetailPageController" pagetitle="Client Detail" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1" padding="unset 20px">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow8">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn14_1">
+                        <wm-breadcrumb dataset="bind:Variables.breadCrumb.dataSet" name="breadcrumb1" fontstyle="italic"></wm-breadcrumb>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                        <wm-label name="label1" caption="Client Details" fontsize="26" padding="10px unset"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                        <wm-layoutgrid name="layoutgrid2">
+                            <wm-gridrow name="gridrow4">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn4" class="clientdetails">
+                                    <wm-composite name="composite2">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label3" caption="Client Id"></wm-label>
+                                        <wm-container class="col-md-9" name="container2">
+                                            <wm-text name="text2" datavalue="bind:Variables.getClientDetails.dataSet[$i].ClientNumber"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn5_1">
+                                    <wm-composite name="composite3">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label4" caption="Email Id"></wm-label>
+                                        <wm-container class="col-md-9" name="container3">
+                                            <wm-text name="text3" datavalue="bind:Variables.getClientDetails.dataSet[$i].EmailId"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn8">
+                                    <wm-composite name="composite4">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label5" caption="Date of Birth"></wm-label>
+                                        <wm-container class="col-md-9" name="container4">
+                                            <wm-text name="text4" datavalue="bind:Variables.getClientDetails.dataSet[$i].DateOfBirth"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow5">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn6" class="clientdetails">
+                                    <wm-composite name="composite5">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label6" caption="Name"></wm-label>
+                                        <wm-container class="col-md-9" name="container5">
+                                            <wm-text name="text5" datavalue="bind:Variables.getClientDetails.dataSet[$i].ClientName"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn7">
+                                    <wm-composite name="composite6">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label7" caption="Phone Number"></wm-label>
+                                        <wm-container class="col-md-9" name="container6">
+                                            <wm-text name="text6" datavalue="bind:Variables.getClientDetails.dataSet[$i].PhoneNumber"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn9">
+                                    <wm-composite name="composite7">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label8" caption="Marital Status"></wm-label>
+                                        <wm-container class="col-md-9" name="container7">
+                                            <wm-text name="text7" datavalue="bind:Variables.getClientDetails.dataSet[$i].MaritalStatus"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow7">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn14" class="clientdetails">
+                                    <wm-composite name="composite8">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label9" caption="Address"></wm-label>
+                                        <wm-container class="col-md-9" name="container8">
+                                            <wm-text name="text8" datavalue="bind:Variables.getClientDetails.dataSet[$i].Address"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn15">
+                                    <wm-composite name="composite9">
+                                        <wm-label class="col-md-3 control-label CustomLabel" name="label10" caption="Occupation"></wm-label>
+                                        <wm-container class="col-md-9" name="container9">
+                                            <wm-text name="text9" datavalue="bind:Variables.getClientDetails.dataSet[$i].Occupation"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn19"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3" padding="1em unset unset unset">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                        <wm-grid title="" dataset="bind:Variables.getPoliciesOfClient.dataSet" navigation="Basic" name="clientPolicyGrid" class="ClientDetailsGrid" gridclass="table-bordered table-striped table-hover">
+                            <wm-grid-column binding="PolicyStatus" caption="Policy Status" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PolicyNumber" caption="Policy Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PlanName" caption="Plan Name" type="string" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PremiumAmount" caption="Premium Amount" type="string" readonly="true" formatpattern="toCurrency" currencypattern="USD" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PremiumDueDate" caption="Premium Due Date" type="string" readonly="true" datepattern="yyyy-MM-dd" formatpattern="toDate" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="CashValue" caption="Cash Value" type="string" readonly="true" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PremiumMode" caption="Premium Mode" type="string" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                        </wm-grid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="BackRow">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                        <wm-button class="btn-primary" caption="Back" type="button" margin="unset 0.5em" name="button1" on-click="Variables.goToPage_clientListing.invoke()"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

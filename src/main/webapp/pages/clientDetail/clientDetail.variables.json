@@ -1,0 +1,66 @@
+{
+  "breadCrumb" : {
+    "_id" : "wm-breadCrumb-wm.Variable-1478077464131",
+    "name" : "breadCrumb",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "label" : "Home",
+      "link" : "#/Main"
+    }, {
+      "label" : "Clients & Policies",
+      "link" : "#/clientListing"
+    }, {
+      "label" : "Client Details",
+      "link" : "#/clientDetail"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "getClientDetails" : {
+    "_id" : "wm-getClientDetails-wm.ServiceVariable-1478069283814",
+    "name" : "getClientDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "guardiangetClientDetailsrtnType",
+    "service" : "guardian",
+    "operation" : "executeGetClientDetails",
+    "operationId" : "QueryExecutionController_executeGetClientDetails",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "getPoliciesOfClient" : {
+    "_id" : "wm-getPoliciesOfClient-wm.ServiceVariable-1478069246230",
+    "name" : "getPoliciesOfClient",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "guardiangetAllPoliciesOfClientrtnType",
+    "service" : "guardian",
+    "operation" : "executeGetAllPoliciesOfClient",
+    "operationId" : "QueryExecutionController_executeGetAllPoliciesOfClient",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 5,
+    "designMaxResults" : 5,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  }
+}

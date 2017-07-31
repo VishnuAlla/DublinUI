@@ -1,0 +1,79 @@
+.wm-app .commentslist
+{
+    /*border-bottom: dashed 1px #3a435c;*/
+    /*border-top: none;*/
+    /*border-left: none;*/
+    /*border-right: none;*/
+    border:none!important;
+    background-color: #282d39;
+    padding-top:25px;
+}
+.wm-app .commentslist > li
+{
+     background-color: #282d39;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom: dotted 2px #3a435c;
+}
+.wm-app .namelabel
+{
+        background-color: #3a435c;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 18px;
+    border-radius: 50%;
+}
+.wm-app .review
+{
+    border-radius: 2px;
+    background-color: #282d39;
+    border: solid 1px #363d50;
+    color: #556287;
+    text-align: center;
+}
+.wm-app .approved
+{
+    background-color:#fff;
+}
+.wm-app .commentbackground
+{
+     background-color: #2e3443;
+     padding:20px;
+}
+.app-switch
+{
+    background: #282d39;
+        height: 40px;
+}
+.app-switch .model-holder
+{
+    display:none;
+}
+.app-switch a
+{
+    color: #9da7be;
+    font-size:16px;
+    text-transform:none;
+}
+.wm-app .app-switch .btn
+{
+    border-radius: 2px!important;
+    /* background-color: #282d39; */
+    border: solid 1px #363d50;
+        text-transform: none;
+        padding-top: 11px;
+}
+.wm-app .app-switch .btn-default
+{
+    background-color:transparent;
+}
+.wm-app .app-switch
+{
+    border-radius:0;
+}
+.app-switch .btn-group>.btn
+{
+    border-radius:0;
+}

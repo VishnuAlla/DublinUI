@@ -1,0 +1,38 @@
+.lastlogged {
+ /* width: 131px;
+  height: 30px;*/
+  font-family: Roboto-Regular;
+  font-size: 11px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9b9b9b;
+}
+.Logout {
+  width: 51px;
+  height: 21px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #282d39;
+}
+
+.userlabel {
+  cursor:pointer;
+  width: 120px;
+  height: 19px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d4145a;
+}

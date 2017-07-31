@@ -1,0 +1,187 @@
+<wm-page data-ng-controller="ProfilePageController" pagetitle="Profile" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-container name="breadcrumbcontainer" content="breadcrum" showindevice="sm,md,lg"></wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1" padding="10px" class="boxshadow">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                        <wm-label padding="unset 0.5em" name="label1" caption="PERSONAL DETAILS" class="headerlabel" width="100%" color="#282d39"></wm-label>
+                        <hr class="hr">
+                        <wm-layoutgrid name="layoutgrid2">
+                            <wm-gridrow name="gridrow4_1">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn6" padding="10px">
+                                    <!--<wm-container name="custom-container" class="custom-container">-->
+                                    <!--    <wm-anchor name="anchor1" caption="EDIT" on-click="anchor1Click($event, $scope)"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="SAVE" name="anchor2"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="CANCEL" name="anchor3"></wm-anchor>-->
+                                    <!--</wm-container>-->
+                                    <wm-composite name="composite1" class="custom-composite">
+                                        <wm-container class="col-md-9" name="container1">
+                                            <wm-label padding="unset 0.5em" name="label2" caption="Name"></wm-label>
+                                            <wm-text name="text1" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.ClientName || Variables.GetProfile.dataSet.AgentName"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn7" padding="10px">
+                                    <!--<wm-container name="custom-container" class="custom-container">-->
+                                    <!--    <wm-anchor name="anchor1" caption="EDIT" on-click="anchor1Click($event, $scope)"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="SAVE" name="anchor2"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="CANCEL" name="anchor3"></wm-anchor>-->
+                                    <!--</wm-container>-->
+                                    <wm-composite name="composite1" class="custom-composite">
+                                        <wm-container class="col-md-9" name="container1">
+                                            <wm-label padding="unset 0.5em" name="label2" caption="Date of Birth"></wm-label>
+                                            <wm-text name="text1" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.DateOfBirth"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn14" padding="10px">
+                                    <wm-container name="custom-container" class="custom-container">
+                                        <wm-anchor name="anc_edit" caption="EDIT" on-click="anchor1Click($event, $scope)"></wm-anchor>
+                                        <wm-anchor caption="SAVE" name="anc_save" show="false" on-click="anc_saveClick($event, $scope)" padding="unset 10px unset unset"></wm-anchor>
+                                        <wm-anchor caption="CANCEL" name="anc_cancel" show="false" on-click="anc_cancelClick($event, $scope)"></wm-anchor>
+                                    </wm-container>
+                                    <wm-composite name="composite1" class="custom-composite">
+                                        <wm-container class="col-md-9" name="container1">
+                                            <wm-label padding="unset 0.5em" name="label2" caption="Marital Status"></wm-label>
+                                            <wm-text name="txt_maritalstatus" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.MaritalStatus"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow5">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn8" padding="10px">
+                                    <!--<wm-container name="custom-container" class="custom-container">-->
+                                    <!--    <wm-anchor name="anchor1" caption="EDIT" on-click="anchor1Click($event, $scope)"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="SAVE" name="anchor2"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="CANCEL" name="anchor3"></wm-anchor>-->
+                                    <!--</wm-container>-->
+                                    <wm-composite name="composite1" class="custom-composite">
+                                        <wm-container class="col-md-9" name="container1">
+                                            <wm-label padding="unset 0.5em" name="label2" caption="Nationality"></wm-label>
+                                            <wm-text name="text1" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.Nationality"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn15" padding="10px">
+                                    <!--<wm-container name="custom-container" class="custom-container">-->
+                                    <!--    <wm-anchor name="anchor1" caption="EDIT" on-click="anchor1Click($event, $scope)"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="SAVE" name="anchor2"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="CANCEL" name="anchor3"></wm-anchor>-->
+                                    <!--</wm-container>-->
+                                    <wm-composite name="composite1" class="custom-composite">
+                                        <wm-container class="col-md-9" name="container1">
+                                            <wm-label padding="unset 0.5em" name="label2" caption="Gender"></wm-label>
+                                            <wm-text name="text1" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.Gender"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn9" padding="10px">
+                                    <!--<wm-container name="custom-container" class="custom-container">-->
+                                    <!--    <wm-anchor name="anchor1" caption="EDIT" on-click="anchor1Click($event, $scope)"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="SAVE" name="anchor2"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="CANCEL" name="anchor3"></wm-anchor>-->
+                                    <!--</wm-container>-->
+                                    <wm-composite name="composite1" class="custom-composite">
+                                        <wm-container class="col-md-9" name="container1">
+                                            <wm-label padding="unset 0.5em" name="label2" caption="SSN"></wm-label>
+                                            <wm-text name="text1" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.SSN"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow8">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn14_1" padding="10px">
+                                    <!--<wm-container name="custom-container" class="custom-container">-->
+                                    <!--    <wm-anchor name="anchor1" caption="EDIT" on-click="anchor1Click($event, $scope)"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="SAVE" name="anchor2"></wm-anchor>-->
+                                    <!--    <wm-anchor caption="CANCEL" name="anchor3"></wm-anchor>-->
+                                    <!--</wm-container>-->
+                                    <wm-composite name="composite1" class="custom-composite">
+                                        <wm-container class="col-md-9" name="container1">
+                                            <wm-label padding="unset 0.5em" name="label2" caption="Client ID"></wm-label>
+                                            <wm-text name="text1" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.ClientId || Variables.GetProfile.dataSet.AgentId"></wm-text>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn15_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn16_1"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2" padding="10px" class="boxshadow">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                        <wm-label padding="unset 0.5em" name="label2" caption="CONTACT DETAILS" width="100%" class="headerlabel" color="#282d39"></wm-label>
+                        <hr class="hr">
+                    </wm-gridcolumn>
+                    <wm-layoutgrid name="layoutgrid3">
+                        <wm-gridrow name="gridrow6">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn10_1" padding="10px">
+                                <wm-container name="custom-container" class="custom-container">
+                                    <wm-anchor name="anc_mobile_edit" caption="EDIT" on-click="anc_mobile_editClick($event, $scope)"></wm-anchor>
+                                    <wm-anchor caption="SAVE" name="anc_mobile_save" show="false" on-click="anc_mobile_saveClick($event, $scope)" padding="unset 10px unset unset"></wm-anchor>
+                                    <wm-anchor caption="CANCEL" name="anc_mobile_cancel" show="false" on-click="anc_mobile_cancelClick($event, $scope)"></wm-anchor>
+                                </wm-container>
+                                <wm-composite name="composite1" class="custom-composite">
+                                    <wm-container class="col-md-9" name="container1">
+                                        <wm-label padding="unset 0.5em" name="label2" caption="Mobile Number"></wm-label>
+                                        <wm-text name="txt_mobilenumber" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.MobileNumber"></wm-text>
+                                    </wm-container>
+                                </wm-composite>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn16" padding="10px">
+                                <!--<wm-container name="custom-container" class="custom-container">-->
+                                <!--    <wm-anchor name="anchor1" caption="EDIT" on-click="anchor1Click($event, $scope)"></wm-anchor>-->
+                                <!--    <wm-anchor caption="SAVE" name="anchor2"></wm-anchor>-->
+                                <!--    <wm-anchor caption="CANCEL" name="anchor3"></wm-anchor>-->
+                                <!--</wm-container>-->
+                                <wm-composite name="composite1" class="custom-composite">
+                                    <wm-container class="col-md-9" name="container1">
+                                        <wm-label padding="unset 0.5em" name="label2" caption="Phone Number"></wm-label>
+                                        <wm-text name="text1" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.PhoneNumber"></wm-text>
+                                    </wm-container>
+                                </wm-composite>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn11" padding="10px">
+                                <wm-container name="custom-container" class="custom-container">
+                                    <wm-anchor name="anc_email_edit" caption="EDIT" on-click="anc_email_editClick($event, $scope)"></wm-anchor>
+                                    <wm-anchor caption="SAVE" name="anc_email_save" show="false" on-click="anc_email_saveClick($event, $scope)" padding="unset 10px unset unset"></wm-anchor>
+                                    <wm-anchor caption="CANCEL" name="anc_email_cancel" show="false" on-click="anc_email_cancelClick($event, $scope)"></wm-anchor>
+                                </wm-container>
+                                <wm-composite name="composite1" class="custom-composite">
+                                    <wm-container class="col-md-9" name="container1">
+                                        <wm-label padding="unset 0.5em" name="label2" caption="Email Address"></wm-label>
+                                        <wm-text name="txt_email" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.EmailId"></wm-text>
+                                    </wm-container>
+                                </wm-composite>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow7">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn12" padding="10px">
+                                <wm-container name="custom-container" class="custom-container">
+                                    <wm-anchor name="anc_address_edit" caption="EDIT" on-click="anc_address_editClick($event, $scope)"></wm-anchor>
+                                    <wm-anchor caption="SAVE" name="anc_address_save" show="false" on-click="anc_address_saveClick($event, $scope)" padding="unset 10px unset unset"></wm-anchor>
+                                    <wm-anchor caption="CANCEL" name="anc_address_cancel" show="false" on-click="anc_address_cancelClick($event, $scope)"></wm-anchor>
+                                </wm-container>
+                                <wm-composite name="composite1" class="custom-composite">
+                                    <wm-container class="col-md-9" name="container1">
+                                        <wm-label padding="unset 0.5em" name="label2" caption="Address"></wm-label>
+                                        <wm-text name="txt_address" disabled="true" datavalue="bind:Variables.GetProfile.dataSet.Address"></wm-text>
+                                    </wm-container>
+                                </wm-composite>
+                            </wm-gridcolumn>
+                            <!--<wm-gridcolumn columnwidth="4" name="gridcolumn17"></wm-gridcolumn>-->
+                            <!--<wm-gridcolumn columnwidth="4" name="gridcolumn13"></wm-gridcolumn>--></wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <!--<wm-footer content="footer" name="footer1"></wm-footer>--></wm-page>

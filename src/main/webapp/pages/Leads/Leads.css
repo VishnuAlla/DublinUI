@@ -1,0 +1,8 @@
+[name=Markedascoldconfirm] .app-dialog-header.modal-header {
+    padding-top: 0.5em !important;
+    border: none;
+    border-radius: 10px;
+}
+[name=Markedascoldconfirm]  .modal-content{
+      border-radius: 10px;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="GetMonthBuisness" type="RestService" springFile="GetMonthBuisness.spring.xml">
+    <operation name="invoke">
+        <parameter name="Month" typeRef="java.lang.String" isList="false"/>
+        <parameter name="agentid" typeRef="java.lang.String" isList="false"/>
+        <return isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="GetMonthBuisness.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="RootResponseROOT" typeRef="GetMonthBuisness.RootResponseROOTEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="GetMonthBuisness.RootResponseROOTEntryItem" name="RootResponseROOTEntryItem" supportsQuickData="false">
+            <element name="ClientName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="ClientNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="Commission" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="IssuanceDate" typeRef="java.lang.Long" isList="false" allowNull="false"/>
+            <element name="PolicyId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="PolicyName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="PremiumPaid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

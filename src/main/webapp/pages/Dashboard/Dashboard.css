@@ -1,0 +1,18 @@
+@media only screen and (max-width: 844px) and (min-width: 299px){
+.wm-app .mobilecontainer
+{
+        margin-top: 20px!important;
+}
+}
+
+.wm-app .table-title{
+  font-family: Dosis-Medium;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: #282d39;
+}
+
+.wm-app .common-link{
+   color: #0076ff;
+}

@@ -1,0 +1,25 @@
+{
+  "GetRFICount" : {
+    "_id" : "wm-GetRFICount-wm.ServiceVariable-1490104042024",
+    "name" : "GetRFICount",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "GetPoliciesDetails.RootResponseROOTEntryItem",
+    "service" : "GetPoliciesDetails",
+    "operation" : "invoke",
+    "operationId" : "GetPoliciesDetails_RestServiceVirtualController-invoke",
+    "operationType" : "post",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

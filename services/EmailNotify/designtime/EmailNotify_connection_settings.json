@@ -1,0 +1,32 @@
+{
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/sendEmail/EmailNotify",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "to" : "aa",
+    "ebody" : "aa",
+    "eSubject" : "aa"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : null,
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "ETag" : [ "\"0d41d8cd98f00b204e9800998ecf8427e\"" ],
+      "Content-Length" : [ "0" ],
+      "Date" : [ "Wed, 12 Jul 2017 18:44:02 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

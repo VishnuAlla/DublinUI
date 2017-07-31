@@ -1,0 +1,19 @@
+{
+  "submenuVariable" : {
+    "_id" : "wm-submenuVariable-wm.Variable-1485250163720",
+    "name" : "submenuVariable",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "pagename" : "Buisness Overview",
+      "url" : "#buisnessoverview"
+    }, {
+      "pagename" : "My Earning",
+      "url" : "#Myearnings"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}

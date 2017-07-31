@@ -1,0 +1,6 @@
+.wm-app .ClientDetailsGrid .panel-footer{
+    border-top: none !important;
+}
+.clientdetails .CustomLabel{
+    padding-left:0px !important;
+}

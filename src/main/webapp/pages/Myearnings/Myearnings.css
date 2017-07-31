@@ -1,0 +1,8 @@
+/*.wm-app .table > thead > tr > td.customclass, .wm-app .table > tbody > tr > td.customclass, .wm-app .table > tfoot > tr > td.customclass, .wm-app .table > thead > tr > th.customclass, .wm-app .table > tbody > tr > th.customclass, .wm-app .table > tfoot > tr > th.customclass, .wm-app .table > thead > tr.customclass > td, .wm-app .table > tbody > tr.customclass > td, .wm-app .table > tfoot > tr.customclass > td, .wm-app .table > thead > tr.customclass > th, .wm-app .table > tbody > tr.customclass > th, .wm-app .table > tfoot > tr.customclass > th*/
+/*{*/
+/*        background-color: #2e3443;*/
+/*}*/
+.customclass
+{
+    background-color: #2e3443!important;
+}

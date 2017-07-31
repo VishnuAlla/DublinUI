@@ -1,0 +1,58 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.CreateQuoteFinalUpdate.basepath}",
+  "paths" : {
+    "/services/createQuote/policyStatus/{applicationid}/{status}" : {
+      "x-WM-BASE_PATH" : "/services/createQuote/policyStatus/{applicationid}/{status}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "put" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "name" : "applicationid",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        }, {
+          "name" : "status",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "CreateQuoteFinalUpdate_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.CreateQuoteFinalUpdate.scheme}://${rest.CreateQuoteFinalUpdate.host}${rest.CreateQuoteFinalUpdate.basepath}/services/createQuote/policyStatus/{applicationid}/{status}"
+    }
+  },
+  "host" : "${rest.CreateQuoteFinalUpdate.host}",
+  "schemes" : [ "${rest.CreateQuoteFinalUpdate.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateQuoteFinalUpdate.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "4fa993f7-7e85-4add-abd6-1116647af52e",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

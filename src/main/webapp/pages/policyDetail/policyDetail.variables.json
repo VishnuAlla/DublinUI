@@ -1,0 +1,43 @@
+{
+  "breadCrumb" : {
+    "_id" : "wm-breadCrumb-wm.Variable-1478077718018",
+    "name" : "breadCrumb",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "label" : "Home",
+      "link" : "#/Main"
+    }, {
+      "label" : "Clients & Policies",
+      "link" : "#/clientListing"
+    }, {
+      "label" : "Policy Details",
+      "link" : "#/policyDetail"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "getPolicyDetails" : {
+    "_id" : "wm-getClientDetails-wm.ServiceVariable-1478067896297",
+    "name" : "getPolicyDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "guardiangetPolicyDetailsrtnType",
+    "service" : "guardian",
+    "operation" : "executeGetPolicyDetails",
+    "operationId" : "QueryExecutionController_executeGetPolicyDetails",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  }
+}

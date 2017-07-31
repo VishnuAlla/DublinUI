@@ -1,0 +1,29 @@
+{
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/portal/440c1544-c8dc-11e6-9740-0242ac1108f8",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"UniqueLeadId\":\"2065eec2-67b6-11e7-a08a-0242ac11010e\",\"LeadId\":\"L00000006\",\"ClientNumber\":\"C00000001\",\"UniquePolicyId\":\"b57cf4bb-cb43-11e6-8c86-0242ac11090e\",\"FirstName\":\"John\",\"LastName\":\"Petet\",\"PhoneNumber\":\"987456321\",\"Email\":\"Mary.Williams@Mailbox.com\",\"SumAssured\":15000,\"PremiumToBePaid\":\"18000\",\"StartDate\":1499941758000,\"PremiumType\":\"years\",\"DateOfBirth\":\"1980-12-12\",\"Gender\":\"Male\",\"UpdatedOn\":1499941758000,\"TobaccoIntake\":\"Yes\",\"Term\":15,\"StateId\":\"b19a29c4-055f-11e7-a552-a45d36d03885\",\"Active\":true,\"StateName\":\"Washington\",\"PlanName\":\"Wealth Builder Plus\",\"ClientId\":\"dd88b13c-c8de-11e6-9740-0242ac1108f8\"}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "ETag" : [ "\"0f051cbf229478512603360305946a499\"" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Content-Length" : [ "629" ],
+      "Date" : [ "Thu, 13 Jul 2017 11:26:17 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

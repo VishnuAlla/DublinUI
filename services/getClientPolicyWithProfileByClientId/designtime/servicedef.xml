@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="getClientPolicyWithProfileByClientId" type="RestService" springFile="getClientPolicyWithProfileByClientId.spring.xml">
+    <operation name="invoke">
+        <parameter name="clientId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="getClientPolicyWithProfileByClientId.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="getClientPolicyWithProfileByClientId.PoliciesEntryItem" name="PoliciesEntryItem" supportsQuickData="false">
+            <element name="NextDueDate" typeRef="java.lang.Long" isList="false" allowNull="false"/>
+            <element name="PlanName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="PolicyId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="PolicyStatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="Term" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="getClientPolicyWithProfileByClientId.Profile" name="Profile" supportsQuickData="false">
+            <element name="Address" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="ClientName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="ClientNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="DateOfBirth" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="EmailId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="MaritalStatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="MobileNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="getClientPolicyWithProfileByClientId.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="Policies" typeRef="getClientPolicyWithProfileByClientId.PoliciesEntryItem" isList="true" allowNull="false"/>
+            <element name="Profile" typeRef="getClientPolicyWithProfileByClientId.Profile" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

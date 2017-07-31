@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="GetPolicyVolumeComparison" type="RestService" springFile="GetPolicyVolumeComparison.spring.xml">
+    <operation name="invoke">
+        <parameter name="agentId" typeRef="java.lang.String" isList="false"/>
+        <return isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="GetPolicyVolumeComparison.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="RootResponseROOT" typeRef="GetPolicyVolumeComparison.RootResponseROOTEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="GetPolicyVolumeComparison.RootResponseROOTEntryItem" name="RootResponseROOTEntryItem" supportsQuickData="false">
+            <element name="StatusCount" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="StatusName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="percentage" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

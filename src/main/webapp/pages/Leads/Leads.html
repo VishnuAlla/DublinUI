@@ -1,0 +1,81 @@
+<wm-page data-ng-controller="LeadsPageController" pagetitle="Leads" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-container name="container1" margin="20px unset unset unset">
+                <wm-layoutgrid name="layoutgrid2">
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                            <wm-container name="container2" content="breadcrumb"></wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                            <wm-label padding="unset 0.5em unset 0em" name="label1" caption="Leads" fontsize="26" fontfamily="Dosis-Regular" margin="40px unset 30px unset" color="#282d39"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                            <wm-prefab prefabname="GridSearch_Enterprise" name="GridSearch_Enterprise1" class="prefab-search" girdname="grid_agentleads" griddata="bind:Variables.GetLeads_SF.dataSet" height="40px"></wm-prefab>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                            <wm-container name="container3">
+                                <wm-grid title="" dataset="bind:Variables.GetLeads_SF.dataSet" navigation="Basic" name="grid_agentleads" pagesize="10">
+                                    <wm-grid-column binding="LeadId" caption="Lead ID" type="string" widget-type="anchor" readonly="true" edit-widget-type="text" show="true">
+                                        <wm-anchor caption="{{row.getProperty('LeadId')}}" hyperlink="" class="common-link" ng-click="leadsquote(row)" ng-class=""></wm-anchor>
+                                    </wm-grid-column>
+                                    <wm-grid-column binding="FirstName" caption="Client Name" type="string" widget-type="label" width="150px" readonly="true" col-class="col-attr1" edit-widget-type="text" show="true">{{row.getProperty('FirstName')}} {{row.getProperty('LastName')}}</wm-grid-column>
+                                    <wm-grid-column binding="PhoneNumber" caption="Mobile Number" type="string" width="130px" readonly="true" mobiledisplay="false" edit-widget-type="text"
+                                    show="true"></wm-grid-column>
+                                    <wm-grid-column binding="Email" caption="Email" type="string" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                                    <wm-grid-column binding="Term" caption="Term" type="string" widget-type="label" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true">
+                                        <wm-label caption="{{row.getProperty('Term')}}  Years" data-ng-class=""></wm-label>
+                                    </wm-grid-column>
+                                    <wm-grid-column binding="SumAssured" caption="Sum Assured" type="string" width="120px" readonly="true" formatpattern="toCurrency" currencypattern="USD" fractionsize="0" mobiledisplay="false" edit-widget-type="text"
+                                    show="true"></wm-grid-column>
+                                    <wm-grid-column binding="PremiumToBePaid" caption="Premium Amount" type="string" width="130px" readonly="true" col-class="grid-amt" formatpattern="toCurrency" currencypattern="USD" fractionsize="0"
+                                    mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                                    <wm-grid-column binding="PlanName" caption="Plan Name" type="string" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                                    <wm-grid-column binding="StateName" caption="State Name" type="string" width="120px" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                                    <wm-grid-column binding="ClientNumber" caption="Customer ID" type="string" width="115px" readonly="true" edit-widget-type="text" show="true">
+                                        <wm-anchor caption="{{row.ClientNumber}}" ng-click="CustomerProfile(row.ClientId)"></wm-anchor>
+                                    </wm-grid-column>
+                                    <wm-grid-column binding="customField" caption="Expand" type="string" widget-type="button" readonly="true" pcdisplay="false" edit-widget-type="text" searchable="false" show="true">
+                                        <wm-button caption="" show="true" class="btn-arrow" iconclass="wi wi-arrow-downward" on-click="expandRow(row)" data-ng-class=""></wm-button>
+                                    </wm-grid-column>
+                                    <wm-grid-column binding="Action" caption="Action" type="string" widget-type="anchor" readonly="true" mobiledisplay="false" edit-widget-type="text" searchable="false" show="true">
+                                        <wm-anchor caption="Cold" ng-click="leadsCold(row)" ng-class=""></wm-anchor>
+                                    </wm-grid-column>
+                                </wm-grid>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-container>
+        </wm-page-content>
+        <wm-view class="dialog-view" name="view2" show="false">
+            <wm-dialog height="100%" dialogtype="design-dialog" modal="true" name="Dialog_agentleads" class="mobile-dialog" title="Lead Details">
+                <wm-container name="container3" content="ExpandSelectedRow"></wm-container>
+                <wm-dialogactions name="dialogactions1">
+                    <wm-button class="btn-gradient pull-left" caption="Close" on-click="closeDialog()" name="button1"></wm-button>
+                    <!--<wm-button class="btn-primary" caption="Delete" name="btnDeleteInDialog" on-click="deleteCompliance()" show="bind:Widgets.gridEmployeeComplianceByStatus.selecteditem.Status == &quot;PendingApproval&quot; || Widgets.gridEmployeeComplianceByStatus.selecteditem.Status == &quot;Assigned&quot;"></wm-button>-->
+                    <!--<wm-button class="btn-primary" caption="Add" name="btnAddInDialog" on-click="addCompliance()"></wm-button>--></wm-dialogactions>
+            </wm-dialog>
+        </wm-view>
+    </wm-content>
+    <wm-view class="dialog-view" name="view3">
+        <wm-dialog dialogtype="design-dialog" modal="true" title="" iconclass="" name="Markedascoldconfirm" width="350">
+            <wm-layoutgrid name="layoutgrid3">
+                <wm-gridrow name="gridrow6">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn8" horizontalalign="center">
+                        <wm-icon name="icon1" iconclass="wi wi-check-circle" color="#01d0a0" iconsize="28px"></wm-icon>
+                        <wm-label padding="unset 0.5em" caption="Successfully marked as cold" name="label6" fontsize="20" color="#02d0a0" fontfamily="Roboto-Regular"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-dialog>
+    </wm-view>
+</wm-page>

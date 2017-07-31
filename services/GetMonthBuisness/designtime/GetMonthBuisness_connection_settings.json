@@ -1,0 +1,27 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "http://wavemaker-apps.pramati.com/dev_api_dublin/services/profile/customerPolicies/Nov-2016/2516f904-c8df-11e6-9740-0242ac1108f8",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"ClientNumber\":\"C11830\",\"ClientName\":\"Mary Williams\",\"PolicyId\":\"P78120087\",\"PremiumPaid\":\"55000\",\"PolicyName\":\"iPROTECT SMART\",\"Commission\":\"5500\",\"IssuanceDate\":1478076936000},{\"ClientNumber\":\"C21580\",\"ClientName\":\"John Doe\",\"PolicyId\":\"P01235689\",\"PremiumPaid\":\"76000\",\"PolicyName\":\"iPROTECT SMART\",\"Commission\":\"7600\",\"IssuanceDate\":1478944536000}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"030167451a33dd2fc246ee070bffd259a\"" ],
+      "Date" : [ "Wed, 28 Dec 2016 07:44:51 GMT" ],
+      "Content-Length" : [ "354" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ],
+      "Cache-Control" : [ "max-age=0" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

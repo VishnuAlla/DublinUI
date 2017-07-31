@@ -1,0 +1,418 @@
+/*Coming from wm-style.css-1 started*/
+
+.wm-app .app-grid .app-datagrid .app-grid-header.scroll-visible {
+    padding-right: 0px!important;
+}
+.wm-app .app-grid .overlay {
+    background: transparent;
+}
+.app-grid .overlay .loading,
+.app-grid .overlay .status {
+    color: #546287;
+}
+.wm-app .bg-primary i {
+    margin-top: 8px!important;
+}
+.wm-app .activetile i {
+    margin-top: 8px !important;
+}
+.wm-app .inactive-tile {
+    height: 42px;
+    width: 200px;
+    border: solid 1px #c8c8c8;
+    background-color: #fff;
+    color: #9b9b9b;
+}
+.wm-app .inactive-tile:hover {
+    border: solid 1px #c8c8c8;
+    color: #fff;
+    height: 42px;
+    width: 200px;
+    background-image: linear-gradient(100deg, #d4145a, #9e005d);
+    /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);*/
+}
+.NeedAnalysisWizard.app-wizard .app-wizard-steps {
+    /*width: 450px;*/
+    
+    width: 500px;
+}
+.wm-app .blanck {
+    margin: 10px 0 0 0!important;
+    background-color: transparent!important;
+}
+.wm-app .blanck .app-container {
+    background-color: transparent!important;
+}
+.wm-app .custom-composite .form-control {
+    background-color: transparent!important;
+}
+/*.app-anchor .anchor-caption {
+    color: #0076ff;
+}*/
+
+@media only screen and (max-width: 844px) and (min-width: 299px) {
+    .wm-app .prefab-search {
+        height: auto !important;
+    }
+    .wm-app .app-content .app-content-row .app-content-column,
+    .wm-app .app-content .app-content-row .app-page-content {
+        padding-top: 20px;
+    }
+    .wm-app .changefontsize {
+        font-size: 15px!important;
+    }
+    .app-wizard .app-wizard-steps .app-wizard-step .step-title {
+        margin-right: 8px;
+    }
+    .wm-app .containerborder {
+        margin-right: 10px;
+    }
+    .wm-app .app-content {
+        background-color: transparent;
+    }
+}
+/*Coming from wm-style.css-1 ended*/
+
+.app-datagrid-paginator {
+    float: right !important;
+}
+/*css for Wizard started*/
+
+.app-wizard .app-wizard-steps .app-wizard-step.current a,
+.app-wizard .app-wizard-steps .app-wizard-step.current a:active,
+.app-wizard .app-wizard-steps .app-wizard-step.current a:focus,
+.app-wizard .app-wizard-steps .app-wizard-step.current a:hover {
+    background-color: #01d0a0;
+    color: #fff;
+    font-family: 'Roboto-Medium';
+    padding-left: 33px
+}
+.app-wizard .app-wizard-steps .app-wizard-step.disabled a,
+.app-wizard .app-wizard-steps .app-wizard-step.disabled a:active,
+.app-wizard .app-wizard-steps .app-wizard-step.disabled a:focus,
+.app-wizard .app-wizard-steps .app-wizard-step.disabled a:hover {
+    /* background-color: #4c5261;
+    background-color: #2e3443;
+   */
+    
+    background-color: #F2F2F2;
+    /*color: #fff;*/
+    
+    font-family: 'Roboto-Regular';
+    padding-left: 33px
+}
+.app-wizard .app-wizard-steps {
+    /*width: 544px;*/
+    
+    width: 590px;
+    margin: auto;
+}
+.app-wizard .app-wizard-body {
+    margin-top: 40px;
+}
+.app-wizard .panel-footer {
+    display: none;
+}
+.app-wizard .app-wizard-steps .app-wizard-step .arrow {
+    /*   border-right: 2px solid #282d39!important;
+    border-top: 2px solid #282d39!important;*/
+    
+    right: -14px;
+    border-right: 2px solid #fff!important;
+    border-top: 2px solid #fff!important;
+}
+/*css for Wizrd ended*/
+
+.nvd3.nv-pie path {
+    stroke: transparent;
+}
+.nvd3 .nv-axis line {
+    stroke: #e2e2e2;
+}
+.nvd3 .nv-axis path {
+    /*stroke: #4c5261;*/
+    
+    stroke: #c8c8c8;
+}
+.nvd3 .nv-axis .tick {
+    stroke-dasharray: 2;
+}
+.nvd3 .nv-axis {
+    stroke: #363d50;
+}
+text.nv-axislabel {
+    display: none;
+}
+.nvd3.nv-pie .nv-pie-title {
+    fill: #9b9b9b;
+    font-size: 30px!important;
+}
+/*.app-chart .nvd3 text {
+    font-family: Roboto-Regular;
+    font-size: 12px;
+    line-height: 2.92;
+    letter-spacing: 0.5px;
+    text-align: right;
+    color: #9b9b9b;
+}*/
+
+.nvd3 text {
+    font: 10px roboto-regular !important;
+}
+.wm-app .lbl_secondary {
+    border: none !important;
+}
+@media only screen and (max-width: 844px) and (min-width: 299px) {
+    .wm-app .app-header .app-header-action {
+        color: #fff;
+    }
+}
+@media only screen and (max-width: 330px) and (min-width: 299px) {
+    .wm-app .prefab-search .btn-default {
+        top: -38px;
+        left: 221px;
+    }
+    .app-wizard .app-wizard-steps {
+        /*width: 544px;*/
+        
+        margin: auto;
+    }
+    .wm-app .totalcount {
+        font-size: 28px;
+        margin-bottom: 20px;
+        margin-top: 20px!important;
+    }
+    .wm-app .prefab-search {
+        height: auto!important
+    }
+    .wm-app .boxshadow {
+        height: auto!important;
+        overflow: auto;
+    }
+}
+/*To be added in the theme started*/
+
+.wm-app .form-control[disabled],
+.wm-app .form-control[readonly],
+fieldset[disabled] .wm-app .form-control {
+    /*    background-color: #ececec !important;
+    border: solid 1px #363d50;
+    color: #556287;
+    box-shadow: none;*/
+    
+    background-color: #ececec !important;
+    border: none;
+    border: solid 1px #e2e2e2;
+    color: #556287;
+    box-shadow: none;
+    /*color: #c8c8c8;*/
+    
+    color: #8c8c8c;
+}
+.wm-app .app-date.input-group[disabled],
+.wm-app .app-date.input-group[readonly] {
+    cursor: not-allowed;
+}
+.app-date[disabled=disabled]>.input-group-btn .btn-date {
+    background-color: #2e3443 !important;
+    opacity: 1;
+}
+.wm-app .form-group .ng-touched.ng-invalid {
+    border: 1px solid #F44336 !important;
+}
+.wm-app .app-form.position-top .control-label {
+    font-family: roboto-regular;
+    margin-bottom: 6px;
+    color: #282d39;
+}
+.wm-app .btn-round {
+    /*    border-radius:100px;*/
+    /*background-color:#02d0a0;*/
+    /*width:2px !important;*/
+    /*height:2px !important;*/
+    /*Commented by kajal*/
+    
+    margin-bottom: 0.2em;
+    width: 8px;
+    height: 8px;
+    /*background-color: #01d0a0;*/
+    
+    border: none;
+    border-radius: 50%;
+    padding: 6px;
+    /* padding: 16px; */
+}
+.wm-app .pending {
+    color: #f6a804!important;
+}
+.wm-app .pending > .btn {
+    background-color: #f6a804;
+}
+.wm-app .overdue {
+    color: #c60751;
+}
+.wm-app .overdue > .btn {
+    background-color: #c60751;
+}
+.wm-app .lapsed {
+    color: #2d98f8;
+}
+.wm-app .lapsed > .btn {
+    background-color: #2d98f8;
+}
+.wm-app .suspended {
+    color: #9da7be;
+}
+.wm-app .suspended > .btn {
+    background-color: #9da7be;
+}
+.wm-app .inforce {
+    color: #02d0a0;
+}
+.wm-app .inforce > .btn {
+    background-color: #02d0a0;
+}
+.wm-app .app-breadcrumb label,
+.wm-app .app-top-nav ul {
+    margin-top: 12px;
+}
+/*.wm-app .custom-select .app-select {
+    border-radius: 2px;
+    background-color: #363d50;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    color: #9da7be;
+    height: 26px;
+    padding: 0 10px 0 10px;
+}
+.wm-app .app-select {
+    border-radius: 2px;
+    background-color: #282d39;
+    border: solid 1px #363d50;
+    color: #fff;
+    box-shadow: none;
+}*/
+
+.wm-app .nav-pills > li.active > a,
+.wm-app .nav-pills > li.active > a:hover,
+.wm-app .nav-pills > li.active > a:focus {
+    background-color: #01d0a0;
+}
+.app-wizard .app-wizard-steps .app-wizard-step.current a,
+.app-wizard .app-wizard-steps .app-wizard-step.current a:active,
+.app-wizard .app-wizard-steps .app-wizard-step.current a:focus,
+.app-wizard .app-wizard-steps .app-wizard-step.current a:hover {
+    background-color: #9e005d;
+    background-image: linear-gradient(100deg, #d4145a, #9e005d);
+    /*   background-color: #d4145a;*/
+}
+/*.wm-app .prefab-search .btn-default i {
+    color: #9da7be;
+}*/
+
+.wm-app .breadcrumb {
+    margin-top: 2px;
+}
+.wm-app .btn-arrow {
+    box-shadow: none!important;
+    background-color: #363d50!important;
+    padding: 0 10px 0 10px !important;
+}
+.wm-app .bg-primary:hover {
+    border: none;
+}
+/*To be added in the theme ended*/
+/**********For form footer in mobile  view *****************/
+
+@media screen and (max-width: 767px) {
+    .mobile-footer {
+        position: fixed !important;
+        bottom: 0px;
+        right: 0px;
+        /*background: #ffffff none repeat scroll 0% 0% !important;*/
+        /*border-top-style: solid;*/
+        /*border-top-width: 1px;*/
+        /*border-top-color: #c8c8c8;*/
+        /*background: #ffffff;*/
+        /*    background-color: #363d50!important;*/
+        
+        border: none;
+        left: 0px;
+        Padding-left: 5px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-right: 10px;
+        margin-top: 40px;
+    }
+    .wm-app .app-form .form-action .btn {
+        margin: 0 0.3em;
+    }
+}
+.app-wizard .app-wizard-steps .app-wizard-step .arrow {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    background-color: inherit;
+    right: -15px;
+    position: absolute;
+    top: 9px;
+    z-index: 1;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-bottom-width: 0;
+    border-left-width: 0;
+    -ms-transform: rotate(45deg) skew(11deg, 11deg);
+    -o-transform: rotate(45deg) skew(11deg, 11deg);
+    -moz-transform: rotate(45deg) skew(11deg, 11deg);
+    -webkit-transform: rotate(45deg) skew(11deg, 11deg);
+    transform: rotate(45deg) skew(11deg, 11deg);
+}
+.wm-app .margin-footer {
+    margin-bottom: 40px;
+}
+.wm-app .app-header .app-header-action {
+    margin-top: 1px;
+}
+/*.app-wizard .app-wizard-steps .app-wizard-step.current a,*/
+/*.app-wizard .app-wizard-steps .app-wizard-step.current a:active,*/
+/*.app-wizard .app-wizard-steps .app-wizard-step.current a:focus,*/
+/*.app-wizard .app-wizard-steps .app-wizard-step.current a:hover {*/
+/*    padding-right: -1px;*/
+/*}*/
+
+.app-wizard .app-wizard-steps .app-wizard-step .step-title {
+    /*padding-left: 10px;*/
+    
+    padding-right: 10px;
+}
+/*.wm-app .form-control {
+    background-color: #2E3340 !important;
+}*/
+
+.wm-app .login-container .form-control,
+.wm-app .login-container .form-group + .form-control {
+    background-color: #fff !important;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #e2e2e2;
+}
+.wm-app .inchartselect {
+    border: 0 !important;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.wm-app .pending-apps {
+    color: #ff5f00 !important;
+}
+.wm-app .grid-amt {
+    font-family: Roboto-Medium;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: right;
+    color: #4c5261;
+}
+.default-label {
+    color: #282d39;
+}
+.wm-app .emailtemp p {
+    display: inline-block;
+}

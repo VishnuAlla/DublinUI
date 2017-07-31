@@ -1,0 +1,29 @@
+{
+  "endpointAddress" : "http://wavemaker-apps.pramati.com/dev_api_dublin/services/profile/policiesByStatus/440c1544-c8dc-11e6-9740-0242ac1108f8/Pending Issuance",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"MobileNumber\":\"9911991100\",\"ClientName\":\"Test One\",\"PolicyId\":\"\",\"ApplicationId\":\"A00000021\",\"ApplicationDate\":1499931535000,\"SumAssured\":900000,\"Status\":\"Pending Issuance\",\"PremiumToBePaid\":\"3406\",\"PremiumPaid\":\"3406\",\"PolicyName\":\"iProtect Plus\",\"IssuanceDate\":\"\",\"RenewalDate\":\"\"},{\"MobileNumber\":\"9911991100\",\"ClientName\":\"RFI P1\",\"PolicyId\":\"\",\"ApplicationId\":\"A00000030\",\"ApplicationDate\":1500013051000,\"SumAssured\":1050000,\"Status\":\"Pending Issuance\",\"PremiumToBePaid\":\"759\",\"PremiumPaid\":\"759\",\"PolicyName\":\"iProtect Plus\",\"IssuanceDate\":\"\",\"RenewalDate\":\"\"},{\"MobileNumber\":\"9999111100\",\"ClientName\":\"RFI P2\",\"PolicyId\":\"\",\"ApplicationId\":\"A00000031\",\"ApplicationDate\":1500012863000,\"SumAssured\":1300000,\"Status\":\"Pending Issuance\",\"PremiumToBePaid\":\"707\",\"PremiumPaid\":\"707\",\"PolicyName\":\"iProtect Smart\",\"IssuanceDate\":\"\",\"RenewalDate\":\"\"},{\"MobileNumber\":\"9911991100\",\"ClientName\":\"Test One\",\"PolicyId\":null,\"ApplicationId\":\"A00000032\",\"ApplicationDate\":1500028293000,\"SumAssured\":950000,\"Status\":\"Pending Issuance\",\"PremiumToBePaid\":\"1046\",\"PremiumPaid\":\"1046\",\"PolicyName\":\"iProtect Smart\",\"IssuanceDate\":\"\",\"RenewalDate\":\"\"}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "ETag" : [ "\"0727102fd40bb694b229cd57c88321366\"" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Content-Length" : [ "1155" ],
+      "Date" : [ "Fri, 14 Jul 2017 10:50:08 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

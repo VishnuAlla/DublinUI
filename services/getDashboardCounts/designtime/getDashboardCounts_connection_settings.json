@@ -1,0 +1,29 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/backOfficeProfile",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "UserId" : "bd0778d3-030b-11e7-a552-a45d36d03885"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"PendingIssuanceCount\":1,\"RFIPendingCount\":0,\"RFIReceivedCount\":0,\"ApprovedCount\":0,\"RejectedCount\":0}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"08d5a62fc684d5092e95fadc71779e1b1\"" ],
+      "Date" : [ "Mon, 13 Mar 2017 11:12:15 GMT" ],
+      "Content-Length" : [ "105" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Connection" : [ "keep-alive" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "mode" : [ "block" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

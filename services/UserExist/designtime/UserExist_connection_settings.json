@@ -1,0 +1,31 @@
+{
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/newQuote/UserExist",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "EmailID" : "mani.merit2008@gmail.com"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"UserExist\":\"true\",\"Ecount\":1}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "ETag" : [ "\"02c37055ae41cdcc5180c96afa38cff5f\"" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Content-Length" : [ "31" ],
+      "Date" : [ "Tue, 11 Jul 2017 10:57:04 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

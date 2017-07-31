@@ -1,0 +1,132 @@
+[ {
+  "name" : "Common",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "Confirmation",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "CustomerProfile",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Dashboard",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Dublin",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "ExpandSelectedRow",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "Leads",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Login",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Myearnings",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "NeedAnalysis",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Policies",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "PoliciesForBO",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Profile",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Recommendation",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "breadcrum",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "breadcrumb",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "buisnessoverview",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "clientDetail",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "clientListing",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "createapolicy",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "navpath",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "createaquote",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "customerportfolio",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "footer",
+  "type" : "FOOTER",
+  "params" : [ ]
+}, {
+  "name" : "header",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "policyDetail",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "selectproduct",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "test",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "testing",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV",
+  "params" : [ ]
+} ]

@@ -1,0 +1,78 @@
+{
+  "GetCommisionDetails" : {
+    "_id" : "wm-GetCommisionDetails-wm.ServiceVariable-1482832663018",
+    "name" : "GetCommisionDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "agentid",
+      "value" : "bind:Variables.loggedInUser.dataSet.id",
+      "type" : "string"
+    }, {
+      "target" : "year",
+      "value" : "bind:Widgets.select_year.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "GetBuisnessOverview.RootResponseROOTEntryItem",
+    "service" : "GetBuisnessOverview",
+    "operation" : "invoke",
+    "operationId" : "GetBuisnessOverview_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onCanUpdate" : "GetCommisionDetailsonCanUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "getMonthMyEarning" : {
+    "_id" : "wm-getMonthMyEarning-wm.ServiceVariable-1482911033147",
+    "name" : "getMonthMyEarning",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "Month",
+      "value" : "bind:Widgets.gridCommisionDetails.selecteditem.Month",
+      "type" : "string"
+    }, {
+      "target" : "agentid",
+      "value" : "bind:Variables.loggedInUser.dataSet.id",
+      "type" : "string"
+    } ],
+    "type" : "GetMonthBuisness.RootResponseROOTEntryItem",
+    "service" : "GetMonthBuisness",
+    "operation" : "invoke",
+    "operationId" : "GetMonthBuisness_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "select_year_value" : {
+    "_id" : "wm-select_year_value-wm.Variable-1488367753545",
+    "name" : "select_year_value",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : ""
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}

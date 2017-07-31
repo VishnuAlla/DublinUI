@@ -1,0 +1,348 @@
+{
+  "ApplicationIDCreated" : {
+    "_id" : "wm-ApplicationIDCreated-wm.NotificationVariable-1486035842820",
+    "name" : "ApplicationIDCreated",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "list"
+    }, {
+      "target" : "text",
+      "value" : "Application ID created successfully",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "2000",
+      "type" : "list"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "ApplicationIDNotCreated" : {
+    "_id" : "wm-ApplicationIDNotCreated-wm.NotificationVariable-1486103595402",
+    "name" : "ApplicationIDNotCreated",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "list"
+    }, {
+      "target" : "text",
+      "value" : "Please try after some time",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "2000",
+      "type" : "list"
+    }, {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "Applicationupdated" : {
+    "_id" : "wm-Applicationupdated-wm.NotificationVariable-1486125700144",
+    "name" : "Applicationupdated",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "list"
+    }, {
+      "target" : "text",
+      "value" : "Application updated successfully",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "2000",
+      "type" : "list"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "ApplicationupdatedSuccess" : {
+    "_id" : "wm-ApplicationupdatedSuccess-wm.NotificationVariable-1486478783462",
+    "name" : "ApplicationupdatedSuccess",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "list"
+    }, {
+      "target" : "text",
+      "value" : "Application details updated successfully",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "2000",
+      "type" : "list"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "CreateQuoteData" : {
+    "_id" : "wm-CreateQuoteData-wm.Variable-1486029804093",
+    "name" : "CreateQuoteData",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dateofbirth" : "",
+      "state" : "",
+      "gender" : "",
+      "tobacco" : "",
+      "term" : "",
+      "sumassured" : "",
+      "applicationid" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "CreateQuoteFinalSubmit" : {
+    "_id" : "wm-CreateQuoteFinalSubmit-wm.ServiceVariable-1486453613383",
+    "name" : "CreateQuoteFinalSubmit",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "RequestBody",
+      "value" : "{\n\t\"status\":\"Pending Issuance\",\n\t\"applicationId\":\"A66666666\"\n}",
+      "type" : "CreateQuoteFinalSubmit.RootRequest"
+    } ],
+    "type" : "CreateQuoteFinalSubmit.RootResponse",
+    "service" : "CreateQuoteFinalSubmit",
+    "operation" : "invoke",
+    "operationId" : "CreateQuoteFinalSubmit_RestServiceVirtualController-invoke",
+    "operationType" : "put",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onSuccess" : "Widgets.ConfirmationDialog.open()",
+    "onError" : "CreateQuoteFinalSubmitonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "CreateQuoteFinalUpdate" : {
+    "_id" : "wm-CreateQuoteFinalUpdate-wm.ServiceVariable-1486467881116",
+    "name" : "CreateQuoteFinalUpdate",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "CreateQuoteFinalUpdate.RootResponse",
+    "service" : "CreateQuoteFinalUpdate",
+    "operation" : "invoke",
+    "operationId" : "CreateQuoteFinalUpdate_RestServiceVirtualController-invoke",
+    "operationType" : "put",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onSuccess" : "Widgets.ConfirmationDialog.open()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "GetPolicyID" : {
+    "_id" : "wm-GetPolicyID-wm.ServiceVariable-1486025916155",
+    "name" : "GetPolicyID",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "name",
+      "value" : "iProtect Plus",
+      "type" : "string"
+    } ],
+    "type" : "GetPolicyID.RootResponse",
+    "service" : "GetPolicyID",
+    "operation" : "invoke",
+    "operationId" : "GetPolicyID_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "IncorrectAge" : {
+    "_id" : "wm-IncorrectAge-wm.NotificationVariable-1485859160584",
+    "name" : "IncorrectAge",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "list"
+    }, {
+      "target" : "text",
+      "value" : "The age of the insured should be at least 18 years and maximum 65 years",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "2000",
+      "type" : "list"
+    }, {
+      "target" : "class",
+      "value" : "Info",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "InsertCreateQuoteNominee" : {
+    "_id" : "wm-InsertCreateQuoteNominee-wm.ServiceVariable-1486125509047",
+    "name" : "InsertCreateQuoteNominee",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "CreateQuoteNomineeDetails.RootResponse",
+    "service" : "CreateQuoteNomineeDetails",
+    "operation" : "invoke",
+    "operationId" : "CreateQuoteNomineeDetails_RestServiceVirtualController-invoke",
+    "operationType" : "post",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onSuccess" : "InsertCreateQuoteNomineeonSuccess($event, $scope)",
+    "onError" : "InsertCreateQuoteNomineeonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "InsertCreateQuotePersonal" : {
+    "_id" : "wm-InsertCreateQuotePersonal-wm.ServiceVariable-1486035635801",
+    "name" : "InsertCreateQuotePersonal",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "InsertCreateQuotePersonal1.RootResponse",
+    "service" : "InsertCreateQuotePersonal1",
+    "operation" : "invoke",
+    "operationId" : "InsertCreateQuotePersonal1_RestServiceVirtualController-invoke",
+    "operationType" : "post",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onSuccess" : "InsertCreateQuotePersonalonSuccess($event, $scope)",
+    "onError" : "InsertCreateQuotePersonalonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "InvalidValues" : {
+    "_id" : "wm-InvalidValues-wm.NotificationVariable-1486034433592",
+    "name" : "InvalidValues",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "list"
+    }, {
+      "target" : "text",
+      "value" : "Please enter all the mandatory fields",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "2000",
+      "type" : "list"
+    }, {
+      "target" : "class",
+      "value" : "Warning",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "UpdateCreateQuoteDetails" : {
+    "_id" : "wm-UpdateCreateQuoteDetails-wm.ServiceVariable-1486473909663",
+    "name" : "UpdateCreateQuoteDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "RequestBody",
+      "value" : "{\n\t\"emailId\":\"c@f.com\",\n\t\"dateOfBirth\":\"28-04-1998\",\n\t\"clientName\":\"Celina Ahern\",\n\t\"maritalStatus\":\"Married\",\n\t\"noOfChildren\":2,\n\t\"nationality\":\"amrican\",\n\t\"gender\":\"Female\",\n\t\"mobileNumber\":\"56565\",\n\t\"phoneNumber\":\"655656\",\n\t\"qualification\":\"b.e\",\n\t\"company\":\"pp\",\n\t\"occupationalHazards\":\"no\",\n\t\"annualIncome\":\"76323\",\n\t\"occupation\":\"banker\",\n\t\"sumAssured\":6766,\n\t\"premiumToBePaid\":7600,\n\t\"tobaccoIntake\":\"no\",\n\t\"term\":7\n}",
+      "type" : "UpdateCreateQuoteDetails.RootRequest"
+    } ],
+    "type" : "UpdateCreateQuoteDetails.RootResponse",
+    "service" : "UpdateCreateQuoteDetails",
+    "operation" : "invoke",
+    "operationId" : "UpdateCreateQuoteDetails_RestServiceVirtualController-invoke",
+    "operationType" : "put",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onSuccess" : "UpdateCreateQuoteDetailsonSuccess($event, $scope)",
+    "onError" : "Variables.ApplicationIDNotCreated.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

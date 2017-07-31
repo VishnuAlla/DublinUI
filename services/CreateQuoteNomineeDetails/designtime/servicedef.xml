@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="CreateQuoteNomineeDetails" type="RestService" springFile="CreateQuoteNomineeDetails.spring.xml">
+    <operation name="invoke">
+        <parameter name="RequestBody" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="CreateQuoteNomineeDetails.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="CreateQuoteNomineeDetails.RootRequest" name="RootRequest" supportsQuickData="false">
+            <element name="addressLine1" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="addressLine2" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="applicationId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="client" typeRef="CreateQuoteNomineeDetails.client" isList="false" allowNull="false"/>
+            <element name="country" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dateOfBirth" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entilementPercentage" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mobileNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="phoneNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="relationship" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="stateId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="zip" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="CreateQuoteNomineeDetails.RootResponse" name="RootResponse" supportsQuickData="false"/>
+        <dataobject javaType="CreateQuoteNomineeDetails.client" name="client" supportsQuickData="false">
+            <element name="changeInWeight" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="height" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="weight" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

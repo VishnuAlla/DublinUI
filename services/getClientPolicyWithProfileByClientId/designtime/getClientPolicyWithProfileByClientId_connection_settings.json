@@ -1,0 +1,29 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/clientProfile/clientPoliciesWithProfile",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "clientId" : "e566c2f4-c8de-11e6-9740-0242ac1108f8"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"Policies\":[{\"PolicyId\":\"P68686868\",\"PlanName\":\"iProtect Plus\",\"NextDueDate\":1484560536000,\"Term\":10,\"PolicyStatus\":\"InForce\"},{\"PolicyId\":\"P68686868\",\"PlanName\":\"iProtect Plus\",\"NextDueDate\":1516096536000,\"Term\":10,\"PolicyStatus\":\"InForce\"},{\"PolicyId\":\"P68686868\",\"PlanName\":\"iProtect Plus\",\"NextDueDate\":1488189336000,\"Term\":10,\"PolicyStatus\":\"InForce\"},{\"PolicyId\":\"P12345678\",\"PlanName\":\"WEALTH BUILDER PLUS\",\"NextDueDate\":1484560536000,\"Term\":10,\"PolicyStatus\":\"InForce\"},{\"PolicyId\":\"P12345678\",\"PlanName\":\"WEALTH BUILDER PLUS\",\"NextDueDate\":1516096536000,\"Term\":10,\"PolicyStatus\":\"InForce\"},{\"PolicyId\":\"P12345678\",\"PlanName\":\"WEALTH BUILDER PLUS\",\"NextDueDate\":1488189336000,\"Term\":10,\"PolicyStatus\":\"InForce\"}],\"Profile\":{\"ClientNumber\":\"C21580\",\"ClientName\":\"John Doe\",\"EmailId\":\"John.Doe@Mailbox.com\",\"MobileNumber\":\"8066445522\",\"Address\":null,\"DateOfBirth\":\"1990-11-01\",\"MaritalStatus\":\"Single\"}}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"04f795ac242143fd2666d347fc98f81e1\"" ],
+      "Date" : [ "Fri, 03 Feb 2017 06:56:55 GMT" ],
+      "Content-Length" : [ "910" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ],
+      "Cache-Control" : [ "max-age=0" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

@@ -1,0 +1,13 @@
+/*.boxshadow{*/
+/* box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);*/
+/*  border: solid 1px #e2e2e2;   */
+/*}*/
+.layoutgrid{
+    margin-top:1em !important;
+    margin-bottom:2em !important;
+}
+
+.wm-app .emailtemp p{
+    display: inline-block;
+    
+}

@@ -1,0 +1,19 @@
+.wm-app .lifestagelabel
+{
+    font-family:'Dosis-Light';
+    font-size:26px;
+    margin-bottom:10px;
+    margin-top:20px;
+}
+
+.wm-app .amount
+{
+width: 135px;
+  height: 48px;
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  color: #02d0a0;
+}

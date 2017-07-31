@@ -1,0 +1,29 @@
+{
+  "GetCustomerPortfolio" : {
+    "_id" : "wm-GetCustomerPortfolio-wm.ServiceVariable-1484891134204",
+    "name" : "GetCustomerPortfolio",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "userid",
+      "value" : "bind:Variables.loggedInUser.dataSet.id",
+      "type" : "string"
+    } ],
+    "type" : "CustomerPortfolio.RootResponseROOTEntryItem",
+    "service" : "CustomerPortfolio",
+    "operation" : "invoke",
+    "operationId" : "CustomerPortfolio_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

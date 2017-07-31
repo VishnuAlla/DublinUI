@@ -1,0 +1,22 @@
+<wm-page data-ng-controller="testingPageController" pagetitle="Testing" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-container name="container1" show="true" accessroles="Authenticated">
+                <wm-layoutgrid name="loggedinGrid">
+                    <wm-gridrow name="loggedinRow">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn1" height="60">
+                            <wm-container name="container2" class="userContainer" bordercolor="#e2e2e2" borderstyle="solid" borderwidth="0 0 1px 0" padding="20px unset unset unset" cursor="pointer">
+                                <wm-label name="label1" caption="bind:Variables.loggedInUser.dataSet.name" on-click="Variables.goToPage_Profile.invoke()" class="userlabel"></wm-label>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                            <wm-anchor name="anchor1" caption="Logout" on-click="Variables.logoutVariable.invoke()" class="Logout" width="100%"></wm-anchor>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

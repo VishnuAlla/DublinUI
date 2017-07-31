@@ -1,0 +1,114 @@
+{
+  "EditProfile" : {
+    "_id" : "wm-EditProfile-wm.ServiceVariable-1482491725888",
+    "name" : "EditProfile",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "RequestBody",
+      "value" : "{\n\"maritalStatus\":\"Single\",\n\"mobileNumber\":\"8743150756\",\n\"emailId\":\"Daniel.paul002@Mailbox.com\",\n\"address\":\"78590 Miller Ave. Deland, FL 32720\",\n\"userId\":\"440c1544-c8dc-11e6-9740-0242ac1108f8\"\n}",
+      "type" : "EditProfile.RootRequest"
+    } ],
+    "type" : "EditProfile.RootResponse",
+    "service" : "EditProfile",
+    "operation" : "invoke",
+    "operationId" : "EditProfile_RestServiceVirtualController-invoke",
+    "operationType" : "put",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onSuccess" : "Variables.ProfileEditedSuccessfully.invoke()",
+    "onError" : "Variables.ProfileEditError.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "GetProfile" : {
+    "_id" : "wm-GetProfile-wm.ServiceVariable-1482485784623",
+    "name" : "GetProfile",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "userid",
+      "value" : "bind:Variables.loggedInUser.dataSet.id",
+      "type" : "string"
+    } ],
+    "type" : "GetProfile.RootResponse",
+    "service" : "GetProfile",
+    "operation" : "invoke",
+    "operationId" : "GetProfile_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "ProfileEditedSuccessfully" : {
+    "_id" : "wm-ProfileEditedSuccessfully-wm.NotificationVariable-1482493507235",
+    "name" : "ProfileEditedSuccessfully",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "list"
+    }, {
+      "target" : "text",
+      "value" : "Profile edited successfully",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "2000",
+      "type" : "list"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "ProfileEditError" : {
+    "_id" : "wm-ProfileEditError-wm.NotificationVariable-1482493556061",
+    "name" : "ProfileEditError",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "list"
+    }, {
+      "target" : "text",
+      "value" : "Cannot Edit Profile, please try after some time",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "2000",
+      "type" : "list"
+    }, {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  }
+}

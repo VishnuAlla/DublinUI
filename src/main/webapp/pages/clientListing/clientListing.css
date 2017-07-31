@@ -1,0 +1,54 @@
+.wm-app .form-inline .input-group .input-group-addon, .wm-app .form-inline .input-group .input-group-btn, .wm-app .form-inline .input-group .form-control {
+    width: auto;
+
+    border-left: 0px;
+    height:41px;
+    /*color: #7a003d;*/
+    /*margin-top: 1px;*/
+}
+/*.wm-app .form-inline .input-group .input-group-addon, .wm-app .form-inline .input-group .input-group-btn, .wm-app .form-inline .input-group .form-control*/
+
+.wm-app .form-inline .form-control
+{
+     height:41px;
+}
+.app-grid .form-search .app-search-button
+    {
+    height: 12px;
+    /*color: #ffd400;*/
+    color: white;
+    size:12px;
+    background: #7a003d
+    
+	}
+	
+	
+	.wm-app .app-grid .input-group-addon
+	{
+	background: #7a003d ;
+	border-radius:2px
+	
+	}
+	
+	.wi{
+	    font-size:20px;
+	}
+.wm-app .form-inline .form-control
+{
+  width:300px;  
+}
+
+.wm-app .form-inline .input-group .input-group-btn
+	{
+	background: #7a003d
+	}
+	
+	.wm-app .form-control, .wm-app .form-group + .form-control{
+	    border-width:01px;
+	    
+	    
+	}
+	.app-grid .form-search .app-search-button a:hover
+{
+      color: yellow;
+}

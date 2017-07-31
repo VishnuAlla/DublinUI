@@ -1,0 +1,702 @@
+<wm-page data-ng-controller="createapolicyPageController" pagetitle="Createapolicy" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-container name="breadcrumbcontainer" content="breadcrumb" showindevice="sm,md,lg"></wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn2" horizontalalign="center">
+                        <wm-label padding="unset 0.5em" name="label1" caption="bind:pageDetails.policyname" class="dosislabel" fontsize="28"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3" horizontalalign="center">
+                        <wm-wizard name="createapolicywizard" class="createapolicywizard" stepstyle="auto">
+                            <wm-wizardstep name="wizard_createquote" title="Create Quote" show="true" enableskip="false">
+                                <!--<wm-container name="firsttile">-->
+                                <wm-layoutgrid name="layoutgrid3">
+                                    <wm-gridrow name="gridrow6">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn6" class="leftcolumn col-xs-12">
+                                            <wm-composite name="composite2">
+                                                <wm-label class="col-md-3 control-label" name="label3" width="100%" horizontalalign="left" caption="Date of Birth"></wm-label>
+                                                <wm-container class="col-md-12 app-select" name="container3">
+                                                    <wm-date name="dob_date" on-change="dob_dateChange($event, $scope, newVal, oldVal)" outputformat="MM-dd-yyyy" datepattern="MM-dd-yyyy" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.clientDOB"></wm-date>
+                                                </wm-container>
+                                            </wm-composite>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn7" class="rightcolumn col-xs-12">
+                                            <wm-composite name="composite3">
+                                                <wm-label class="col-md-3 control-label" name="label4" width="100%" horizontalalign="left" caption="State"></wm-label>
+                                                <wm-container class="col-md-12" name="container4">
+                                                    <wm-select name="select_state_createquote" dataset="bind:Variables.GetStates.dataSet" datafield="StateId" displayfield="StateName" on-change="select_state_createquoteChange($event, $scope, newVal, oldVal)"
+                                                    placeholder="Select Sate" datavalue="bind:Variables.GetCreateQuoteData.dataSet.length===0?Variables.GetStates.dataSet[0].StateId:Variables.GetCreateQuoteData.dataSet.Details.StateId"></wm-select>
+                                                </wm-container>
+                                            </wm-composite>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow8">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn10_1" class="leftcolumn">
+                                            <wm-composite name="composite3_1">
+                                                <wm-label class="col-md-3 control-label" name="label5" horizontalalign="left" width="100%" caption="Gender"></wm-label>
+                                                <wm-container class="col-md-12" name="container4_1">
+                                                    <wm-switch datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.Gender" name="switch_gender_createquote" dataset="Male, Female" on-change="switch_gender_createquoteChange($event, $scope, newVal, oldVal)"></wm-switch>
+                                                </wm-container>
+                                            </wm-composite>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn11" class="rightcolumn">
+                                            <wm-composite name="composite4">
+                                                <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" name="label6" caption="Tobacco"></wm-label>
+                                                <wm-container class="col-md-12" name="container5">
+                                                    <wm-switch datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.TobaccoIntake" dataset="Yes,No" name="switch_tobacco" on-change="switch_tobaccoChange($event, $scope, newVal, oldVal)"></wm-switch>
+                                                </wm-container>
+                                            </wm-composite>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow9">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn12" class="leftcolumn">
+                                            <wm-composite name="composite46">
+                                                <wm-label class="col-md-3 control-label" name="label52" width="100%" horizontalalign="left" caption="Term"></wm-label>
+                                                <wm-container class="col-md-9" name="container49" width="100%">
+                                                    <wm-select name="select_Term" dataset="bind:Variables.Term.dataSet" datafield="Key" displayfield="Value" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.Term" on-change="select_TermChange($event, $scope, newVal, oldVal)"
+                                                    placeholder="Select Term"></wm-select>
+                                                </wm-container>
+                                            </wm-composite>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn13" class="rightcolumn">
+                                            <!--<wm-container name="container8">-->
+                                            <!--    <wm-composite name="composite6">-->
+                                            <!--        <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" name="label8" caption="Cover"></wm-label>-->
+                                            <!--        <wm-container class="col-md-9 rangecontainer" width="100%" name="container9">-->
+                                            <!--            <wm-layoutgrid name="layoutgrid7">-->
+                                            <!--                <wm-gridrow name="gridrow17">-->
+                                            <!--                    <wm-gridcolumn columnwidth="1" name="gridcolumn25">-->
+                                            <!--                        <wm-button class="btn-default" caption="" type="button" margin="unset 0.5em" iconclass="wi wi-minus" on-click="btn_coverminusClick($event, $scope)" name="btn_coverminus"></wm-button>-->
+                                            <!--                    </wm-gridcolumn>-->
+                                            <!--                    <wm-gridcolumn columnwidth="10" name="gridcolumn26">-->
+                                            <!--                        <wm-text name="txtcover" class="plaintextbox"></wm-text>-->
+                                            <!--                    </wm-gridcolumn>-->
+                                            <!--                    <wm-gridcolumn columnwidth="1" name="gridcolumn29">-->
+                                            <!--                        <wm-button class="btn-default" caption="" type="button" margin="unset 0.5em" iconclass="wi wi-plus" on-click="btn_coverplusClick($event, $scope)" name="btn_coverplus"></wm-button>-->
+                                            <!--                    </wm-gridcolumn>-->
+                                            <!--                </wm-gridrow>-->
+                                            <!--            </wm-layoutgrid>-->
+                                            <!--        </wm-container>-->
+                                            <!--    </wm-composite>-->
+                                            <!--</wm-container>-->
+                                            <wm-composite name="composite45_1">
+                                                <wm-label class="col-md-3 control-label" name="label51_1" caption="Cover" width="100%" horizontalalign="left"></wm-label>
+                                                <wm-container class="col-md-9" name="container46_1" width="100%">
+                                                    <wm-select name="select_cover" dataset="bind:Variables.Cover.dataSet" datafield="Key" displayfield="dataValue" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.SumAssured" on-change="select_coverChange($event, $scope, newVal, oldVal)"
+                                                    placeholder="Select Cover"></wm-select>
+                                                </wm-container>
+                                            </wm-composite>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow7" class="margin-footer">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn8">
+                                            <wm-container name="container_confirmation" class="color_container" margin="10px unset unset unset">
+                                                <wm-layoutgrid name="layoutgrid18">
+                                                    <wm-gridrow name="gridrow33">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn49">
+                                                            <wm-layoutgrid name="layoutgrid19">
+                                                                <wm-gridrow name="gridrow35">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn50" horizontalalign="center">
+                                                                        <wm-label name="label2" caption="Premium for your selected cover is" class="dosislabel" padding="16px unset unset unset" fontsize="24"></wm-label>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow36">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn52" horizontalalign="center">
+                                                                        <wm-label name="amountlabel" class="amount" caption="bind:amount | toCurrency: '$'" textalign="left" margin="8px unset 22px unset"></wm-label>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow37">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn54" horizontalalign="center">
+                                                                        <wm-label name="label4" caption="Inclusive of applicable service tax and cesses" margin="-10px unset unset unset" fontstyle="italic" class="instructiontext"></wm-label>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                            </wm-container>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="wizardfooter" class="mobile-footer">
+                                        <wm-gridcolumn name="wizardfootercolum" columnwidth="12" horizontalalign="left" padding="30px unset unset unset">
+                                            <wm-button class="btn_save" caption="Continue" type="button" margin="unset 0.5em unset unset" name="btn_continue" on-click="btn_continueClick($event, $scope)" show="bind:pageDetails.mode===&quot;Add&quot;"></wm-button>
+                                            <wm-button class="btn_save" caption="Next" type="button" margin="unset 0.5em unset unset" name="btn_next" on-click="btn_nextClick($event, $scope)" show="true"></wm-button>
+                                            <wm-button class="btn_secondary" caption="Edit" type="button" margin="unset 0.5em" name="btn_edit" on-click="btn_editClick($event, $scope)" show="bind:pageDetails.mode===&quot;Edit&quot;"></wm-button>
+                                            <wm-button class="btn_save" caption="Update" type="button" margin="unset 0.5em" name="btn_update" on-click="btn_updateClick($event, $scope)" show="false"></wm-button>
+                                            <wm-button class="btn_secondary" caption="Cancel" type="button" margin="unset 0.5em" name="btn_cancel" on-click="Variables.goToPage_Dashboard.invoke()" show="bind:pageDetails.mode===&quot;Add&quot;"></wm-button>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-wizardstep>
+                            <wm-wizardstep name="wizard_customerdetails" title="Customer Details" show="true">
+                                <wm-layoutgrid name="layoutgrid8">
+                                    <wm-gridrow name="gridrow19">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn30">
+                                            <wm-accordion name="accordion1">
+                                                <wm-accordionpane name="accordionpane1" title="Personal Details" iconclass="">
+                                                    <wm-layoutgrid name="layoutgrid9">
+                                                        <wm-gridrow name="gridrow23">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn36" class="leftcolumn">
+                                                                <wm-composite name="composite7">
+                                                                    <wm-label class="col-md-3 control-label" name="label12" horizontalalign="left" width="100%" caption="First Name"></wm-label>
+                                                                    <wm-container class="col-md-9" name="container11" width="100%">
+                                                                        <wm-text name="txt_firstname" placeholder="Enter First Name" class="plaintextbox" on-change="txt_firstnameChange($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.ClientName.split(' ')[0]"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn37" class="rightcolumn">
+                                                                <wm-composite name="composite8">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" name="label13" caption="Last Name"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container12">
+                                                                        <wm-text name="txtlastname" placeholder="Enter Last Name" class="plaintextbox" on-change="txtlastnameChange($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.ClientName.split(' ')[1]"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow24">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn38" class="leftcolumn">
+                                                                <wm-composite name="composite9">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" name="label14" caption="Email"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container13">
+                                                                        <wm-text name="txtemail" placeholder="Enter Email Address" class="plaintextbox" on-change="txtemailChange($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.EmailId"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn39" class="rightcolumn">
+                                                                <wm-composite name="composite11">
+                                                                    <wm-label class="col-md-3 control-label" name="label16_1" horizontalalign="left" width="100%" caption="Gender"></wm-label>
+                                                                    <wm-container class="col-md-9" name="container15" width="100%">
+                                                                        <wm-switch datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.Gender" name="switch_gender_customerdetails" dataset="Male, Female" on-change="switch_gender_customerdetailsChange($event, $scope, newVal, oldVal)"></wm-switch>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow25">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn40" class="leftcolumn">
+                                                                <wm-composite name="composite13">
+                                                                    <wm-label class="col-md-3 control-label" name="label18" horizontalalign="left" width="100%" caption="Marital Status"></wm-label>
+                                                                    <wm-container class="col-md-9" name="container17" width="100%">
+                                                                        <wm-select name="select_maritalstatus" dataset="bind:Variables.MaritalStatus.dataSet" datafield="Key" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.MaritalStatus" displayfield="Value"
+                                                                        placeholder="Select Marital Status"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn41" class="rightcolumn">
+                                                                <wm-composite name="composite15" show="bind:pageData.Mode===&quot;MYMode&quot;">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Number of Childrens" name="label20"></wm-label>
+                                                                    <wm-container class="col-md-9 rangecontainer" width="100%" name="container19">
+                                                                        <wm-layoutgrid name="layoutgrid10">
+                                                                            <wm-gridrow name="gridrow28">
+                                                                                <wm-gridcolumn columnwidth="1" name="gridcolumn46_1">
+                                                                                    <wm-button class="btn-default" caption="" type="button" margin="unset 0.5em" iconclass="wi wi-minus" on-click="minusbtnClick($event, $scope)" name="button8"></wm-button>
+                                                                                </wm-gridcolumn>
+                                                                                <wm-gridcolumn columnwidth="10" name="gridcolumn47">
+                                                                                    <wm-text class="plaintextbox" name="txt_noofchildrens"></wm-text>
+                                                                                </wm-gridcolumn>
+                                                                                <wm-gridcolumn columnwidth="1" name="gridcolumn48">
+                                                                                    <wm-button class="btn-default" caption="" type="button" margin="unset 0.5em" iconclass="wi wi-plus" on-click="plusbtnClick($event, $scope)" name="button9"></wm-button>
+                                                                                </wm-gridcolumn>
+                                                                            </wm-gridrow>
+                                                                        </wm-layoutgrid>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite46_1">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Number of Children" name="label52_1"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container47_1">
+                                                                        <wm-select name="select_childrens" dataset="bind:Variables.Number_ofChildrens.dataSet" datafield="Key" displayfield="Value" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.NoOfChildren"
+                                                                        placeholder="Select Number of Children"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <!--<wm-gridrow name="gridrow26">-->
+                                                        <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn42" class="leftcolumn">-->
+                                                        <!--        <wm-composite name="composite14">-->
+                                                        <!--            <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" name="label19" caption="Nationality"></wm-label>-->
+                                                        <!--            <wm-container class="col-md-9" width="100%" name="container18">-->
+                                                        <!--                <wm-select name="select_nationality"></wm-select>-->
+                                                        <!--            </wm-container>-->
+                                                        <!--        </wm-composite>-->
+                                                        <!--    </wm-gridcolumn>-->
+                                                        <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn43" class="rightcolumn">-->
+                                                        <!--        <wm-composite name="composite12">-->
+                                                        <!--            <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Social Security Number (SSN)" name="label17"></wm-label>-->
+                                                        <!--            <wm-container class="col-md-9" width="100%" name="container16">-->
+                                                        <!--                <wm-text placeholder="Enter SSN number" name="txtssn" class="plaintextbox"></wm-text>-->
+                                                        <!--            </wm-container>-->
+                                                        <!--        </wm-composite>-->
+                                                        <!--    </wm-gridcolumn>-->
+                                                        <!--</wm-gridrow>-->
+                                                        <!--<wm-gridrow name="gridrow27">-->
+                                                        <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn44"></wm-gridcolumn>-->
+                                                        <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn45"></wm-gridcolumn>-->
+                                                        <!--</wm-gridrow>-->
+                                                    </wm-layoutgrid>
+                                                </wm-accordionpane>
+                                                <wm-accordionpane name="accordionpane2" title="Employment Details">
+                                                    <wm-layoutgrid name="layoutgrid11">
+                                                        <wm-gridrow name="gridrow29">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn49_1" class="leftcolumn">
+                                                                <wm-composite name="composite16">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Qualification" name="label21"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container20">
+                                                                        <wm-select name="select_qualification" dataset="bind:Variables.Qualification.dataSet" datafield="Key" displayfield="Value" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.Qualification"
+                                                                        placeholder="Select Qualification"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn50_1" class="rightcolumn">
+                                                                <wm-composite name="composite17">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Occupation" name="label22"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container21">
+                                                                        <wm-select name="select_occupation" dataset="bind:Variables.Occupation.dataSet" datafield="Key" displayfield="Value" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.Occupation"
+                                                                        placeholder="Select Occupation"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow30">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn51" class="leftcolumn">
+                                                                <wm-composite name="composite19">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Company / Organisation / Business" name="label24"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container23">
+                                                                        <wm-text placeholder="Enter Company / Organisation / Business" name="txt_company" class="plaintextbox" on-change="txt_companyChange($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.Company"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn52_1" class="rightcolumn">
+                                                                <wm-composite name="composite18">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Occupational Hazards (If any)" name="label23"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container22">
+                                                                        <wm-select name="select_occupationhazards" dataset="bind:Variables.YesNoValue.dataSet" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.OccupationalHazards" datafield="Key"
+                                                                        placeholder="Select Occupational hazzards" displayfield="dataValue"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow31">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn53" class="leftcolumn">
+                                                                <wm-composite name="composite20">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Life Assured Annual Income" name="label25"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container24">
+                                                                        <wm-text placeholder="Enter Life Assured Annual Income" name="txt_assuredincome" class="plaintextbox" type="number" on-change="txt_assuredincomeChange($event, $scope, newVal, oldVal)"
+                                                                        datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.AnnualIncome" regexp=".*^[0-9]*$" minvalue="0" maxchars="10"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn54_1" class="rightcolumn"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-accordionpane>
+                                                <wm-accordionpane name="accordionpane3" title="Address &amp; Contact Details">
+                                                    <wm-layoutgrid name="layoutgrid12">
+                                                        <wm-gridrow name="gridrow32">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn55"></wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn56"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow33_1">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn57" class="leftcolumn">
+                                                                <wm-composite name="composite27">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Address Type" name="label32"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container31">
+                                                                        <wm-select name="select_addresstype" dataset="bind:Variables.AddressType.dataSet" datafield="dataValue" displayfield="dataValue" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.AddressType"
+                                                                        placeholder="Select Address Type"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn58"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow34">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn59" class="leftcolumn">
+                                                                <wm-composite name="composite21">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Address Line 1" name="label26"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container25">
+                                                                        <wm-text placeholder="Enter Address" name="txtaddress1" class="plaintextbox" on-change="txtaddress1Change($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.AddressLine1"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn60" class="rightcolumn">
+                                                                <wm-composite name="composite22">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Address Line 2" name="label27"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container26">
+                                                                        <wm-text placeholder="Enter Address" name="txtaddress2" class="plaintextbox" on-change="txtaddress2Change($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.AddressLine2"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow35_1">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn61" class="leftcolumn">
+                                                                <wm-composite name="composite23">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="ZIP" name="label28"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container27">
+                                                                        <wm-text placeholder="Enter ZIP" name="txt_zip" class="plaintextbox" on-change="txt_zipChange($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.Zip"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn62" class="rightcolumn">
+                                                                <wm-composite name="composite24" show="bind:pageData.Mode===&quot;MyMode&quot;">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="City" name="label29"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container28">
+                                                                        <wm-text placeholder="Enter City" name="txt_city" class="plaintextbox" on-change="txt_cityChange($event, $scope, newVal, oldVal)"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite29">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Country" name="label34"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container33">
+                                                                        <wm-select name="select_country" dataset="bind:Variables.Country.dataSet" datafield="Key" displayfield="Value" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.Country" placeholder="Select Country"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow36_1">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn63" class="leftcolumn">
+                                                                <wm-composite name="composite28">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="State" name="label33"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container32">
+                                                                        <wm-select name="select_state" dataset="bind:Variables.GetStates.dataSet" datafield="StateId" displayfield="StateName" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.StateId"
+                                                                        placeholder="Select State"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn64" class="rightcolumn"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow37_1">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn65" class="leftcolumn">
+                                                                <wm-composite name="composite25">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Mobile" name="label30"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container29">
+                                                                        <wm-text placeholder="Enter Mobile Number" name="txt_mobile" type="number" class="plaintextbox" on-change="txt_mobileChange($event, $scope, newVal, oldVal)" maxchars="10" regexp=".*^[0-9]*$"
+                                                                        datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.MobileNumber" minvalue="0"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn66" class="rightcolumn">
+                                                                <wm-composite name="composite26">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Phone" name="label31"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container30">
+                                                                        <wm-text placeholder="Enter Number" name="txt_phone" type="number" class="plaintextbox" on-change="txt_phoneChange($event, $scope, newVal, oldVal)" maxchars="10" regexp=".*^[0-9]*$" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.PhoneNumber"
+                                                                        minvalue="0"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow38">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn67" horizontalalign="left" class="leftcolumn">
+                                                                <wm-button class="btn-add" caption="Add Address" type="button" margin="unset 0.5em" name="button10" show="bind:pageData.Mode===&quot;MyMode&quot;"></wm-button>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn68"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow39">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn69"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-accordionpane>
+                                            </wm-accordion>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow40">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn71" horizontalalign="left">
+                                            <wm-button class="btn_save" caption="Save &amp; Continue" type="button" margin="unset 0.5em unset 0.9em" name="btn_savecontinue" on-click="btn_savecontinueClick($event, $scope)" show="bind:pageDetails.mode===&quot;Add&quot;"></wm-button>
+                                            <wm-button class="btn_save" caption="Next" type="button" margin="unset 0.5em unset 0.9em" name="btn_step2next" on-click="btn_step2nextClick($event, $scope)" show="true"></wm-button>
+                                            <wm-button class="btn_secondary" caption="Edit" type="button" margin="unset 0.5em" name="btn_step2edit" on-click="btn_step2editClick($event, $scope)" show="bind:pageDetails.mode===&quot;Edit&quot;"></wm-button>
+                                            <wm-button class="btn_save" caption="Update" type="button" margin="unset 0.5em" name="btn_step2update" on-click="btn_step2updateClick($event, $scope)" show="false"></wm-button>
+                                            <wm-button class="btn_secondary" caption="Cancel" type="button" margin="unset 0.5em" name="btn_step2cancel" on-click="btn_step2cancelClick($event, $scope)" show="bind:pageDetails.mode===&quot;Add&quot;"></wm-button>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-wizardstep>
+                            <wm-wizardstep name="wizard_proposaldetails" title="Proposal Details" accessroles="Client">
+                                <wm-layoutgrid name="layoutgrid15">
+                                    <wm-gridrow name="gridrow48_1">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn91_1">
+                                            <wm-accordion name="accordion2">
+                                                <wm-accordionpane name="accordionpane4" title="Nominee Details">
+                                                    <wm-layoutgrid name="layoutgrid14">
+                                                        <wm-gridrow name="gridrow43">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn76"></wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn77"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow44">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn78" class="leftcolumn">
+                                                                <wm-composite name="composite30">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="First Name" name="label35"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container34">
+                                                                        <wm-text placeholder="Enter First Name" type="text" name="txt_nomineeFirstname" class="plaintextbox" on-change="txt_nomineeFirstnameChange($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Nominees[$i].nomineeFirstName"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn79" class="rightcolumn">
+                                                                <wm-composite name="composite31">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Last Name" name="label36"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container35">
+                                                                        <wm-text placeholder="Enter Last Name" type="text" name="txt_nomineelastname" class="plaintextbox" on-change="txt_nomineelastnameChange($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Nominees[$i].nomieeLastName"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow45">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn80" class="leftcolumn">
+                                                                <wm-composite name="composite33">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Relation" name="label38"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container37">
+                                                                        <wm-select name="select_nomineerelation" dataset="bind:Variables.Relationship.dataSet" datafield="Key" displayfield="Value" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Nominees[$i].nomineeRelation"
+                                                                        placeholder="Select Relation with the Nominee"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn81" class="rightcolumn">
+                                                                <wm-composite name="composite32">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Entitlement Percentage" name="label37"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container36">
+                                                                        <wm-text placeholder="Enter Entitlement Percentage" type="number" name="txt_EntitlementPercentage" class="plaintextbox" on-change="txt_EntitlementPercentageChange($event, $scope, newVal, oldVal)"
+                                                                        datavalue="bind:Variables.GetCreateQuoteData.dataSet.Nominees[$i].nomineePercentage" minvalue="0" regexp=".*^(100|[1-9][0-9]?)$" maxchars="2"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow46">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn82" class="leftcolumn">
+                                                                <wm-composite name="composite34">
+                                                                    <wm-label class="col-md-3 control-label" width="100%" horizontalalign="left" caption="Date of Birth" name="label39"></wm-label>
+                                                                    <wm-container class="col-md-12 app-select" name="container38">
+                                                                        <wm-date name="dob_nominee" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Nominees[$i].nomineeDOB" datepattern="MM-dd-yyyy" outputformat="MM-dd-yyyy"></wm-date>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn83" class="rightcolumn">
+                                                                <wm-form-field displayname="Enter Number 1-100" widget="text" show="true" type="custom" name="form_field5" required="true" regexp=".*^(100|[1-9][0-9]?)$" maxchars="3" validationmessage="Please enter range within 0-100"></wm-form-field>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow47">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn84">
+                                                                <wm-composite name="composite35" horizontalalign="left" width="100%">
+                                                                    <wm-checkbox caption="Same as Proposer’s Address" class="col-md-push-3 col-md-9" name="checkbox1" width="100%" on-change="checkbox1Change($event, $scope, newVal, oldVal)" show="bind:pageDetails.mode===&quot;Add&quot;"></wm-checkbox>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn85" class="rightcolumn"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow34">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn59" class="leftcolumn">
+                                                                <wm-composite name="composite21">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Address Line 1" name="label26"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container25">
+                                                                        <wm-text placeholder="Enter Address" name="txt_nomineeaddress1" class="plaintextbox" on-change="txt_nomineeaddress1Change($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Nominees[$i].nomineeAdress1"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn60" class="rightcolumn">
+                                                                <wm-composite name="composite22">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Address Line 2" name="label27"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container26">
+                                                                        <wm-text placeholder="Enter Address" name="txt_nomineeaddress2" class="plaintextbox" on-change="txt_nomineeaddress2Change($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Nominees[$i].nomineeAddress2"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow35_1">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn61" class="leftcolumn">
+                                                                <wm-composite name="composite23">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="ZIP" name="label28"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container27">
+                                                                        <wm-text placeholder="Enter ZIP" name="txt_nomineezip" class="plaintextbox" on-change="txt_nomineezipChange($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Nominees[$i].nomineeZip"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn62" class="rightcolumn">
+                                                                <wm-composite name="composite24" show="bind:pageData.Mode===&quot;MyMode&quot;">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="City" name="label29"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container28">
+                                                                        <wm-text placeholder="Enter City" name="txt_nomineecity" class="plaintextbox"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                                <wm-composite name="composite29">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Country" name="label34"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container33">
+                                                                        <wm-select name="select_nomineecountry" dataset="bind:Variables.Country.dataSet" datafield="Key" displayfield="Value" datavalue="bind:Variables.Country.dataSet.Key" placeholder="Select Country"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow36_1">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn63" class="leftcolumn">
+                                                                <wm-composite name="composite28">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="State" name="label33"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container32">
+                                                                        <wm-select name="select_nomineestate" datavalue="bind:Variables.GetStates.dataSet[0].StateId" dataset="bind:Variables.GetStates.dataSet" datafield="StateId" displayfield="StateName" placeholder="Select State"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn64" class="rightcolumn"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow37_1">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn65" class="leftcolumn">
+                                                                <wm-composite name="composite25">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Mobile" name="label30"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container29">
+                                                                        <wm-text placeholder="Enter Mobile Number" name="txt_nomineemobile" type="number" class="plaintextbox" on-change="txt_nomineemobileChange($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Nominees[$i].nomineeMobile"
+                                                                        minvalue="0" regexp=".*^[0-9]*$" maxchars="10"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn66" class="rightcolumn">
+                                                                <wm-composite name="composite26">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Phone" name="label31"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container30">
+                                                                        <wm-text placeholder="Enter Number" name="txt_nomineephone" type="number" class="plaintextbox" on-change="txt_nomineephoneChange($event, $scope, newVal, oldVal)" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Nominees[$i].nomineePhone"
+                                                                        regexp=".*^[0-9]*$" maxchars="10" minvalue="0"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow38">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn67" horizontalalign="left" class="leftcolumn">
+                                                                <wm-button class="btn-add" caption="Add Nominee" type="button" margin="unset 0.5em" name="button10" show="bind:pageData.Mode==&quot;MyMode&quot;"></wm-button>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn68" class="rightcolumn"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-accordionpane>
+                                                <wm-accordionpane name="accordionpane5" title="Height &amp; Weight Details">
+                                                    <wm-layoutgrid name="layoutgrid14_1">
+                                                        <wm-gridrow name="gridrow46_1">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn82_1" class="leftcolumn">
+                                                                <wm-composite name="composite43">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Height (in CMs)" name="label47"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container46">
+                                                                        <wm-text placeholder="Enter Height (in CMs)" type="text" name="txt_height" class="plaintextbox" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.Height"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn83_1" class="rightcolumn">
+                                                                <wm-composite name="composite44">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Weight (in KGs)" name="label48"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container47">
+                                                                        <wm-text placeholder="Enter Weight (in KGs)" type="text" name="txt_weight" class="plaintextbox" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.Weight"></wm-text>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow47_1">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn84_1" class="leftcolumn">
+                                                                <wm-composite name="composite45">
+                                                                    <wm-label class="col-md-3 control-label" horizontalalign="left" width="100%" caption="Change in weight from last 5 Years (If Any)" name="label49"></wm-label>
+                                                                    <wm-container class="col-md-9" width="100%" name="container48">
+                                                                        <wm-select name="select_weightchange" dataset="bind:Variables.YesNoValue.dataSet" datavalue="bind:Variables.GetCreateQuoteData.dataSet.Details.ChangeInWeight" datafield="Key" placeholder="Select Weight Change"
+                                                                        displayfield="dataValue"></wm-select>
+                                                                    </wm-container>
+                                                                </wm-composite>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn85_1" class="rightcolumn"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-accordionpane>
+                                            </wm-accordion>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow49">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn93" horizontalalign="left">
+                                            <wm-button class="btn_save" caption="Save &amp; Continue" type="button" margin="unset 0.5em unset 0.9em" name="btn_step3save" on-click="btn_step3saveClick($event, $scope)" show="bind:pageDetails.mode===&quot;Add&quot;"></wm-button>
+                                            <wm-button class="btn_save" caption="Next" type="button" margin="unset 0.5em unset 0.9em" name="btn_step3next" on-click="btn_nextClick($event, $scope)" show="true"></wm-button>
+                                            <wm-button class="btn_secondary" caption="Edit" type="button" margin="unset 0.5em" name="btn_step3edit" on-click="btn_step3editClick($event, $scope)" show="bind:pageDetails.mode===&quot;Edit&quot;"></wm-button>
+                                            <wm-button class="btn_save" caption="Update" type="button" margin="unset 0.5em" name="btn_step3update" on-click="btn_step3updateClick($event, $scope)" show="false"></wm-button>
+                                            <wm-button class="btn_secondary" caption="Cancel" type="button" margin="unset 0.5em" name="btn_step3cancel" on-click="btn_step3cancelClick($event, $scope)" show="bind:pageDetails.mode===&quot;Add&quot;"></wm-button>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-wizardstep>
+                            <wm-wizardstep name="wizard_pay" title="Summary" show="true" accessroles="Everyone">
+                                <wm-layoutgrid name="layoutgrid13">
+                                    <wm-gridrow name="gridrow16">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn16" horizontalalign="left">
+                                            <wm-label padding="unset 0.5em" name="label16" caption="Plan Summary" class="lbl_secondary" margin="0px unset unset unset"></wm-label>
+                                            <wm-grid title="" dataset="bind:Variables.GetCreateQuoteData.dataSet.Details" navigation="Basic" name="FinalGrid">
+                                                <wm-grid-column binding="ApplicationId" caption="Application Number" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                                                <wm-grid-column binding="ClientName" caption="Policy Holder" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                                                <wm-grid-column binding="SumAssured" caption="Sum Assured" type="string" readonly="true" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                                                <wm-grid-column binding="PremiumType" caption="Frequency" type="string" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                                                <wm-grid-column binding="Term" caption="Policy Term" type="string" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                                                <wm-grid-column binding="PremiumToBePaid" caption="Premium" type="string" readonly="true" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                                            </wm-grid>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow48">
+                                        <wm-gridcolumn columnwidth="2" name="gridcolumn89"></wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="2" name="gridcolumn88"></wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="2" name="gridcolumn87"></wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="4" name="gridcolumn90" horizontalalign="left">
+                                            <wm-label padding="unset 0.5em" name="label50" caption="Premium Amount" class="dosislabel" color="#02d0a0"></wm-label>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="2" name="gridcolumn86" horizontalalign="right">
+                                            <wm-label padding="unset 0.5em" name="lbl_PremiumAmount" caption="bind:Variables.GetCreateQuoteData.dataSet.Details.PremiumToBePaid | toCurrency: '$'" class="dosislabel" color="#02d0a0" fontweight="bold"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow50">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn93_1" horizontalalign="left">
+                                            <wm-button class="btn_save" caption="Submit" type="button" margin="unset 0.5em" name="btn_submit" on-click="btn_submitClick($event, $scope)"></wm-button>
+                                            <wm-button class="btn_secondary" caption="Cancel" type="button" margin="unset 0.5em" name="button18"></wm-button>
+                                            <wm-button class="btn_secondary" caption="NEXT" type="button" margin="unset 0.5em" name="button22" on-click="button22Click($event, $scope)"></wm-button>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-wizardstep>
+                            <wm-wizardstep name="wizard_review" title="Review">
+                                <wm-layoutgrid name="layoutgrid14_2">
+                                    <wm-gridrow name="gridrow47_2">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn81_1"></wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow48_2">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn83_2">
+                                            <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.GetClientPolicyDetails.dataSet" navigation="Basic" name="livelist2">
+                                                <wm-listtemplate layout="inline" name="listtemplate2">
+                                                    <wm-container name="pictureContainer" class="media-left">
+                                                        <wm-picture width="32pt" height="32pt" name="Picture" shape="circle" picturesource="bind:Variables.GetClientPolicyDetails.dataSet.NomineeDetails[0].Relationship" class="media-object"></wm-picture>
+                                                        <wm-label padding="unset 0.5em" name="label25" caption="MD"></wm-label>
+                                                    </wm-container>
+                                                    <wm-container class="media-body" padding="unset unset unset 1.25em" name="container15" horizontalalign="left">
+                                                        <wm-label name="Name" class="pull-left" caption="bind:Variables.livelistvariables.dataSet.name" fontunit="em" width="100%"></wm-label>
+                                                        <wm-label name="Time" caption="bind:Variables.livelistvariables.dataSet.status" class="pull-right" margin="0px unset unset unset"></wm-label>
+                                                        <wm-label caption="bind:Variables.livelistvariables.dataSet.date" class="pull-left" margin="0px unset unset unset" name="JobTitle" width="100%"></wm-label>
+                                                        <wm-label name="Content" caption="bind:Variables.livelistvariables.dataSet.description" class="text-muted pull-left"></wm-label>
+                                                    </wm-container>
+                                                    <wm-container class="media-right" name="container16"></wm-container>
+                                                </wm-listtemplate>
+                                            </wm-livelist>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-wizardstep>
+                        </wm-wizard>
+                        <wm-button class="btn-default" caption="Button" type="button" margin="unset 0.5em" name="button23" on-click="button23Click($event, $scope)"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <!--<wm-footer content="footer"></wm-footer> -->
+    <wm-view class="dialog-view" name="view1">
+        <wm-confirmdialog name="confirmdialog1" title="Confirmation"></wm-confirmdialog>
+    </wm-view>
+    <wm-view class="dialog-view" name="view2" show="false">
+        <wm-dialog dialogtype="design-dialog" modal="true" title="Confirmation" iconclass="" name="ConfirmationDialog" on-close="Variables.goToPage_Dashboard.invoke()">
+            <wm-container name="Applicationdetails">
+                <wm-label padding="unset 0.5em" name="label52_2" color="#282d39" caption="bind:&quot;Application &quot;" fontsize="16"></wm-label>
+                <wm-label name="label52_2" color="#2d98f8" caption="bind:finaldata.ApplicationID" fontsize="16"></wm-label>
+                <wm-label padding="unset 0.5em" name="label52_2" color="#282d39" caption="bind:&quot; submitted successfully&quot;" fontsize="16"></wm-label>
+            </wm-container>
+            <wm-label padding="unset 0.5em" name="label53" width="100%" color="#282d39" caption="Next Steps the customer should do:" fontsize="14" margin="10px unset"></wm-label>
+            <wm-label padding="unset 0.5em" width="100%" color="#282d39" caption="1. Complete online registration" name="label54" fontsize="14"></wm-label>
+            <wm-label padding="unset 0.5em" width="100%" color="#282d39" caption="2. Confirm policy details" name="label55" fontsize="14"></wm-label>
+            <wm-label padding="unset 0.5em" color="#282d39" caption="bind:&quot; 3. Pay premium Amount of &quot;" name="label56" fontsize="14"></wm-label>
+            <wm-label padding="unset 0.5em unset unset" color="#d4145a" caption="bind:finaldata.PremiumAmount" name="label56_1" fontsize="14" fontfamily="Roboto-Medium"></wm-label>
+        </wm-dialog>
+    </wm-view>
+</wm-page>

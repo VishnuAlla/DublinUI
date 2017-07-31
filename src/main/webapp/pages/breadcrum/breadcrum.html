@@ -1,0 +1,7 @@
+<wm-partial data-ng-controller="breadcrumPageController" name="partial1">
+    <!--<wm-nav type="pills" name="breadcrumbnav" dataset="bind:Variables.Breadcrumbs.dataSet" itemlabel="bcLable" orderby="index:asc" on-select="breadcrumbnavSelect($event, $scope, $item)"></wm-nav>-->
+    <wm-breadcrumb dataset="bind:Variables.Breadcrumbs.dataSet" name="breadcrumb1" itemlabel="bind:Breadcrumbs.dataset.length == 1 ? $[bcLable] + &quot;/&quot; : $[bcLable]" itemlink="link"></wm-breadcrumb>
+    <wm-breadcrumb dataset="bind:Variables.Breadcrumbs.dataSet" name="breadcrumb2" itemlabel="bcLable" itemlink="link" show="false"></wm-breadcrumb>
+</wm-partial>
+<!--<wm-partial data-ng-controller="breadcrumPageController"> -->
+<!--</wm-partial>-->

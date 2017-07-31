@@ -1,0 +1,309 @@
+<wm-page data-ng-controller="CustomerProfilePageController" pagetitle="Customer Profile" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-container name="breadcrumbcontainer" content="breadcrumb" showindevice="sm,md,lg"></wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2" padding="50px unset unset unset">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn2">
+                        <wm-label padding="unset 0.5em unset 0em" name="label1" caption="bind:Variables.GetClientPolicyDetails.dataSet.ClientDetails.ClientName" fontsize="26" fontfamily="Dosis-Regular" margin="-5px unset unset unset" color="#282d39"></wm-label>
+                        <wm-label padding="0.2em 1em" name="label2" caption="bind:Variables.GetClientPolicyDetails.dataSet.ClientDetails.ClientNumber" class="customerid" fontsize="14" fontfamily="Roboto-Medium" margin="1px unset unset unset"
+                        style="top: -6px;"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn3" padding="20px unset unset unset" class="left_container col-xs-12">
+                        <wm-container name="left_container" class="custleft_container mobileleft_container">
+                            <wm-tabs name="tabs1" class="bkgcolor_tab" height="580px" on-change="tabs1Change($event, $scope, newPaneIndex, oldPaneIndex)">
+                                <wm-tabpane name="tab_policies" title="Policies" class="bkgcolor_tab" isdefaulttab="true" padding="unset unset 20px -10px">
+                                    <wm-container name="container4" margin="-10px unset unset unset">
+                                        <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" dataset="bind:Variables.PolicyProfileDetails.dataSet.policydetails" navigation="None"
+                                        name="livelist1" showrecordcount="false" enablereorder="false" on-click="livelist1Click($event, $scope)" selectfirstitem="true" show="true" groupby="livelist1groupby(rowData)" disableitem="false">
+                                            <wm-listtemplate layout="inline" name="listtemplate1">
+                                                <wm-container name="container5" class="basecontainer container-sahdow">
+                                                    <wm-layoutgrid name="layoutgrid5">
+                                                        <wm-gridrow name="gridrow25">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn33" padding="10px unset unset unset">
+                                                                <wm-label padding="unset 1em" name="label43" caption="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyId" fontfamily="Roboto-Regular" fontsize="12" color="#556287" class="cursor-type"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow26">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn35">
+                                                                <wm-label padding="unset 1em unset 0.8em" name="label44" caption="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PlanName" fontsize="14" margin="-5px unset unset unset" class="cursor-type dosislabel"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow27">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn37">
+                                                                <wm-label padding="unset 0.5em unset 1em" name="label43_1" caption="Due Date:" fontfamily="Roboto-Regular" fontsize="12" color="#9b9b9b" margin="-10px unset unset unset" class="cursor-type"></wm-label>
+                                                                <wm-label padding="unset 0.5em unset 1em" caption="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].NextDueDate | toDate: 'dd MMM, yyyy'" name="label46" fontfamily="Roboto-Regular"
+                                                                fontsize="12" color="#9b9b9b" margin="-10px unset unset unset" class="cursor-type"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow28">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn38">
+                                                                <wm-label padding="unset 0.5em unset 1em" name="lbl_singlepolicydetail" caption="bind:Variables.PolicyProfileDetails.dataSet.policydetails.PremiumToBePaid   | toCurrency: '$'" width="auto" fontfamily="Roboto-Regular"
+                                                                fontsize="14" color="#9b9b9b" margin="-5px unset unset unset" class="cursor-type" show="bind:pageDetails.navpath===&quot;policies&quot;"></wm-label>
+                                                                <wm-label padding="unset 0.5em unset 1em" caption="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PremiumTobePaid | toCurrency: '$'" width="auto" fontfamily="Roboto-Regular"
+                                                                fontsize="14" color="#9b9b9b" margin="-5px unset unset unset" class="cursor-type" show="true" name="lbl_singlepolicy"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow29">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn39" padding="unset unset 5px unset">
+                                                                <wm-container name="container_inforce" show="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus===&quot;InForce&quot;" class="inforce">
+                                                                    <wm-button type="button" margin="unset 0.5em unset 1em" name="button1" class="btn-round pull-left cursor-type "></wm-button>
+                                                                    <wm-label padding="unset 0.5em" name="label45" caption="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus" fontfamily="Roboto-Regular" fontsize="12"
+                                                                    class="cursor-type"></wm-label>
+                                                                </wm-container>
+                                                                <wm-container name="container_pending" show="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus===&quot;Pending Application&quot; || Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus===&quot;Pending Issuance&quot;"
+                                                                class="pending">
+                                                                    <wm-button type="button" margin="unset 0.5em unset 1em" name="button1" class="btn-round pull-left cursor-type"></wm-button>
+                                                                    <wm-label padding="unset 0.5em" caption="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus" fontfamily="Roboto-Regular" fontsize="12" class="cursor-type"
+                                                                    name="label50"></wm-label>
+                                                                </wm-container>
+                                                                <wm-container name="container_overdue" show="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus===&quot;overdue&quot;" class="overdue">
+                                                                    <wm-button type="button" margin="unset 0.5em unset 1em" name="button1" class="btn-round pull-left cursor-type"></wm-button>
+                                                                    <wm-label padding="unset 0.5em" name="label45" caption="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus" fontfamily="Roboto-Regular" fontsize="12"
+                                                                    class="cursor-type"></wm-label>
+                                                                </wm-container>
+                                                                <wm-container name="container_lapsed" show="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus===&quot;lapsed&quot;" class="lapsed">
+                                                                    <wm-button type="button" margin="unset 0.5em unset 1em" name="button1" class="btn-round pull-left cursor-type"></wm-button>
+                                                                    <wm-label padding="unset 0.5em" name="label45" caption="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus" fontfamily="Roboto-Regular" fontsize="12"
+                                                                    class="cursor-type"></wm-label>
+                                                                </wm-container>
+                                                                <wm-container name="container_suspended" show="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus===&quot;suspended&quot; || Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus===&quot;cancelled&quot; "
+                                                                class="suspended">
+                                                                    <wm-button type="button" margin="unset 0.5em unset 1em" name="button1" class="btn-round pull-left cursor-type"></wm-button>
+                                                                    <wm-label padding="unset 0.5em" name="label45" caption="bind:Variables.PolicyProfileDetails.dataSet.policydetails[$i].PolicyStatus" fontfamily="Roboto-Regular" fontsize="12"
+                                                                    class="cursor-type"></wm-label>
+                                                                </wm-container>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-container>
+                                            </wm-listtemplate>
+                                        </wm-livelist>
+                                    </wm-container>
+                                </wm-tabpane>
+                                <wm-tabpane name="tab_profile" title="Profile" isdefaulttab="true" class="bkgcolor_tab" overflow="hidden">
+                                    <wm-layoutgrid name="layoutgrid2">
+                                        <wm-gridrow name="gridrow6" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Client ID" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.ClientDetails.ClientNumber" name="label5" class="namelabel" color="#c60751"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow7" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn10_1">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Client Name" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.ClientDetails.ClientName" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow7" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn10_1">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Email ID" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.ClientDetails.EmailId" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow7" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn10_1">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Phone Number" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.ClientDetails.MobileNumber" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow7" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn10_1">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Address" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.ClientDetails.Address" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow7" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn10_1">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Date of Birth" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.ClientDetails.DateOfBirth" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow7" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn10_1">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Marital Status" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.ClientDetails.MaritalStatus" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <!--<wm-gridrow name="gridrow7" padding="unset unset 20px unset">-->
+                                        <!--    <wm-gridcolumn columnwidth="12" name="gridcolumn10_1">-->
+                                        <!--        <wm-label padding="unset 0.5em" name="label4" width="100%" caption="SSN" class="titlelabels"></wm-label>-->
+                                        <!--        <wm-label padding="unset 0.5em" width="100%" caption="123-12-1234" name="label5" class="namelabel"></wm-label>-->
+                                        <!--    </wm-gridcolumn>-->
+                                        <!--</wm-gridrow>-->
+                                    </wm-layoutgrid>
+                                </wm-tabpane>
+                            </wm-tabs>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="9" name="gridcolumn6" padding="20px unset unset 20px" class="custright_container col-xs-12">
+                        <wm-container name="right_container" class="mobileright_container hidecontainer">
+                            <wm-button type="button" margin="unset unset 10px unset" name="btn_back" class="pull-left btn_secondary visible-xs" caption="Back" on-click="btn_backClick($event, $scope)"></wm-button>
+                            <wm-tabs name="tabs2">
+                                <wm-tabpane name="tabpane4" title="Details" class="bkgcolor_tab" borderwidth="0px" padding="20px unset unset 0px">
+                                    <wm-layoutgrid name="layoutgrid3">
+                                        <wm-gridrow name="gridrow14" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn15">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Policy Name" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PlanName" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn16">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Policy ID" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyId" name="label5" class="namelabel" color="#c60751"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow15" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn17">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Status" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus" name="label5" class="namelabel" show="false"></wm-label>
+                                                <wm-container show="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus===&quot;InForce&quot;" class="inforce" name="container13">
+                                                    <wm-label padding="unset 0.5em" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus" fontfamily="Roboto-Regular" fontsize="16" class="cursor-type" name="label49"></wm-label>
+                                                </wm-container>
+                                                <wm-container show="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus===&quot;Pending Application&quot; || Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus===&quot;Pending Issuance&quot;"
+                                                class="pending" name="container14">
+                                                    <wm-label padding="unset 0.5em" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus" fontfamily="Roboto-Regular" fontsize="16" class="cursor-type" name="label50_1"></wm-label>
+                                                </wm-container>
+                                                <wm-container show="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus===&quot;overdue&quot;" class="overdue" name="container15">
+                                                    <wm-label padding="unset 0.5em" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus" fontfamily="Roboto-Regular" fontsize="16" class="cursor-type" name="label51"></wm-label>
+                                                </wm-container>
+                                                <wm-container show="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus===&quot;Lapsed&quot;" class="lapsed" name="container16">
+                                                    <wm-label padding="unset 0.5em" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus" fontfamily="Roboto-Regular" fontsize="16" class="cursor-type" name="label52"></wm-label>
+                                                </wm-container>
+                                                <wm-container show="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus===&quot;suspended&quot; ||
+Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus===&quot;cancelled&quot;" class="suspended" name="container17">
+                                                    <wm-label padding="unset 0.5em" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PolicyStatus" fontfamily="Roboto-Regular" fontsize="16" class="cursor-type" name="label53"></wm-label>
+                                                </wm-container>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn18">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Commencement Date" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.StartDate | toDate: 'dd MMM, yyyy'" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow15" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn17">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Premium Amount" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PremiumToBePaid | toCurrency: '$'" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn18">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Premium Due Date" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.NextDueDate | toDate: 'dd MMM, yyyy'" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow15" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn17">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Term" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.term+&quot; Years&quot;" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn18">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Sum Assured" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.SumAssured | toCurrency: '$'" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow15" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn17">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Premium Paid Till Date" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PremiumPaid | toCurrency: '$'" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn18">
+                                                <wm-label padding="unset 0.5em" name="label4" width="100%" caption="Frequency" class="titlelabels"></wm-label>
+                                                <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.GetClientPolicyDetails.dataSet.PolicyDetail.PremiumType" name="label5" class="namelabel"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow19" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn26">
+                                                <wm-label padding="unset 0.5em" name="label39" caption="Nominees" class="dosislabel" margin="40px unset unset unset"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow20" padding="unset unset 20px unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn28">
+                                                <wm-grid title="" dataset="bind:Variables.GetClientPolicyDetails.dataSet.NomineeDetails" navigation="Basic" name="grid_NomineesDetails" nodatamessage="No nominees found" show="true" class="custom-gridrow">
+                                                    <wm-grid-column binding="Name" caption="Name" type="string" readonly="true" show="true"></wm-grid-column>
+                                                    <wm-grid-column binding="Relationship" caption="Relationship" type="string" readonly="true" show="true"></wm-grid-column>
+                                                    <wm-grid-column binding="EntilementPercentage" caption="Allocation" type="string" readonly="true" mobiledisplay="false" show="true"></wm-grid-column>
+                                                    <wm-grid-column binding="DateOfBirth" caption="Date Of Birth" type="string" readonly="true" datepattern="dd MMM, yyyy" formatpattern="toDate" mobiledisplay="false" show="true"></wm-grid-column>
+                                                    <wm-grid-column binding="MobileNumber" caption="Contact Number" type="string" readonly="true" mobiledisplay="false" show="true"></wm-grid-column>
+                                                    <wm-grid-column binding="Expand" caption="Expand" type="string" widget-type="button" readonly="true" pcdisplay="false" searchable="false" show="true">
+                                                        <wm-button caption="" show="true" class="btn-arrow" iconclass="wi wi-arrow-downward" on-click="expandRow(row)" data-ng-class=""></wm-button>
+                                                    </wm-grid-column>
+                                                </wm-grid>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow23">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn29">
+                                                <wm-button class="link-btn" caption="View Application" type="button" margin="unset 0.5em" name="button9" on-click="button9Click($event, $scope)"></wm-button>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <!--<wm-gridrow name="gridrow21">-->
+                                        <!--    <wm-gridcolumn columnwidth="12" name="gridcolumn30">-->
+                                        <!--        <wm-label padding="unset 0.5em" name="label40" caption="Fund Value" class="dosislabel" margin="40px unset unset unset"></wm-label>-->
+                                        <!--    </wm-gridcolumn>-->
+                                        <!--</wm-gridrow>-->
+                                        <!--<wm-gridrow name="gridrow22" padding="unset unset 20px unset">-->
+                                        <!--    <wm-gridcolumn columnwidth="12" name="gridcolumn32">-->
+                                        <!--        <wm-grid title="" dataset="bind:Variables.GetPoliciesDetails.dataSet" navigation="Basic" name="grid3">-->
+                                        <!--            <wm-grid-column binding="TotalCount" caption="Total Count" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>-->
+                                        <!--            <wm-grid-column binding="DueDate" caption="Due Date" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>-->
+                                        <!--            <wm-grid-column binding="PremiumToBePaid" caption="Premium To Be Paid" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>-->
+                                        <!--            <wm-grid-column binding="UpdatedOn" caption="Updated On" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>-->
+                                        <!--            <wm-grid-column binding="MonthCount" caption="Month Count" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>-->
+                                        <!--            <wm-grid-column binding="PaymentDate" caption="Payment Date" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>-->
+                                        <!--            <wm-grid-column binding="PolicyStatus" caption="Policy Status" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>-->
+                                        <!--            <wm-grid-column binding="ApplicationId" caption="Application Id" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>-->
+                                        <!--            <wm-grid-column binding="PremiumPaid" caption="Premium Paid" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>-->
+                                        <!--            <wm-grid-column binding="SumAssured" caption="Sum Assured" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>-->
+                                        <!--        </wm-grid>-->
+                                        <!--    </wm-gridcolumn>-->
+                                        <!--</wm-gridrow>-->
+                                    </wm-layoutgrid>
+                                </wm-tabpane>
+                                <wm-tabpane name="tabpane5" title="Transactions">
+                                    <wm-grid title="" dataset="bind:Variables.GetClientPolicyDetails.dataSet.PaymentDetails" navigation="Basic" name="grid_transactions" nodatamessage="No transactions found" show="true">
+                                        <wm-grid-column binding="PaymentDate" caption="Transaction Date" type="string" width="130px" readonly="true" datepattern="dd MMM, yyyy" formatpattern="toDate" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                                        <wm-grid-column binding="TransactionId" caption="Transaction ID" type="string" width="130px" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                                        <wm-grid-column binding="PaymentMode" caption="Transaction Type" type="string" width="130px" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                                        <wm-grid-column binding="PremiumPaid" caption="Premium Paid" type="string" width="130px" textalignment="right" readonly="true" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false"
+                                        edit-widget-type="text" show="true"></wm-grid-column>
+                                        <wm-grid-column binding="Expand" caption="Expand" type="string" widget-type="button" readonly="true" pcdisplay="false" edit-widget-type="text" searchable="false" show="true">
+                                            <wm-button caption="" show="true" class="btn-arrow" iconclass="wi wi-arrow-downward" on-click="expandRow(row)" data-ng-class=""></wm-button>
+                                        </wm-grid-column>
+                                        <wm-grid-column binding="PaymentStatus" caption="Status" type="string" textalignment="center" readonly="true" mobiledisplay="false" edit-widget-type="text" searchable="false" show="true"></wm-grid-column>
+                                    </wm-grid>
+                                </wm-tabpane>
+                            </wm-tabs>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <!--<wm-gridrow name="gridrow4_1">-->
+                <!--    <wm-gridcolumn columnwidth="12" name="gridcolumn4"></wm-gridcolumn>-->
+                <!--</wm-gridrow>-->
+                <!--<wm-gridrow name="gridrow5">-->
+                <!--    <wm-gridcolumn columnwidth="12" name="gridcolumn5"></wm-gridcolumn>-->
+                <!--</wm-gridrow>-->
+            </wm-layoutgrid>
+        </wm-page-content>
+        <wm-view class="dialog-view" name="view2" show="false">
+            <wm-dialog height="100%" dialogtype="design-dialog" modal="true" name="Dialog_transactionsdetails" class="mobile-dialog" title="Transaction Details">
+                <wm-container name="container3" content="ExpandSelectedRow"></wm-container>
+                <wm-dialogactions name="dialogactions1">
+                    <wm-button class="btn-gradient  pull-left" caption="Close" on-click="closeDialog()" name="button1"></wm-button>
+                </wm-dialogactions>
+            </wm-dialog>
+        </wm-view>
+        <wm-view class="dialog-view" name="view2" show="false">
+            <wm-dialog height="100%" dialogtype="design-dialog" modal="true" name="Dialog_NomineeDetails" class="mobile-dialog" title="Nominee Details">
+                <wm-container name="container3" content="ExpandSelectedRow"></wm-container>
+                <wm-dialogactions name="dialogactions1">
+                    <wm-button class="btn-gradient  pull-left" caption="Close" on-click="closeDialog()" name="button1"></wm-button>
+                </wm-dialogactions>
+            </wm-dialog>
+        </wm-view>
+    </wm-content>
+    <!--<wm-footer content="footer"></wm-footer> --></wm-page>

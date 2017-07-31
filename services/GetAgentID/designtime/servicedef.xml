@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="GetAgentID" type="RestService" springFile="GetAgentID.spring.xml">
+    <operation name="invoke">
+        <parameter name="userid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="GetAgentID.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="GetAgentID.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="AgentId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

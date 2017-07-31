@@ -1,0 +1,27 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/createQuote/applicationDetails/A00000015",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"Details\":{\"clientDOB\":\"1970-01-01\",\"Gender\":\"Female\",\"ClientName\":\"Rio John\",\"ClientNumber\":\"C00000007\",\"EmailId\":\"rio.john@gmail.com\",\"MaritalStatus\":\"Married\",\"NoOfChildren\":1,\"MobileNumber\":\"6565656565\",\"PhoneNumber\":\"3232323232\",\"Height\":655,\"Weight\":50,\"ChangeInWeight\":\"false\",\"Nationality\":\"American\",\"Qualification\":\"Associate Degree\",\"Company\":\"Testing\",\"OccupationalHazards\":\"false\",\"AnnualIncome\":500000,\"Occupation\":\"General Practitioner\",\"AddressType\":\"Home\",\"AddressLine1\":\"no-w\",\"AddressLine2\":\"sun paradise\",\"Zip\":\"65656\",\"Country\":\"United States of America\",\"SumAssured\":800000,\"PolicyId\":\"\",\"ApplicationId\":\"A00000015\",\"StartDate\":1489397886000,\"PremiumType\":\"yearly\",\"TobaccoIntake\":\"No\",\"Term\":15,\"StateId\":\"566d5852-07cd-11e7-8041-0242ac110006\",\"PremiumToBePaid\":\"1651.58\",\"ClientId\":\"c3106713-07d0-11e7-8041-0242ac110006\",\"ProcessStatus\":null,\"ProcessInstanceId\":null,\"PolicyStatus\":\"Pending Application\",\"policyName\":\"Wealth Builder Plus\"},\"Nominees\":[{\"nomineeFirstName\":\"nancy\",\"nomieeLastName\":\"rio\",\"nomineeRelation\":\"Child\",\"nomineePercentage\":99,\"nomineeDOB\":\"1970-01-01\",\"nomineeMobile\":\"6565656565\",\"nomineePhone\":\"6565656565\",\"nomineeAdress1\":\"no-w\",\"nomineeAddress2\":\"sun paradise\",\"nomineeZip\":\"65656\",\"nomineeStateId\":\"566d5852-07cd-11e7-8041-0242ac110006\",\"nomineeCountry\":\"United States of America\",\"clientId\":\"c3106713-07d0-11e7-8041-0242ac110006\"}]}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"0508df599151a07a0bd01f862be1e47db\"" ],
+      "Date" : [ "Mon, 13 Mar 2017 09:56:04 GMT" ],
+      "Content-Length" : [ "1402" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Connection" : [ "keep-alive" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "mode" : [ "block" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

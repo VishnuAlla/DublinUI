@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="EditProfile" type="RestService" springFile="EditProfile.spring.xml">
+    <operation name="invoke">
+        <parameter name="RequestBody" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="EditProfile.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="EditProfile.RootRequest" name="RootRequest" supportsQuickData="false">
+            <element name="address" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="emailId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="maritalStatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mobileNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="EditProfile.RootResponse" name="RootResponse" supportsQuickData="false"/>
+    </dataobjects>
+</service>

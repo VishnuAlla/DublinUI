@@ -1,0 +1,99 @@
+<wm-partial data-ng-controller="CommonPageController" name="CommonPage">
+    <wm-view name="loginDialogView" class="dialog-view">
+        <wm-logindialog modal="true" name="CommonLoginDialog" iconclass="" title="" on-submit="CommonLoginDialogSubmit($event, $scope)" on-error="CommonLoginDialogError($event, $scope)" on-success="CommonLoginDialogSuccess($event, $scope)">
+            <wm-form name="loginform" backgroundcolor="#ffffff">
+                <!--<wm-message scopedataset="loginMessage" class="app-login-dialog-message" name="loginmessage"></wm-message>-->
+                <wm-layoutgrid name="layoutgrid1">
+                    <!--<wm-gridrow name="gridrow10">-->
+                    <!--    <wm-gridcolumn columnwidth="12" name="gridcolumn13">-->
+                    <!--        <wm-message name="invallidcredentails" type="error" show="false"></wm-message>-->
+                    <!--    </wm-gridcolumn>-->
+                    <!--</wm-gridrow>-->
+                    <!--<wm-gridrow name="gridrow3">-->
+                    <!--    <wm-gridcolumn columnwidth="12" name="gridcolumn3">-->
+                    <!--        <wm-container name="container9" width="100%">-->
+                    <!--            <wm-select name="roleselect" dataset="bind:Variables.RoleValue.dataSet" datafield="Key" displayfield="dataValue" required="true" placeholder="Select Role" color="#000000" backgroundcolor="#ffffff"></wm-select>-->
+                    <!--        </wm-container>-->
+                    <!--    </wm-gridcolumn>-->
+                    <!--</wm-gridrow>-->
+                    <!--<wm-gridrow name="gridrow1">-->
+                    <!--    <wm-gridcolumn name="gridcolumn1">-->
+                    <!--        <wm-composite name="usernamefield" backgroundcolor="#ffffff">-->
+                    <!--            <wm-label class="col-md-3 control-label" caption="Username" name="usernamelabel" color="#000000" backgroundcolor="#ffffff"></wm-label>-->
+                    <!--            <wm-container class="col-md-9" name="container1">-->
+                    <!--                <wm-text placeholder="Enter username" class="col-md-8 app-login-dialog-username" name="usernametext" autocomplete="off" autocorrect="off" autocapitalize="off" color="#000000"></wm-text>-->
+                    <!--            </wm-container>-->
+                    <!--        </wm-composite>-->
+                    <!--    </wm-gridcolumn>-->
+                    <!--</wm-gridrow>-->
+                    <!--<wm-gridrow name="gridrow2">-->
+                    <!--    <wm-gridcolumn name="gridcolumn2">-->
+                    <!--        <wm-composite name="passwordfield" backgroundcolor="#ffffff">-->
+                    <!--            <wm-label class="col-md-3 control-label" caption="Password" name="passwordlabel" color="#000000" backgroundcolor="#ffffff"></wm-label>-->
+                    <!--            <wm-container class="col-md-9" name="container2">-->
+                    <!--                <wm-text type="password" placeholder="Enter password" class="col-md-8 app-login-dialog-password" name="passwordtext" autocomplete="off" autocorrect="off" autocapitalize="off" color="#000000"></wm-text>-->
+                    <!--            </wm-container>-->
+                    <!--        </wm-composite>-->
+                    <!--    </wm-gridcolumn>-->
+                    <!--</wm-gridrow>-->
+                    <wm-gridrow name="gridrow9">
+                        <wm-gridcolumn columnwidth="12" name="containergridcolumn" padding="unset unset 2em unset">
+                            <wm-container name="container1" class="panel" backgroundcolor="#ffffff" color="#bdbdbd" horizontalalign="center">
+                                <wm-label name="label1" caption="User Login" horizontalalign="center" class="p" backgroundcolor="#f7f7f7" margin="0px unset" fontsize="20" padding="1em unset" color="#1e1e1e" show="false"></wm-label>
+                                <wm-container name="logo-container" horizontalalign="center" borderstyle="solid" borderwidth="0px 0px 1px 0px" bordercolor="#e2e2e2">
+                                    <wm-picture name="picture1" picturesource="resources/images/logos/logo.png" class="p" margin="0px unset" padding="1em unset" width="160px" height="84px"></wm-picture>
+                                </wm-container>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow10">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                            <wm-message name="invallidcredentails" type="error" show="false"></wm-message>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow9_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn11" padding="unset unset 2em unset">
+                            <wm-composite name="composite1" required="true">
+                                <wm-label class="col-md-3 control-label" name="label2" caption="Select Role" show="false"></wm-label>
+                                <wm-container name="container9" width="100%">
+                                    <wm-select name="roleselect" dataset="bind:Variables.RoleValue.dataSet" datafield="Key" displayfield="dataValue" required="true" placeholder="Select Role" color="#000" backgroundcolor="#fff" class="roleselect"></wm-select>
+                                </wm-container>
+                            </wm-composite>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn4" padding="unset unset 2em unset">
+                            <wm-container class="input-group" name="container3" width="100%">
+                                <wm-container class="input-group-addon" name="container4" show="false">
+                                    <wm-icon name="icon1" iconclass="wi wi-user"></wm-icon>
+                                </wm-container>
+                                <wm-text placeholder="Username" name="usernametext" class="app-login-username" width="100%" autocomplete="false" autocorrect="off" autocapitalize="off" updateon="default" required="true" color="#000" backgroundcolor="#fff"></wm-text>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                            <wm-container class="input-group" name="container3" width="100%">
+                                <wm-container class="input-group-addon" name="container6" show="false">
+                                    <wm-icon name="icon1" iconclass="wi wi-key"></wm-icon>
+                                </wm-container>
+                                <wm-text type="password" name="passwordtext" placeholder="Password" class="app-login-password" width="100%" autocomplete="true" autocorrect="off" autocapitalize="off" updateon="default" required="true" color="#000" backgroundcolor="#fff"></wm-text>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-form>
+            <wm-dialogactions name="dialogactions1">
+                <wm-button class="btn-primary" caption="" data-role="loginbutton" name="button1" iconclass="wi wi-arrow-right"></wm-button>
+            </wm-dialogactions>
+        </wm-logindialog>
+    </wm-view>
+    <wm-view name="CommonAlertDialogView" class="dialog-view">
+        <wm-alertdialog name="CommonAlertDialog" controller="NotificationDialogController" notificationdialog="alert" message="{{notification.text}}" title="{{notification.title}}" oktext="{{notification.okButtonText}}" alerttype="{{notification.alerttype}}"
+        on-ok="variableOnOk()" on-close="variableOnClose()"></wm-alertdialog>
+    </wm-view>
+    <wm-view name="CommonConfirmDialogView" class="dialog-view">
+        <wm-confirmdialog name="CommonConfirmDialog" controller="NotificationDialogController" notificationdialog="confirm" message="{{notification.text}}" title="{{notification.title}}" oktext="{{notification.okButtonText}}" canceltext="{{notification.cancelButtonText}}"
+        on-ok="variableOnOk()" on-cancel="variableOnCancel()"></wm-confirmdialog>
+    </wm-view>
+</wm-partial>

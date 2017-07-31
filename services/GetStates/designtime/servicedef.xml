@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="GetStates" type="RestService" springFile="GetStates.spring.xml">
+    <operation name="invoke">
+        <return isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="GetStates.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="RootResponseROOT" typeRef="GetStates.RootResponseROOTEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="GetStates.RootResponseROOTEntryItem" name="RootResponseROOTEntryItem" supportsQuickData="false">
+            <element name="GeoGroup" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="StateCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="StateId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="StateName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

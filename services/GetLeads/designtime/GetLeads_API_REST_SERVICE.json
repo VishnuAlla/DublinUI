@@ -1,0 +1,145 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "2cfca1ea-d8d2-409c-adbe-f4205e2ca265",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true
+  },
+  "host" : "wavemaker-apps.pramati.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/GetLeads/invoke/services/portal/{id}" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "GetLeads_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/RootResponseROOTEntryItem"
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/GetLeads/invoke/services/portal/{id}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetLeads.scheme}://${rest.GetLeads.host}${rest.GetLeads.basepath}/services/portal/{id}"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "RootResponseROOT" ],
+      "properties" : {
+        "RootResponseROOT" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/RootResponseROOTEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetLeads.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponseROOTEntryItem" : {
+      "required" : [ "Active", "ClientId", "ClientNumber", "DateOfBirth", "Email", "FirstName", "Gender", "LastName", "LeadId", "PhoneNumber", "PlanName", "PremiumToBePaid", "PremiumType", "StartDate", "StateId", "StateName", "SumAssured", "Term", "TobaccoIntake", "UniqueLeadId", "UniquePolicyId", "UpdatedOn" ],
+      "properties" : {
+        "TobaccoIntake" : {
+          "type" : "string"
+        },
+        "LeadId" : {
+          "type" : "string"
+        },
+        "PremiumToBePaid" : {
+          "type" : "string"
+        },
+        "UpdatedOn" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "ClientNumber" : {
+          "type" : "string"
+        },
+        "PhoneNumber" : {
+          "type" : "string"
+        },
+        "ClientId" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "StateName" : {
+          "type" : "string"
+        },
+        "Term" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "SumAssured" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "UniquePolicyId" : {
+          "type" : "string"
+        },
+        "DateOfBirth" : {
+          "type" : "string"
+        },
+        "Active" : {
+          "type" : "boolean"
+        },
+        "PlanName" : {
+          "type" : "string"
+        },
+        "PremiumType" : {
+          "type" : "string"
+        },
+        "StartDate" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "UniqueLeadId" : {
+          "type" : "string"
+        },
+        "StateId" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "FirstName" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetLeads.RootResponseROOTEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="getDashboardCount" type="RestService" springFile="getDashboardCount.spring.xml">
+    <operation name="invoke">
+        <parameter name="agentId" typeRef="java.lang.String" isList="false"/>
+        <return isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="getDashboardCount.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="RootResponseROOT" typeRef="getDashboardCount.RootResponseROOTEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="getDashboardCount.RootResponseROOTEntryItem" name="RootResponseROOTEntryItem" supportsQuickData="false">
+            <element name="CustomerCount" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="InForceCount" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="InForcePremiumForMonth" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="InForcePremiumForWeek" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="OverDuePremiumAmount" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="OverdueCount" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="SuspendedCount" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="SuspendedPremiumAmount" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

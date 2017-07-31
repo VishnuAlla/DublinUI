@@ -1,0 +1,34 @@
+<wm-partial data-ng-controller="ExpandSelectedRowPageController" name="partial1">
+    <wm-container on-load="container3_1Load($isolateScope)" name="container3_1" padding="0px 10px" margin="10px unset 5px unset" class="blank" show="bind:Variables.expandVariable.dataSet[$i].key===&quot;Status&quot;">
+        <wm-composite name="mobilecontainer" margin="2px unset 0px unset">
+            <wm-label fontweight="bold" name="label2_1" color="black" width="100%" caption="bind:Variables.expandVariable.dataSet[$i].key" fontfamily="Roboto-Medium"></wm-label>
+            <wm-label name="label3" color="black" width="100%" caption="bind:Variables.expandVariable.dataSet[$i].value" fontfamily="Roboto-Regular" margin="0px unset" class="{{Variables.expandVariable.dataSet[0].value==='Accepted'? 'accepted' : Variables.expandVariable.dataSet[0].value==='Inactive'? 'inactive' :Variables.expandVariable.dataSet[0].value==='Rejected'? 'rejected' :Variables.expandVariable.dataSet[0].value==='Active'? 'active': Variables.expandVariable.dataSet[0].value==='Cancelled'? 'cancelled': Variables.expandVariable.dataSet[0].value==='Submitted'? 'accepted' :'notified'}}"></wm-label>
+        </wm-composite>
+    </wm-container>
+    <wm-livelist listclass="list-group" itemclass="list-group-item blanck" template="true" dataset="bind:Variables.expandVariable.dataSet" navigation="None" name="livelist1">
+        <wm-listtemplate layout="blank" name="listtemplate1">
+            <wm-container class="blank" data-template-ctr="true" name="container3">
+                <wm-container on-load="container3_1Load($isolateScope)" name="container3_1" padding="0px 10px" margin="10px unset 5px unset" class="blank">
+                    <wm-composite name="composite2_1" show="false">
+                        <wm-label class="col-md-3 control-label" name="label2" caption="bind:Variables.expandVariable.dataSet[$i].key"></wm-label>
+                        <wm-container class="col-md-9" name="container4_1" show="false">
+                            <wm-text name="text2_1" datavalue="bind:Variables.expandVariable.dataSet[$i].value"></wm-text>
+                        </wm-container>
+                    </wm-composite>
+                    <wm-container name="container4" margin="0px unset -5px unset" show="bind:Variables.expandVariable.dataSet[$i].key!=&quot;Premium&quot;">
+                        <wm-composite name="mobilecontainer" margin="2px unset 0px unset" show="true">
+                            <wm-label fontweight="bold" name="label2_1" color="black" width="100%" caption="bind:Variables.expandVariable.dataSet[$i].key" fontfamily="Roboto-Medium"></wm-label>
+                            <wm-label name="label3" color="black" width="100%" caption="bind:Variables.expandVariable.dataSet[$i].value" fontfamily="Roboto-Regular" class="status-value" margin="0px unset"></wm-label>
+                        </wm-composite>
+                    </wm-container>
+                </wm-container>
+            </wm-container>
+            <wm-container on-load="container3_1Load($isolateScope)" name="container3_1" padding="0px 10px" margin="10px unset 5px unset" class="blank" show="bind:Variables.expandVariable.dataSet[$i].key===&quot;Premium&quot;">
+                <wm-composite name="mobilecontainer" margin="2px unset 0px unset">
+                    <wm-label fontweight="bold" name="label2_1" color="black" width="100%" caption="bind:Variables.expandVariable.dataSet[$i].key" fontfamily="Roboto-Medium"></wm-label>
+                    <wm-label name="label3" color="black" width="100%" caption="bind:Variables.expandVariable.dataSet[$i].value | toCurrency: '$'" fontfamily="Roboto-Regular" margin="0px unset"></wm-label>
+                </wm-composite>
+            </wm-container>
+        </wm-listtemplate>
+    </wm-livelist>
+</wm-partial>

@@ -1,0 +1,27 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "http://wavemaker-apps.pramati.com/dev_api_dublin/services/profile/userDetails/b86947e9-c8db-11e6-9740-0242ac1108f8",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"ClientId\":\"dd88b13c-c8de-11e6-9740-0242ac1108f8\",\"UserId\":\"b86947e9-c8db-11e6-9740-0242ac1108f8\",\"ClientNumber\":\"C11830\",\"EmailId\":\"Mary.Williams@Mailbox.com\",\"DateOfBirth\":\"1991-12-15\",\"ClientName\":\"Mary Williams\",\"MaritalStatus\":\"Married\",\"Nationality\":\"American\",\"Gender\":\"Female\",\"MobileNumber\":\"8063890000\",\"PhoneNumber\":\"9213093412\",\"SSN\":\"123-45-6666\",\"Address\":\"228 Park Ave S New York, USA\",\"Occupation\":\"Banker\"}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"07e6499db38683dfeb072f25a4aa666b6\"" ],
+      "Date" : [ "Fri, 23 Dec 2016 09:35:28 GMT" ],
+      "Content-Length" : [ "424" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ],
+      "Cache-Control" : [ "max-age=0" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

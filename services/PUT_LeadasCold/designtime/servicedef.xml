@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="PUT_LeadasCold" type="RestService" springFile="PUT_LeadasCold.spring.xml">
+    <dataobjects/>
+</service>

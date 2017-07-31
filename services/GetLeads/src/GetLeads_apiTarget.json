@@ -1,0 +1,147 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.GetLeads.basepath}",
+  "paths" : {
+    "/services/portal/{id}" : {
+      "x-WM-BASE_PATH" : "/services/portal/{id}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-IS_LIST" : true,
+              "items" : {
+                "$ref" : "#/definitions/RootResponseROOTEntryItem"
+              },
+              "uniqueItems" : false,
+              "type" : "array"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "GetLeads_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetLeads.scheme}://${rest.GetLeads.host}${rest.GetLeads.basepath}/services/portal/{id}"
+    }
+  },
+  "host" : "${rest.GetLeads.host}",
+  "schemes" : [ "${rest.GetLeads.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetLeads.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "RootResponseROOT" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/RootResponseROOTEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        }
+      },
+      "required" : [ "RootResponseROOT" ]
+    },
+    "RootResponseROOTEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetLeads.RootResponseROOTEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "TobaccoIntake" : {
+          "type" : "string"
+        },
+        "LeadId" : {
+          "type" : "string"
+        },
+        "PremiumToBePaid" : {
+          "type" : "string"
+        },
+        "UpdatedOn" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "ClientNumber" : {
+          "type" : "string"
+        },
+        "PhoneNumber" : {
+          "type" : "string"
+        },
+        "ClientId" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "StateName" : {
+          "type" : "string"
+        },
+        "Term" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "SumAssured" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "UniquePolicyId" : {
+          "type" : "string"
+        },
+        "Active" : {
+          "type" : "boolean"
+        },
+        "DateOfBirth" : {
+          "type" : "string"
+        },
+        "PlanName" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "StartDate" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "PremiumType" : {
+          "type" : "string"
+        },
+        "UniqueLeadId" : {
+          "type" : "string"
+        },
+        "StateId" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "FirstName" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "Active", "ClientId", "ClientNumber", "DateOfBirth", "Email", "FirstName", "Gender", "LastName", "LeadId", "PhoneNumber", "PlanName", "PremiumToBePaid", "PremiumType", "StartDate", "StateId", "StateName", "SumAssured", "Term", "TobaccoIntake", "UniqueLeadId", "UniquePolicyId", "UpdatedOn" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "2cfca1ea-d8d2-409c-adbe-f4205e2ca265",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

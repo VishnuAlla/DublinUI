@@ -1,0 +1,97 @@
+<wm-page data-ng-controller="MyearningsPageController" pagetitle="Myearnings" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-container name="breadcrumbcontainer" content="breadcrum" showindevice="sm,md,lg"></wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow12545_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                        <wm-label padding="unset 0.5em unset 0em" name="label1" caption="My Earnings" fontsize="26" fontfamily="Dosis-Regular" margin="40px unset 30px unset" color="#282d39"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <!--<wm-gridrow name="gridrow1">-->
+                <!--    <wm-gridcolumn columnwidth="8" name="gridcolumn1" class="boxshadow">-->
+                <!--        <wm-label padding="unset 0.5em" name="label1" caption="Business Overview for current Finanacial Year" class="headerlabel"></wm-label>-->
+                <!--        <wm-chart type="Line" title="Line Chart" iconclass="wi wi-line-chart" name="chart1" dataset="bind:Variables.GetBuisnessOverview.dataSet" xaxisdatakey="Month" yaxisdatakey="PremiunAmount,Target" staggerlabels="true" ynumberformat=",r"></wm-chart>-->
+                <!--    </wm-gridcolumn>-->
+                <!--    <wm-gridcolumn columnwidth="4" name="gridcolumn2" class="boxshadow">-->
+                <!--<wm-label padding="unset 0.5em" name="label1" caption="Business Overview for current Finanacial Year" show="false" class="headerlabel"></wm-label>-->
+                <!--        <wm-grid title="" dataset="bind:Variables.GetBuisnessOverview.dataSet" navigation="Basic" name="grid1" class="custom-grid">-->
+                <!--            <wm-grid-column binding="Month" caption="Month" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>-->
+                <!--            <wm-grid-column binding="PolicyCount" caption="Policy Count" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>-->
+                <!--            <wm-grid-column binding="PremiunAmount" caption="Premium Amount" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>-->
+                <!--            <wm-grid-column binding="Target" caption="Target" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>-->
+                <!--        </wm-grid>-->
+                <!--    </wm-gridcolumn>-->
+                <!--</wm-gridrow>-->
+                <wm-gridrow name="gridrow4_1">
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn3_1">
+                        <wm-container name="leftcontainer" margin="10px 10px unset unset" padding="10px" class="boxshadow">
+                            <wm-gridrow name="gridrow4_1">
+                                <wm-gridcolumn columnwidth="8" name="gridcolumn3_1" class="col-xs-8">
+                                    <wm-label padding="unset 0.5em" name="label1" caption="Commissions" class="headerlabel dosislabel"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn3_1_1">
+                                    <wm-composite name="composite1" class="pull-right">
+                                        <!--<wm-label class="col-md-3 control-label" name="label2" show="false"></wm-label>-->
+                                        <wm-container class="col-md-9 custom-select" name="container5" width="100%">
+                                            <wm-select name="select_year" dataset="bind:Variables.select_year_value.dataSet" datavalue="bind:today.getFullYear()" on-change="select_yearChange($event, $scope, newVal, oldVal)" datafield="dataValue" displayfield="dataValue"></wm-select>
+                                        </wm-container>
+                                    </wm-composite>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-chart type="Column" title="" iconclass="wi wi-bar-chart" name="chart_commisions" dataset="bind:Variables.GetCommisionDetails.dataSet" xaxisdatakey="GraphMonth" yaxisdatakey="Commission" customcolors="bind:Variables.colors_buisnessoverview.dataSet"
+                            tooltips="true" showlegend="hide" reducexticks="true" barspacing="0.5" height="310px" ynumberformat=",r"></wm-chart>
+                            <!--<wm-label padding="unset 0.5em" name="label1" caption="Commisions for Current Financial Year" class="headerlabel dosislabel"></wm-label>-->
+                            <wm-chart type="Line" title="" iconclass="wi wi-line-chart" name="chart2" dataset="bind:Variables.GetCommisionDetails.dataSet" xaxisdatakey="Month" yaxisdatakey="NetCommission" height="310px" showlegend="hide" tooltips="false" highlightpoints="true" customcolors="bind:Variables.colors_buisnessoverview.dataSet"
+                            show="false"></wm-chart>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn4">
+                        <wm-container name="rightcontainer" margin="10px unset unset unset" class="boxshadow rightcontainer">
+                            <wm-grid title="" dataset="bind:Variables.GetCommisionDetails.dataSet" navigation="None" name="gridCommisionDetails" height="310px" rowngclass="{'customclass':row.Month===month}">
+                                <wm-grid-column binding="Month" caption="Month" type="string" readonly="true" show="true">
+                                    <wm-anchor caption="{{row.Month}}" ng-click="GetMonth(row)"></wm-anchor>
+                                </wm-grid-column>
+                                <wm-grid-column binding="Commission" caption="Net Commission" type="string" textalignment="right" readonly="true" col-class="grid-amt" formatpattern="toCurrency" currencypattern="USD" show="true"></wm-grid-column>
+                            </wm-grid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                        <wm-container name="bottomcontainer" margin="20px unset unset unset" class="boxshadow">
+                            <wm-grid title="" dataset="bind:Variables.getMonthMyEarning.dataSet" navigation="Basic" name="GridOnClick">
+                                <wm-grid-column binding="ClientNumber" caption="Customer ID" type="string" widget-type="anchor" width="100px" readonly="true" show="true">
+                                    <wm-anchor caption="{{row.ClientNumber}}" ng-click="CustomerProfile(row.ClientId)"></wm-anchor>
+                                </wm-grid-column>
+                                <wm-grid-column binding="ClientName" caption="Customer" type="string" width="120px" readonly="true" show="true"></wm-grid-column>
+                                <wm-grid-column binding="PolicyId" caption="Policy No." type="string" width="120px" readonly="true" mobiledisplay="false" show="true"></wm-grid-column>
+                                <wm-grid-column binding="PolicyName" caption="Policy" type="string" width="120px" readonly="true" mobiledisplay="false" show="true"></wm-grid-column>
+                                <wm-grid-column binding="IssuanceDate" caption="Issuance Date" type="string" width="150px" readonly="true" datepattern="dd MMM, yyyy" formatpattern="toDate" mobiledisplay="false" show="true"></wm-grid-column>
+                                <wm-grid-column binding="Commission" caption="Commission Amt" type="string" width="150px" textalignment="right" readonly="true" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false" show="true"></wm-grid-column>
+                                <wm-grid-column binding="PremiumPaid" caption="Premium Amt" type="string" width="150px" textalignment="right" readonly="true" col-class="grid-amt" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false" show="true"></wm-grid-column>
+                                <wm-grid-column binding="expandField" caption="Expand" type="custom" widget-type="button" readonly="true" pcdisplay="false" searchable="false" show="true">
+                                    <wm-button caption="" show="true" class="btn-arrow" iconclass="wi wi-arrow-downward" on-click="expandRow(row)" data-ng-class=""></wm-button>
+                                </wm-grid-column>
+                            </wm-grid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+        <wm-view class="dialog-view" name="view2" show="false">
+            <wm-dialog height="100%" dialogtype="design-dialog" modal="true" name="Dialog_myearningdetails" class="mobile-dialog" title="My Earnings Details">
+                <wm-container name="container3" content="ExpandSelectedRow"></wm-container>
+                <wm-dialogactions name="dialogactions1">
+                    <wm-button class="btn-gradient  pull-left" caption="Close" on-click="closeDialog()" name="button1"></wm-button>
+                </wm-dialogactions>
+            </wm-dialog>
+        </wm-view>
+    </wm-content>
+    <!--<wm-footer content="footer" name="footer1"></wm-footer>--></wm-page>

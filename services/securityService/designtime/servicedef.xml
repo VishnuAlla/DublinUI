@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="securityService" class="com.wavemaker.runtime.security.SecurityService" type="SecurityServiceType" springFile="securityService.spring.xml">
+    <operation name="generateUserAccessToken">
+        <return typeRef="com.wavemaker.runtime.security.token.Token" isList="false"/>
+    </operation>
+    <operation name="getUserId">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="isSecurityEnabled">
+        <return typeRef="java.lang.Boolean" isList="false"/>
+    </operation>
+    <operation name="isAuthenticated">
+        <return typeRef="boolean" isList="false"/>
+    </operation>
+    <operation name="getWmTokenBasedAuthenticationService">
+        <return typeRef="com.wavemaker.runtime.security.token.WMTokenBasedAuthenticationService" isList="false"/>
+    </operation>
+    <operation name="getSecurityInfo">
+        <return typeRef="com.wavemaker.runtime.security.model.SecurityInfo" isList="false"/>
+    </operation>
+    <operation name="setRoles">
+        <parameter name="roles" typeRef="java.lang.String" isList="true"/>
+    </operation>
+    <operation name="getTenantId">
+        <return typeRef="int" isList="false"/>
+    </operation>
+    <operation name="getUserLandingPage">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="ssoLogin">
+        <parameter name="httpServletResponse" typeRef="javax.servlet.http.HttpServletResponse" isList="false"/>
+    </operation>
+    <operation name="getLoginConfig">
+        <return typeRef="com.wavemaker.commons.model.security.LoginConfig" isList="false"/>
+    </operation>
+    <operation name="getRoles">
+        <return typeRef="java.lang.String" isList="true"/>
+    </operation>
+    <operation name="getLoginTime">
+        <return typeRef="long" isList="false"/>
+    </operation>
+    <operation name="getCASProxyTicket">
+        <parameter name="serviceUrl" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getUserRoles">
+        <return typeRef="java.lang.String" isList="true"/>
+    </operation>
+    <operation name="getLoggedInUser">
+        <return typeRef="com.wavemaker.runtime.security.WMCurrentUser" isList="false"/>
+    </operation>
+    <operation name="getUserName">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="com.wavemaker.runtime.security.WMCurrentUser" name="WMCurrentUser" supportsQuickData="false">
+            <element name="authenticated" typeRef="boolean" isList="false" allowNull="false"/>
+            <element name="loginTime" typeRef="long" isList="false" allowNull="false"/>
+            <element name="securityEnabled" typeRef="boolean" isList="false" allowNull="false"/>
+            <element name="tenantId" typeRef="int" isList="false" allowNull="false"/>
+            <element name="userId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userRoles" typeRef="java.lang.String" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.runtime.security.model.SecurityInfo" name="SecurityInfo" supportsQuickData="false">
+            <element name="authenticated" typeRef="boolean" isList="false" allowNull="false"/>
+            <element name="csrfHeaderName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="loginConfig" typeRef="com.wavemaker.commons.model.security.LoginConfig" isList="false" allowNull="false"/>
+            <element name="securityEnabled" typeRef="boolean" isList="false" allowNull="false"/>
+            <element name="userInfo" typeRef="com.wavemaker.runtime.security.model.UserInfo" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.runtime.security.token.Token" name="Token" supportsQuickData="false">
+            <element name="wmAuthToken" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.runtime.security.token.WMTokenBasedAuthenticationService" name="WMTokenBasedAuthenticationService" supportsQuickData="false">
+            <element name="key" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="tokenValiditySeconds" typeRef="int" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.commons.model.security.LoginConfig" name="LoginConfig" supportsQuickData="false">
+            <element name="pageName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="sessionTimeout" typeRef="com.wavemaker.commons.model.security.SessionTimeoutConfig" isList="false" allowNull="false"/>
+            <element name="type" typeRef="com.wavemaker.commons.model.security.LoginType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="javax.servlet.http.HttpServletResponse" name="HttpServletResponse" supportsQuickData="false"/>
+    </dataobjects>
+</service>

@@ -1,0 +1,29 @@
+{
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/profile/customerPortfolio/440c1544-c8dc-11e6-9740-0242ac1108f8",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"MobileNumber\":\"8063891111\",\"ClientName\":\"Adam Paul\",\"ClientId\":\"1ae6a903-dd66-11e6-873e-0242ac1109d2\",\"ClientNumber\":\"C00000003\",\"AnnualPremium\":33000,\"PolicyCount\":2},{\"MobileNumber\":\"8063892222\",\"ClientName\":\"Robinson\",\"ClientId\":\"1aedc267-dd66-11e6-873e-0242ac1109d2\",\"ClientNumber\":\"C00000004\",\"AnnualPremium\":37000,\"PolicyCount\":2},{\"MobileNumber\":\"8063895443\",\"ClientName\":\"Lee Scott\",\"ClientId\":\"1af1607f-dd66-11e6-873e-0242ac1109d2\",\"ClientNumber\":\"C00000005\",\"AnnualPremium\":41000,\"PolicyCount\":2},{\"MobileNumber\":\"8063895443\",\"ClientName\":\"Clark Wright\",\"ClientId\":\"1af52cc3-dd66-11e6-873e-0242ac1109d2\",\"ClientNumber\":\"C00000006\",\"AnnualPremium\":45000,\"PolicyCount\":2},{\"MobileNumber\":\"123432\",\"ClientName\":\"AA AA\",\"ClientId\":\"218c2686-65b1-11e7-a08a-0242ac11010e\",\"ClientNumber\":\"C00000009\",\"AnnualPremium\":1652,\"PolicyCount\":0},{\"MobileNumber\":\"123123213\",\"ClientName\":\"Joseph Paul\",\"ClientId\":\"5f0c24c3-65ab-11e7-a08a-0242ac11010e\",\"ClientNumber\":\"C00000008\",\"AnnualPremium\":2769,\"PolicyCount\":0},{\"MobileNumber\":\"123\",\"ClientName\":\"Mani S\",\"ClientId\":\"9a4ff1e8-65aa-11e7-a08a-0242ac11010e\",\"ClientNumber\":\"C00000007\",\"AnnualPremium\":3935,\"PolicyCount\":2},{\"MobileNumber\":\"8063890000\",\"ClientName\":\"Mary Williams\",\"ClientId\":\"dd88b13c-c8de-11e6-9740-0242ac1108f8\",\"ClientNumber\":\"C00000001\",\"AnnualPremium\":70225,\"PolicyCount\":2},{\"MobileNumber\":\"8066445522\",\"ClientName\":\"John Doe\",\"ClientId\":\"e566c2f4-c8de-11e6-9740-0242ac1108f8\",\"ClientNumber\":\"C00000002\",\"AnnualPremium\":167093,\"PolicyCount\":3}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "ETag" : [ "\"0cd5fe7fd26b6c19b910b9073aff7d041\"" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Content-Length" : [ "1535" ],
+      "Date" : [ "Mon, 10 Jul 2017 20:56:39 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

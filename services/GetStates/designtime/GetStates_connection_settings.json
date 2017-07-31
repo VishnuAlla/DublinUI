@@ -1,0 +1,27 @@
+{
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/createQuote",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"StateId\":\"8a674c8e-e922-11e6-ba0a-0242ac11000b\",\"StateName\":\"Washington\",\"StateCode\":\"WA\",\"GeoGroup\":\"WestCoast\"},{\"StateId\":\"8a738a49-e922-11e6-ba0a-0242ac11000b\",\"StateName\":\"Oregon\",\"StateCode\":\"OR\",\"GeoGroup\":\"WestCoast\"},{\"StateId\":\"8a79e716-e922-11e6-ba0a-0242ac11000b\",\"StateName\":\"California\",\"StateCode\":\"CA\",\"GeoGroup\":\"WestCoast\"},{\"StateId\":\"8a804620-e922-11e6-ba0a-0242ac11000b\",\"StateName\":\"Texas\",\"StateCode\":\"TX\",\"GeoGroup\":\"Central\"},{\"StateId\":\"8a86a55e-e922-11e6-ba0a-0242ac11000b\",\"StateName\":\"Kansas\",\"StateCode\":\"KS\",\"GeoGroup\":\"Central\"},{\"StateId\":\"8a8d05f8-e922-11e6-ba0a-0242ac11000b\",\"StateName\":\"New Mexico\",\"StateCode\":\"NM\",\"GeoGroup\":\"Central\"},{\"StateId\":\"8a936461-e922-11e6-ba0a-0242ac11000b\",\"StateName\":\"New York\",\"StateCode\":\"NY\",\"GeoGroup\":\"Central\"},{\"StateId\":\"8a99c20f-e922-11e6-ba0a-0242ac11000b\",\"StateName\":\"Wyoming\",\"StateCode\":\"WY\",\"GeoGroup\":\"Central\"},{\"StateId\":\"8aa53c5e-e922-11e6-ba0a-0242ac11000b\",\"StateName\":\"Florida\",\"StateCode\":\"FL\",\"GeoGroup\":\"EastCoast\"},{\"StateId\":\"8aab9651-e922-11e6-ba0a-0242ac11000b\",\"StateName\":\"Maine\",\"StateCode\":\"ME\",\"GeoGroup\":\"EastCoast\"}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "ETag" : [ "\"0ff963511f2b4ead4a41c0e613e0ef80b\"" ],
+      "Date" : [ "Fri, 03 Feb 2017 06:09:58 GMT" ],
+      "Content-Length" : [ "1125" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ],
+      "Cache-Control" : [ "max-age=0" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

@@ -1,0 +1,16 @@
+[ {
+  "urlPattern" : "/pages/Dashboard/**",
+  "permission" : "Role",
+  "roles" : [ "Agent" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/**",
+  "permission" : "Authenticated",
+  "roles" : null,
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/MasterPolicyDetails/invoke/services//profile/masterPolicies/**",
+  "permission" : "Role",
+  "roles" : [ "Agent" ],
+  "httpMethod" : null
+} ]

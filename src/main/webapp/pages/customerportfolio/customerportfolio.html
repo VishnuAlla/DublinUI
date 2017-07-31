@@ -1,0 +1,56 @@
+<wm-page data-ng-controller="customerportfolioPageController" pagetitle="Customerportfolio" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-container name="breadcrumbcontainer" content="breadcrum" showindevice="sm,md,lg"></wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                        <wm-label padding="unset 0.5em unset 0em" name="label1" caption="Customer Portfolio" fontsize="26" fontfamily="Dosis-Regular" margin="40px unset 30px unset" color="#282d39"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1" height="55">
+                        <wm-prefab prefabname="GridSearch_Enterprise" name="GridSearch_Enterprise2" class="prefab-search" griddata="bind:Variables.GetCustomerPortfolio.dataSet" girdname="grid_cutomerportfolio" height="40px"></wm-prefab>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2" horizontalalign="right">
+                        <wm-anchor margin="1.5em 0.5em unset 0.5em" name="anc_exportToexcel" caption="Export To Excel" on-click="anc_exportToexcelClick($event, $scope)" class="common-link"></wm-anchor>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2" padding="5px unset unset unset">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                        <wm-grid title="" dataset="bind:Variables.GetCustomerPortfolio.dataSet" navigation="Basic" name="grid_cutomerportfolio" pagesize="10">
+                            <wm-grid-column binding="ClientNumber" caption="Customer ID" type="string" width="100px" readonly="true" edit-widget-type="text" show="true">
+                                <wm-anchor caption="{{row.ClientNumber}}" class="common-link" ng-click="CustomerProfile(row.ClientId)"></wm-anchor>
+                            </wm-grid-column>
+                            <wm-grid-column binding="ClientName" caption="Customer Name" type="string" width="160px" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="MobileNumber" caption="Mobile" type="string" width="120px" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PolicyCount" caption="Active Policies" type="string" width="100px" readonly="true" mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="PremiumPaid" caption="Total Premium Paid" type="string" width="120px" textalignment="right" readonly="true" col-class="grid-amt" formatpattern="toCurrency" currencypattern="USD" prefix="$"
+                            mobiledisplay="false" edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="AnnualPremium" caption="Total Annual Premium" type="string" width="150px" textalignment="right" readonly="true" formatpattern="toCurrency" currencypattern="USD" mobiledisplay="false"
+                            edit-widget-type="text" show="true"></wm-grid-column>
+                            <wm-grid-column binding="expandField" caption="Expand" type="custom" widget-type="button" readonly="true" pcdisplay="false" edit-widget-type="text" searchable="false" show="true">
+                                <wm-button caption="" show="true" class="btn-arrow" iconclass="wi wi-arrow-downward" on-click="expandRow(row)" data-ng-class=""></wm-button>
+                            </wm-grid-column>
+                        </wm-grid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+        <wm-view class="dialog-view" name="view2" show="false">
+            <wm-dialog height="100%" dialogtype="design-dialog" modal="true" name="Dialog_customerporfolio" class="mobile-dialog" title="Customer Details">
+                <wm-container name="container3" content="ExpandSelectedRow"></wm-container>
+                <wm-dialogactions name="dialogactions1">
+                    <wm-button class="btn-gradient pull-left" caption="Close" on-click="closeDialog()" name="button1"></wm-button>
+                    <!--<wm-button class="btn-primary" caption="Delete" name="btnDeleteInDialog" on-click="deleteCompliance()" show="bind:Widgets.gridEmployeeComplianceByStatus.selecteditem.Status == &quot;PendingApproval&quot; || Widgets.gridEmployeeComplianceByStatus.selecteditem.Status == &quot;Assigned&quot;"></wm-button>-->
+                    <!--<wm-button class="btn-primary" caption="Add" name="btnAddInDialog" on-click="addCompliance()"></wm-button>--></wm-dialogactions>
+            </wm-dialog>
+        </wm-view>
+    </wm-content>
+    <!--<wm-footer content="footer" name="footer1"></wm-footer>--></wm-page>

@@ -1,0 +1,33 @@
+{
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/createQuote/makeNewPayment",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "paymentMode" : "NetB",
+    "agentID" : "440c1544-c8dc-11e6-9740-0242ac1108f8",
+    "status" : "Paid",
+    "applicationID" : "A00003743",
+    "premiumPaid" : "100"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : null,
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "X-XSS-Protection" : [ "1" ],
+      "mode" : [ "block" ],
+      "ETag" : [ "\"0d41d8cd98f00b204e9800998ecf8427e\"" ],
+      "Content-Length" : [ "0" ],
+      "Date" : [ "Wed, 31 May 2017 20:33:43 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

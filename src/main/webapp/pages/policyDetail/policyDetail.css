@@ -1,0 +1,6 @@
+.leftmargin .app-label{
+    margin-left: 0px !important;
+}
+.ColumnDetails.policydetails .form-group .CustomLabel{
+    padding-left: 0px !important;
+}

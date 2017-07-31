@@ -1,0 +1,30 @@
+{
+  "endpointAddress" : "https://wavemaker-apps.pramati.com/dev_api_dublin/services/clientProfile/detailsByPolicyId",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "policyId" : "P00000012"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"NomineeDetails\":[],\"PaymentDetails\":[{\"PaymentDate\":1496188800000,\"PolicyPaymentId\":\"b2043e4a-4615-11e7-a08a-0242ac11010e\",\"TransactionId\":\"T18792311\",\"PaymentMode\":\"NetBanking\",\"PremiumPaid\":\"17000\",\"PaymentStatus\":\"Refund\"},{\"PaymentDate\":1477562136000,\"PolicyPaymentId\":\"e44047b4-45fc-11e7-a08a-0242ac11010e\",\"TransactionId\":\"T18791813\",\"PaymentMode\":\"Cheque\",\"PremiumPaid\":\"23000\",\"PaymentStatus\":\"Paid\"}],\"PolicyDetail\":{\"PlanName\":\"iProtect Plus\",\"PolicyStatus\":\"InForce\",\"PremiumToBePaid\":\"23000\",\"term\":10,\"PremiumPaid\":\"17000\",\"PolicyId\":\"P00000012\",\"StartDate\":1477482936000,\"NextDueDate\":1540554936000,\"SumAssured\":10000000,\"PremiumType\":\"yearly\"},\"ClientDetails\":{\"ClientNumber\":\"C00000006\",\"ClientName\":\"Clark Wright\",\"EmailId\":\"Clark.Wright@Mailbox.com\",\"MobileNumber\":\"8063895443\",\"Address\":null,\"DateOfBirth\":\"1991-12-15\",\"MaritalStatus\":\"Married\"}}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "X-XSS-Protection" : [ "1" ],
+      "mode" : [ "block" ],
+      "ETag" : [ "\"0e1e6a83457f89cab829ee6f47dfb1c89\"" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Content-Length" : [ "870" ],
+      "Date" : [ "Wed, 31 May 2017 21:05:00 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

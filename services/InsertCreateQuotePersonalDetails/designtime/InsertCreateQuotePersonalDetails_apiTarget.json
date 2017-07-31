@@ -1,0 +1,186 @@
+{
+  "basePath" : "/dev_api_dublin",
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "host" : "wavemaker-apps.pramati.com",
+  "paths" : {
+    "/services/createQuote" : {
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "description" : "RequestBody",
+          "name" : "RequestBody",
+          "required" : false,
+          "in" : "body"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "InsertCreateQuotePersonalDetails_RestServiceVirtualController-invoke"
+      },
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "/services/createQuote",
+      "x-WM-COMPLETE_PATH" : "${rest.InsertCreateQuotePersonalDetails.scheme}://${rest.InsertCreateQuotePersonalDetails.host}${rest.InsertCreateQuotePersonalDetails.basepath}/services/createQuote",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "schemes" : [ "https" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "InsertCreateQuotePersonalDetails.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "client" : {
+          "$ref" : "#/definitions/client"
+        },
+        "address" : {
+          "$ref" : "#/definitions/address"
+        },
+        "userName" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "clientDetails" : {
+          "$ref" : "#/definitions/clientDetails"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "InsertCreateQuotePersonalDetails.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "client" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "InsertCreateQuotePersonalDetails.client",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "dateOfBirth" : {
+          "type" : "string"
+        },
+        "occupation" : {
+          "type" : "string"
+        },
+        "occupationalHazards" : {
+          "type" : "string"
+        },
+        "clientNumber" : {
+          "type" : "string"
+        },
+        "noOfChildren" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "maritalStatus" : {
+          "type" : "string"
+        },
+        "annualIncome" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "emailId" : {
+          "type" : "string"
+        },
+        "qualification" : {
+          "type" : "string"
+        },
+        "nationality" : {
+          "type" : "string"
+        },
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "company" : {
+          "type" : "string"
+        },
+        "clientName" : {
+          "type" : "string"
+        },
+        "gender" : {
+          "type" : "string"
+        },
+        "mobileNumber" : {
+          "type" : "string"
+        }
+      }
+    },
+    "address" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "InsertCreateQuotePersonalDetails.address",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "zip" : {
+          "type" : "string"
+        },
+        "stateId" : {
+          "type" : "string"
+        },
+        "addressType" : {
+          "type" : "string"
+        },
+        "addressLine2" : {
+          "type" : "string"
+        },
+        "addressLine1" : {
+          "type" : "string"
+        },
+        "country" : {
+          "type" : "string"
+        }
+      }
+    },
+    "clientDetails" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "InsertCreateQuotePersonalDetails.clientDetails",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "uniquePolicyId" : {
+          "type" : "string"
+        },
+        "policyId" : {
+          "type" : "string"
+        },
+        "term" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "sumAssured" : {
+          "type" : "string"
+        },
+        "tobaccoIntake" : {
+          "type" : "string"
+        },
+        "agentId" : {
+          "type" : "string"
+        },
+        "premiumType" : {
+          "type" : "string"
+        },
+        "premiumToBePaid" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "c4bccc7e-3fe4-4cd2-bef6-eb4156d6d5c2",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "pramati",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

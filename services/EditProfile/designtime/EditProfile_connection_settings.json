@@ -1,0 +1,24 @@
+{
+  "authType" : "NONE",
+  "contentType" : "application/json",
+  "endpointAddress" : "http://wavemaker-apps.pramati.com/dev_api_dublin/services/profile/user",
+  "method" : "PUT",
+  "requestBody" : "{\n\"maritalStatus\":\"Single\",\n\"mobileNumber\":\"8743150756\",\n\"emailId\":\"Daniel.paul002@Mailbox.com\",\n\"address\":\"78590 Miller Ave. Deland, FL 32720\",\n\"userId\":\"440c1544-c8dc-11e6-9740-0242ac1108f8\"\n}",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : null,
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Date" : [ "Fri, 23 Dec 2016 11:14:13 GMT" ],
+      "Content-Length" : [ "0" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null
+}

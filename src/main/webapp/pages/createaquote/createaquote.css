@@ -1,0 +1,381 @@
+.wm-app .createapolicywizard .panel-body
+{
+    width: 642px;
+  /*  margin: 0 auto;*/
+    /*padding-top: 50px !important;*/
+}
+.wm-app .p-title{
+    font-family: Roboto-Medium;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #556287;
+}
+.wm-app .createapolicywizard
+{
+    width: 660px;
+    margin: 0 auto;
+}
+.wm-app .lbl_secondary
+{
+    font-family: 'Dosis-Light' !important;
+      padding: 0 0 10px 0px !important;
+    font-size: 26px;
+    margin-bottom: 10px!important;
+    margin-top: 20px !important;
+    width: 100%;
+  color:#282d39;
+   /*     border-bottom: solid 1px #e2e2e2!important;*/
+}
+.wm-app .hideelement
+{
+    display:none !important;
+}
+.wm-app .RFI
+{
+    background-color: #2d98f8;
+    border-radius:2px;
+    font-size: 10px;
+    height: 13px;
+    font-weight: 500;
+    text-align:center !important;
+}
+.wm-app .approved12
+{
+    background-color: #01d0a0;
+    text-align:center !important;
+    border-radius:2px;
+    font-size: 10px;
+    height: 13px;
+    font-weight: 500;
+}
+.wm-app .rejected
+{
+    background-color: #d4145a;
+    text-align:center !important;
+    border-radius:2px;
+    font-size: 10px;
+    height: 13px;
+    font-weight: 500;
+}
+.wm-app .reviewtab
+{
+        width: 715px;
+    margin: auto;
+}
+.wm-app .dosislabel
+{
+        font-family: 'Dosis-Medium'!important;
+    /*font-size: 20px!important;*/
+    font-weight: 500!important;
+    letter-spacing: 0.8px;
+}
+.app-wizard .app-wizard-steps
+{
+        /*width: 544px;*/
+        /*width: 590px;*/
+        width:615px;
+            margin-top: 50px !important;
+    margin-bottom: -40px !important;
+}
+.wm-app .commentslist
+{
+    /*border-bottom: dashed 1px #3a435c;*/
+    /*border-top: none;*/
+    /*border-left: none;*/
+    /*border-right: none;*/
+    border:none!important;
+   /* background-color: #282d39;*/
+    padding-top:25px;
+}
+.wm-app .commentslist > li
+{
+ /*    background-color: #282d39;*/
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom: dotted 2px #e2e2e2;
+}
+.wm-app .namelbl
+{
+    background-color: #f2f2f2;
+    width: 50px;
+    height: 50px;
+    border: solid 1px #e2e2e2;
+    text-align: center;
+    padding-top: 18px;
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.wm-app .review
+{
+    border-radius: 2px;
+    background-color: #282d39;
+    border: solid 1px #363d50;
+    color: #556287;
+    text-align: center;
+}
+.wm-app .approved
+{
+    background-color:#fff;
+}
+.wm-app .commentbackground
+{
+  /*   background-color: #2e3443;*/
+  border-bottom: solid 2px #d4145a;
+     padding:20px;
+     margin-left: -5px;
+    width: 95%;
+}
+@media only screen and (max-width: 844px) and (min-width: 299px){
+.createapolicywizard .panel-body
+{
+    width: auto!important;
+}
+.wm-app .createapolicywizard
+{
+    width:auto !important;
+}
+.wm-app .leftcolumn
+{
+    padding-right: 10px !important;
+    margin-top: 10px;
+}
+.wm-app .rightcolumn
+{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 10px;
+    text-align: initial;
+}
+.wm-app .app-form .form-action, .wm-app .app-liveform .form-action
+{
+   /* background-color: #363d50!important;*/
+    border:none;
+}
+}
+.wm-app .form-control:focus
+{
+           border: 1px solid #c8c8c8 !important;
+}
+
+.app-date.input-group
+{
+    max-width:none;
+    border: solid 1px #363d50;
+}
+/*.app-date.input-group i
+{
+        color: #556287;
+}*/
+.app-date > .form-control
+{
+    border: none!important;
+}
+.wm-app .app-date .btn-date
+{
+    background-color: #282d39 !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin-top: -1px;
+    height: 37px;
+}
+.wm-app .instructiontext
+{
+    color:#556287 !important;
+    font-family:'Roboto-Italic' !important;
+    font-size:12px !important;
+}
+.wm-app .app-select i
+{
+    color: #556287;
+    font-size: 24px;
+}
+
+.wm-app .leftcolumn
+{
+        padding-right: 20px;
+    margin-top: 10px;
+    padding-left: 10px;
+    text-align: initial;
+}
+.wm-app .leftcolumn label,
+.wm-app .rightcolumn label
+{
+    font-size: 14px;
+    color: #9da7be;
+    font-weight: normal;
+}
+.app-switch
+{
+    background: #282d39;
+}
+.app-switch .model-holder
+{
+    display:none;
+}
+.app-switch a
+{
+    color: #9da7be;
+    font-size:16px;
+    text-transform:none;
+}
+.wm-app .app-switch .btn
+{
+    border-radius: 2px!important;
+    /* background-color: #282d39; */
+  /*  border: solid 1px #363d50;*/
+        text-transform: none;
+        padding:0.8em;
+}
+.wm-app .app-switch .btn-default
+{
+     background-color: #ffffff;
+    border: solid 1px #c8c8c8;
+    color: #9b9b9b;
+}
+/*.wm-app .app-switch .btn.selected*/
+/*{*/
+/*        border: solid 1px #d4145a;*/
+/*}*/
+
+.wm-app .app-switch
+{
+    border-radius:0;
+}
+.app-switch .btn-group>.btn
+{
+    border-radius:0;
+}
+.wm-app .rightcolumn
+{text-align: initial;
+        padding-left: 20px;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+.wm-app .app-accordion .app-accordion-panel.panel .panel-heading .panel-title .heading
+{
+    font-size: 20px;
+    font-family: 'Dosis-Medium';
+    letter-spacing: 0.8px;
+}
+.wm-app .app-accordion .app-accordion-panel.panel .panel-heading .panel-actions
+{
+   left: -49em;
+    top: 1.6em;
+    outline: none;
+    float: left ;
+}
+.app-accordion .app-accordion-panel .panel-heading .panel-actions .panel-action
+{
+    /*border-radius: 50%;*/
+    color: #556287;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 1px;
+    border: 1px solid #556287;
+    /*margin-right: .25em;*/
+    margin-right: 20px;
+}
+.wm-app .app-accordion .app-accordion-panel.panel .panel-collapse.in:before{
+    background: transparent;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.wm-app .app-calendar tbody .btn-default, .wm-app .app-date tbody .btn-default, .wm-app .app-datetime tbody .btn-default, .wm-app .app-timeinput tbody .btn-default, .wm-app .app-calendar tbody .btn, .wm-app .app-date tbody .btn, .wm-app .app-datetime tbody .btn, .wm-app .app-timeinput tbody .btn
+{
+        background-color: transparent;
+        color: #fff;
+          /*  border: 1px solid #3a445d;*/
+}
+.wm-app .text-muted
+{
+        color: #9da7be;
+}
+.wm-app .app-date tbody .btn-default:hover, .wm-app .app-datetime tbody .btn-default:hover
+{
+    background-color: #fff;
+    /*border-color: #d4145a;*/
+    color: #282d39;
+}
+.wm-app .app-calendar small, .wm-app .app-date small, .wm-app .app-datetime small, .wm-app .app-timeinput small
+{
+        color: #d4145a;
+}
+.wm-app .app-date tbody tr:last-child td, .wm-app .app-datetime tbody tr:last-child td{
+        padding-bottom: 10px;
+}
+/*.wm-app .uib-weeks
+{
+    background-color:#282d39!important;
+}*/
+.wm-app .app-date .uib-daypicker tbody .btn-default, .wm-app .app-datetime .uib-daypicker tbody .btn-default
+{
+        margin-left: 5px;
+    margin-bottom: 5px;
+}
+.wm-app .app-date tbody tr td:first-child, .wm-app .app-datetime tbody tr td:first-child{
+        padding-left: 15px;
+}
+.wm-app .app-date tbody tr td:last-child, .wm-app .app-datetime tbody tr td:last-child
+{
+        padding-right: 14px;
+}
+.wm-app .app-date tbody .btn-default.active, .wm-app .app-datetime tbody .btn-default.active, .wm-app .app-date tbody .btn-default:focus, .wm-app .app-datetime tbody .btn-default:focus
+{
+        border-color: #d4145a;
+}
+.wm-app .app-date .dropdown-menu li:last-child, .wm-app .app-datetime .dropdown-menu li:last-child
+{
+    padding:0;
+}
+.wm-app .app-date .btn-group .btn, .wm-app .app-datetime .btn-group .btn, .wm-app .app-date .btn-group + .btn, .wm-app .app-datetime .btn-group + .btn
+{
+    font-size: .85em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.option
+{
+    line-height:50px;
+}
+/*.app-wizard .app-wizard-steps .disabled .arrow
+{
+     border-right: 2px solid #282d39!important;
+    border-top: 2px solid #282d39!important;
+ 
+}*/
+.wm-app .app-form .form-action, .wm-app .app-liveform .form-action
+{
+        border: none;
+        
+}
+.wm-app .amount
+{
+        padding: 0!important;
+    font-family: 'Roboto-Regular'!important;
+    font-size: 36px;
+    font-weight: 900!important;
+    font-style: normal;
+    font-stretch: normal;
+    color: #02d0a0 !important;
+}
+.wm-app .app-form .control-label, .wm-app .app-liveform .control-label, .wm-app .app-form .app-label, .wm-app .app-liveform .app-label{
+    padding:0;
+    margin:0;
+        margin-bottom: 6px;
+    color: #282d39;
+}
+
+.wm-app .bo-name{
+        text-transform: capitalize;
+}

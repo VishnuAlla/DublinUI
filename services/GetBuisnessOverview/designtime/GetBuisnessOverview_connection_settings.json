@@ -1,0 +1,29 @@
+{
+  "endpointAddress" : "http://wavemaker-apps.pramati.com/dev_api_dublin/services/profile/policyCounts/440c1544-c8dc-11e6-9740-0242ac1108f8/2017",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "[{\"Month\":\"Jan-2017\",\"GraphMonth\":\"Jan\",\"Target\":70000,\"PolicyCount\":102,\"Commission\":368045,\"Premium\":403406},{\"Month\":\"Feb-2017\",\"GraphMonth\":\"Feb\",\"Target\":80000,\"PolicyCount\":101,\"Commission\":358142,\"Premium\":355746},{\"Month\":\"Mar-2017\",\"GraphMonth\":\"Mar\",\"Target\":90000,\"PolicyCount\":101,\"Commission\":376465,\"Premium\":374174},{\"Month\":\"Apr-2017\",\"GraphMonth\":\"Apr\",\"Target\":60000,\"PolicyCount\":101,\"Commission\":373616,\"Premium\":371115},{\"Month\":\"May-2017\",\"GraphMonth\":\"May\",\"Target\":50000,\"PolicyCount\":101,\"Commission\":345785,\"Premium\":343199},{\"Month\":\"Jun-2017\",\"GraphMonth\":\"Jun\",\"Target\":33500,\"PolicyCount\":102,\"Commission\":363317,\"Premium\":362888},{\"Month\":\"Jul-2017\",\"GraphMonth\":\"Jul\",\"Target\":75000,\"PolicyCount\":\"0\",\"Commission\":\"\",\"Premium\":\"\"},{\"Month\":\"Aug-2017\",\"GraphMonth\":\"Aug\",\"Target\":65000,\"PolicyCount\":\"0\",\"Commission\":\"\",\"Premium\":\"\"},{\"Month\":\"Sep-2017\",\"GraphMonth\":\"Sep\",\"Target\":98000,\"PolicyCount\":\"0\",\"Commission\":\"\",\"Premium\":\"\"},{\"Month\":\"Oct-2017\",\"GraphMonth\":\"Oct\",\"Target\":96000,\"PolicyCount\":\"0\",\"Commission\":\"\",\"Premium\":\"\"},{\"Month\":\"Nov-2017\",\"GraphMonth\":\"Nov\",\"Target\":75000,\"PolicyCount\":\"0\",\"Commission\":\"\",\"Premium\":\"\"},{\"Month\":\"Dec-2017\",\"GraphMonth\":\"Dec\",\"Target\":86000,\"PolicyCount\":\"0\",\"Commission\":\"\",\"Premium\":\"\"}]",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Cache-Control" : [ "max-age=0" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "ETag" : [ "\"040f70d64a50e53d268ec7418f3270740\"" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Content-Length" : [ "1297" ],
+      "Date" : [ "Wed, 14 Jun 2017 20:33:55 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="MakePayment_API" type="RestService" springFile="MakePayment_API.spring.xml">
+    <dataobjects/>
+</service>

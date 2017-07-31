@@ -1,0 +1,160 @@
+<wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="12" name="Main_content">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-container name="breadcrumbcontainer" content="breadcrumb" showindevice="sm,md,lg"></wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn10">
+                        <wm-label padding="unset 0.5em" name="label1" color="#000" caption="bind:Variables.EmailNotify.dataSet.eSubject"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn11"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-button class="btn-default" caption="bind:Variables.loggedInUser.dataSet.tenantId" type="button" margin="unset 0.5em" name="button1" on-click="Variables.EmailNotify.invoke()"></wm-button>
+            <wm-picture name="picture1" picturesource="bind:Variables.loggedInUser.dataSet.name"></wm-picture>
+            <wm-richtexteditor name="richtexteditor1" placeholder="" datavalue="bind:Variables.EmailNotify.dataSet.value"></wm-richtexteditor>
+            <wm-layoutgrid name="layoutgrid2">
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4" height="150">
+                        <wm-composite name="composite1">
+                            <wm-container class="col-md-9" name="container2">
+                                <wm-switch datavalue="yes" name="switch1" dataset="yes, no"></wm-switch>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn5"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4_1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn6"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn7"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-html name="html2" backgroundcolor="#2f2f2f">
+                <p id="cname"> Hi </p>
+                <br>
+                <br> Please find the username and password to access Dublin Portal.
+                <br>
+                <br>
+                <div class="emailtemp">
+                    <p style="font-size: 12.0pt;line-height:150%;font-weight: bold">Username:</p>
+                    <p id="uname">mani</p>
+                </div>
+                <div class="emailtemp">
+                    <p style="font-size: 12.0pt;line-height:150%;font-weight: bold">Password:</p>
+                    <p id="pwdname">mani</p>
+                </div>
+                <p>To login to the application, click <a href="http://e1d52cdd96e3.cloud.wavemakeronline.com/dev_ui_dublinpublic/#/MyInsurance" target="">here</a>
+                </p>
+                <br>
+                <br>
+                <br>
+                <p>Best Regards</p>
+                <p>Dublin, Inc.</p>
+                <p><img src="https://wavemaker.pramati.com/run-62kfn0cn7x/white_theme_dublin/resources/images/logos/logo_cropped.png">
+                    <br>
+                </p>
+            </wm-html>
+            <!--<wm-header content="header" name="header" height="auto"></wm-header>-->
+            <!--<wm-content name="content">-->
+            <!--    <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>-->
+            <!--    <wm-page-content columnwidth="12" name="mainContent" padding="20px 20px unset 20px">-->
+            <!--        // comment ends-->
+            <!--<wm-prefab prefabname="GenericSearch" name="GenericSearch1"></wm-prefab>-->
+            <!--<wm-prefab prefabname="GridSearch_Enterprise" name="GridSearch_Enterprise1"></wm-prefab>-->
+            <!--<wm-breadcrumb dataset="bind:Variables.breadcrumb.dataSet" name="breadcrumb1" fontstyle="italic"></wm-breadcrumb>-->
+            <!--    <wm-layoutgrid name="layoutgrid1" class="layoutgrid">-->
+            <!--        <wm-gridrow name="gridrow1">-->
+            <!--            <wm-gridcolumn columnwidth="7" name="gridcolumn2" padding="unset 20px 30px unset">-->
+            <!--                <wm-layoutgrid name="layoutgrid3" class="boxshadow">-->
+            <!--                    <wm-gridrow name="gridrow7">-->
+            <!--                        <wm-gridcolumn columnwidth="12" name="gridcolumn9_1" horizontalalign="center" padding=".5em unset unset unset">-->
+            <!--                            <wm-label padding="5px 0.5px unset 0.5px" name="label4_1" fontweight="bold" fontsize="16" caption="Policy Snapshot"></wm-label>-->
+            <!--                        </wm-gridcolumn>-->
+            <!--                    </wm-gridrow>-->
+            <!--                    <wm-gridrow name="gridrow8">-->
+            <!--                        <wm-gridcolumn columnwidth="12" name="gridcolumn11" padding="unset unset unset 1em">-->
+            <!--                            <wm-chart type="Column" title="" iconclass="wi wi-bar-chart" name="chart1" dataset="bind:Variables.svPolicyStatusCount.dataSet" xaxisdatakey="PolicyStatus" yaxisdatakey="PolicyCount" theme="Retro" height="407px" show="true"-->
+            <!--                            tooltips="true" showlegend="hide" viewtype="Grouped" nodatamessage="Loading."></wm-chart>-->
+            <!--                        </wm-gridcolumn>-->
+            <!--                    </wm-gridrow>-->
+            <!--                </wm-layoutgrid>-->
+            <!--            </wm-gridcolumn>-->
+            <!--            <wm-gridcolumn columnwidth="5" name="gridcolumn1" horizontalalign="center">-->
+            <!--                <wm-layoutgrid name="layoutgrid5">-->
+            <!--                    <wm-gridrow name="gridrow12">-->
+            <!--                        <wm-gridcolumn columnwidth="12" name="gridcolumn13_1">-->
+            <!--                            <wm-layoutgrid name="layoutgrid2" class="boxshadow">-->
+            <!--                                <wm-gridrow name="gridrow5"></wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow9">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn13" padding="1em unset unset unset">-->
+            <!--                                        <wm-label name="label5" caption="Clients" fontsize="16" fontweight="bold"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow3">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn5" padding="1.5em unset unset unset">-->
+            <!--                                        <wm-icon name="icon1" iconclass="wi wi-assignment-ind fa-5x" iconsize="100px" color="#2D98F8"></wm-icon>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow4">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn7" padding=".5em unset unset unset">-->
+            <!--                                        <wm-label padding="unset 0.5px" name="numberOfClientsLabel" caption="bind:Variables.svClientsCount.dataSet[$i].ClientCount" fontsize="32"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                            </wm-layoutgrid>-->
+            <!--                        </wm-gridcolumn>-->
+            <!--                    </wm-gridrow>-->
+            <!--                    <wm-gridrow name="gridrow13"></wm-gridrow>-->
+            <!--                    <wm-gridrow name="gridrow14">-->
+            <!--                        <wm-gridcolumn columnwidth="12" name="gridcolumn17" padding="20px unset unset unset">-->
+            <!--                            <wm-layoutgrid name="layoutgrid4" class="boxshadow">-->
+            <!--                                <wm-gridrow name="gridrow9_1">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn10" padding="1em unset unset unset">-->
+            <!--                                        <wm-label name="label4" caption="Policies" fontsize="16" fontweight="bold"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow10">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn12" padding="1.5em unset unset unset">-->
+            <!--                                        <wm-icon name="icon2" iconsize="100px" iconclass="wi wi-file-text" color="#7a003d" opacity="0.8"></wm-icon>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow11">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn14" padding=".5em unset unset unset">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="numberOfPoliciesLabel" fontsize="32" caption="bind:Variables.svAllPolicyCount.dataSet[$i].PolicyCount"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                            </wm-layoutgrid>-->
+            <!--                        </wm-gridcolumn>-->
+            <!--                    </wm-gridrow>-->
+            <!--                </wm-layoutgrid>-->
+            <!--            </wm-gridcolumn>-->
+            <!--        </wm-gridrow>-->
+            <!--        <wm-gridrow name="gridrow8_1">-->
+            <!--            <wm-gridcolumn columnwidth="3" name="gridcolumn15">-->
+            <!--                <wm-tile name="statTile" width="240px" height="160px" class="bg-primary">-->
+            <!--                    <wm-layoutgrid height="100%" name="layoutgrid7">-->
+            <!--                        <wm-gridrow height="100%" name="gridrow16">-->
+            <!--                            <wm-gridcolumn columnwidth="3" horizontalalign="center" padding="2em unset unset unset" name="gridcolumn17_1">-->
+            <!--                                <wm-icon iconsize="3em" name="tileIcon" iconclass="wi wi-bar-chart"></wm-icon>-->
+            <!--                            </wm-gridcolumn>-->
+            <!--                            <wm-gridcolumn columnwidth="9" padding="2em unset unset unset" horizontalalign="center" name="gridcolumn18">-->
+            <!--                                <wm-label name="tileTitle" caption="title" class="p" fontsize="1.5" fontunit="em"></wm-label>-->
+            <!--                                <wm-label name="tileStatLabel" caption="00" fontsize="3" fontunit="em" class="p"></wm-label>-->
+            <!--                            </wm-gridcolumn>-->
+            <!--                        </wm-gridrow>-->
+            <!--                    </wm-layoutgrid>-->
+            <!--                </wm-tile>-->
+            <!--            </wm-gridcolumn>-->
+            <!--            <wm-gridcolumn columnwidth="4" name="gridcolumn8"></wm-gridcolumn>-->
+            <!--            <wm-gridcolumn columnwidth="5" name="gridcolumn9"></wm-gridcolumn>-->
+            <!--        </wm-gridrow>-->
+            <!--    </wm-layoutgrid>-->
+        </wm-page-content>
+    </wm-content>
+    <wm-footer name="footer" content="footer"></wm-footer>
+</wm-page>
